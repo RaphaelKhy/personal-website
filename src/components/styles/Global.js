@@ -2,8 +2,16 @@ import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
 body{
-    @import url('http://fonts.cdnfonts.com/css/circular-std');
-    font-family: 'Circular Std', sans-serif;
+    font-family: Sans-Serif;
+    & ::selection {
+    background-color: #b6d8d0;
+    }
+    a {
+    color: black;
+    }
+    a:hover {
+    color: purple;
+    }
 }
 `;
 

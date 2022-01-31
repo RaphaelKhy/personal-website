@@ -1,12 +1,11 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export const StyledMenu = styled.div`
-  border-color: aquamarine;
-  border-style: solid;
+  ${(props) => displayBorders(props.theme)}
   margin-left: 0.3rem;
   display: flex;
   flex-direction: row;
-  align-items:center;
+  align-items: center;
   a {
     color: black; /* Unvisited link  */
     text-decoration: none;
@@ -16,3 +15,12 @@ export const StyledMenu = styled.div`
     color: purple; /* Mouse over link */
   }
 `;
+
+function displayBorders(theme, color) {
+  if (theme.showBorders) {
+    return css`
+      outline-style: solid;
+      outline-color: ${color ? color : "burlywood"};
+    `;
+  }
+}
