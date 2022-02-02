@@ -7,6 +7,9 @@ export const StyledHeader = styled.header`
   justify-content: end;
   border-bottom: 1px solid ${(props) => props.theme.colors.elementBorder};
   padding: 0px 25px 0px 25px;
+  position: sticky;
+  top: 0;
+  background-color: ${(props) => props.theme.colors.AppBg}
 `;
 
 function displayBorders(theme, color) {
