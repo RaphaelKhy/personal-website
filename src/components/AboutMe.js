@@ -10,7 +10,9 @@ export default function AboutMe() {
           studying Information Systems at Stony Brook University.
         </p>
       </div>
-      <div className="aboutMeImage"></div>
+      <div className="aboutMeImage">
+        <img src={require("./static/images/Profile.jpg")} />
+      </div>
     </StyledAboutMe>
   );
 }

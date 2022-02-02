@@ -2,17 +2,37 @@ import styled, { css } from "styled-components";
 
 export const StyledMenu = styled.div`
   ${(props) => displayBorders(props.theme)}
-  margin-left: 0.3rem;
-  display: flex;
-  flex-direction: row;
+  display: inline-flex;
   align-items: center;
+  flex-wrap: wrap;
+  column-gap: 20px;
+  height: 65px;
+
   a {
-    color: black; /* Unvisited link  */
+    color: ${(props) => props.theme.colors.lowContrastText};
     text-decoration: none;
-    margin: 1rem;
+    :hover {
+      color: ${(props) => props.theme.colors.highContrastText};
+    }
   }
-  a:hover {
-    color: purple; /* Mouse over link */
+
+  button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: unset;
+    background-color: unset;
+    border-radius: 4px;
+    height: 40px;
+    width: 40px;
+    color: ${(props) => props.theme.colors.highContrastText};
+    :hover {
+      background-color: ${(props) => props.theme.colors.hoveredElementBg};
+    }
+    #svg {
+      height: 1rem;
+      width: 1rem;
+    }
   }
 `;
 

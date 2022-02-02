@@ -10,6 +10,7 @@ export const StyledProjects = styled.div`
     ${(props) => displayBorders(props.theme, "green")}
     display: flex;
     justify-content: center;
+    color: ${(props) => props.theme.colors.highContrastText};
   }
 
   #project {
@@ -22,40 +23,35 @@ export const StyledProjects = styled.div`
   #projectTitle {
     padding: 0.5rem;
     margin-bottom: 0rem;
-  }
-
-  #projectBody {
-    width: 100%;
-    display: flex;
-    background-color: lightgray;
-    border-radius: 0.6rem;
-    padding: 0.5rem;
+    color: ${(props) => props.theme.colors.highContrastText};
   }
 
   #projectText {
     ${(props) => displayBorders(props.theme, "silver")}
+    color: ${(props) => props.theme.colors.highContrastText};
     width: 50%;
-    padding-right: 0.5rem;
     #projectDescription {
-      font-size: 18px;
     }
   }
 
   #technologies {
     display: flex;
+    flex-wrap: wrap;
+    column-gap: 1rem;
     p {
-      margin-right: 1rem;
-      padding: 0px 3px;
-      border-radius: 0.3rem;
-      background-color: silver;
+      padding: 0.3rem;
+      border-radius: 16px;
+      background-color: ${(props) => props.theme.colors.solidBg};
       align-items: center;
       display: flex;
+      margin-top: 0px;
     }
   }
 
   #PortfolioVisualizerImage {
     ${(props) => displayBorders(props.theme, "blue")}
     width: 50%;
+    
     img {
       max-width: 100%;
       max-height: 25rem;
@@ -64,7 +60,11 @@ export const StyledProjects = styled.div`
   }
 
   a {
+    color: ${(props) => props.theme.colors.lowContrastText};
     margin-right: 1rem;
+    :hover {
+      color: ${(props) => props.theme.colors.highContrastText};
+    }
   }
 `;
 

@@ -2,15 +2,11 @@ import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
 body{
+    background-color: ${(props) => props.theme.colors.AppBg};
+    margin: 0 0 0 0;
     font-family: Sans-Serif;
     & ::selection {
-    background-color: #b6d8d0;
-    }
-    a {
-    color: black;
-    }
-    a:hover {
-    color: purple;
+    background-color: ${(props) => props.theme.colors.select};
     }
 }
 `;

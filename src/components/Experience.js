@@ -1,31 +1,39 @@
-import { StyledExperiene } from "./styles/Experience.styled";
+import { StyledExperience } from "./styles/Experience.styled";
+import { StyledProjectCard } from "./styles/ProjectCard.styled";
 
 export default function Experience() {
   return (
-    <StyledExperiene id="experience">
-      <h1 className="title">Experience</h1>
-      <div id="experienceBody">
+    <StyledExperience id="experience">
+      <h1 id="title">Experience</h1>
+      <StyledProjectCard id="experienceBody">
         <div id="IvyScope">
-          <div id="IvyScopeTitle">
-            <h2>
-              <img src={require("../images/IvyScope.ico")} />
-              IvyScope
-            </h2>
-            <p>September 2021 - Present</p>
+          <div id="Company">
+            <div id="CompanyName">
+              <a href="https://ivyscope.io/" target="blank">
+                <img src={require("./static/images/IvyScope.png")} />
+              </a>
+              <h2>IvyScope</h2>
+            </div>
+            <div id="CompanyDates">September 2021 - Present</div>
           </div>
-          <div id="IvyScopeBody">
-            <h3 id="IvyScopeBodyTitle">Front-End Developer</h3>
-            <ul>
-              <li>
+          <div id="ExperienceBody">
+            <h2 id="ExperienceTitle">Front-End Developer</h2>
+            <div id="ExperienceBody">
+              <p>
                 Worked with a small team to build a platform for students to
                 schedule and host college tours online.
-              </li>
-              <li>Developed webpages in React using mobile first design.</li>
-            </ul>
-            <p id="Technologies"> Technologies: React, Material UI, SASS, Heroku</p>
+              </p>
+              <p>Developed webpages in React using mobile first design.</p>
+              <div id="technologies">
+                <p>React</p>
+                <p>Material UI</p>
+                <p>SASS</p>
+                <p>Heroku</p>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </StyledExperiene>
+      </StyledProjectCard>
+    </StyledExperience>
   );
 }

@@ -1,43 +1,80 @@
 import styled, { css } from "styled-components";
 
-export const StyledExperiene = styled.div`
+export const StyledExperience = styled.div`
   ${(props) => displayBorders(props.theme)}
-  padding: 0.3rem;
-  margin-bottom: 0.3rem;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  color: ${(props) => props.theme.colors.highContrastText};
+  padding: 0.3rem;
 
-  .title {
-    display: flex;
-    justify-content: center;
-    ${(props) => displayBorders(props.theme)}
-  }
-  #experienceBody {
+  #title {
     display: flex;
     justify-content: center;
   }
+
   #IvyScope {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    justify-content: center;
   }
-  #IvyScopeTitle {
-    ${(props) => displayBorders(props.theme)}
-    margin-right: 3rem;
-  }
-  #IvyScopeBody {
-    ${(props) => displayBorders(props.theme)}
-    #IvyScopeBodyTitle {
+
+  #Company {
+    display: flex;
+    flex-direction: column;
+    column-gap: 20px;
+    ${(props) => displayBorders(props.theme, "black")}
+    width: 30%;
+    margin-right: 1rem;
+    #CompanyName {
       display: flex;
-      justify-content: center;
+      flex-direction: row;
+      align-items: center;
+      flex-wrap: wrap;
+      column-gap: 1rem;
+      ${(props) => displayBorders(props.theme)}
+      img {
+        height: 32px;
+        width: 32px;
+      }
     }
-    #Technologies {
-      display: flex;
-      justify-content: center;
+    #CompanyDates {
+      ${(props) => displayBorders(props.theme)}
+      color: ${(props) => props.theme.colors.lowContrastText};
     }
   }
-  ul {
-    list-style-type: none;
+
+  #ExperienceBody {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    ${(props) => displayBorders(props.theme)}
+
+    #ExperienceTitle {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      ${(props) => displayBorders(props.theme)}
+    }
+    #ExperienceBody {
+      p {
+        margin-top: 0px;
+      }
+    }
+  }
+
+  #technologies {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 1rem;
+    p {
+      padding: 0.3rem;
+      border-radius: 16px;
+      background-color: ${(props) => props.theme.colors.solidBg};
+      align-items: center;
+      display: flex;
+      margin-top: 0px;
+    }
   }
 `;
 

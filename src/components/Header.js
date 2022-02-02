@@ -1,10 +1,10 @@
 import Menu from "./Menu";
 import { StyledHeader } from "./styles/Header.styled";
 
-export default function Header() {
+export default function Header(props) {
   return (
     <StyledHeader>
-      <Menu />
+      <Menu handleToggle={props.handleToggle} />
     </StyledHeader>
   );
 }

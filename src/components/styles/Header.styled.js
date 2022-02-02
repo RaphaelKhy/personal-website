@@ -5,8 +5,8 @@ export const StyledHeader = styled.header`
   display: flex;
   flex-direction: row;
   justify-content: end;
-  padding: 0.3rem;
-  margin-bottom: 0.5rem;
+  border-bottom: 1px solid ${(props) => props.theme.colors.elementBorder};
+  padding: 0px 25px 0px 25px;
 `;
 
 function displayBorders(theme, color) {

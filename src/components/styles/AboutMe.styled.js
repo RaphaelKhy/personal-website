@@ -2,14 +2,26 @@ import styled, { css } from "styled-components";
 
 export const StyledAboutMe = styled.div`
   ${(props) => displayBorders(props.theme)}
-  margin-bottom: 0.3rem;
+  padding-left: 0.3rem;
+  padding-right: 0.3rem;
+  margin-top: 1rem;
   display: flex;
+  flex-direction: row;
+  align-self: center;
+  max-width: 800px;
+  color: ${(props) => props.theme.colors.highContrastText};
+
   .aboutMeText {
-    width: 50%;
+    margin-right: 1rem;
   }
   .aboutMeImage {
-    width: 50%;
-    background-color: beige;
+    display: flex;
+    max-width: 400px;
+    img {
+      max-width: 100%;
+      border-radius: 1rem;
+      object-fit: cover;
+    }
   }
 `;
 
