@@ -1,5 +1,5 @@
 import { StyledCard } from "./styles/Card.styled";
 
-export default function PojectCard({}) {
+export default function Card({}) {
   return <StyledCard></StyledCard>;
 }

@@ -6,7 +6,6 @@ export const StyledExperience = styled.div`
   flex-direction: column;
   justify-content: center;
   color: ${(props) => props.theme.colors.highContrastText};
-  padding: 0.3rem;
 
   #title {
     display: flex;

@@ -4,7 +4,6 @@ export const StyledProjects = styled.div`
   ${(props) => displayBorders(props.theme, "brown")}
   display: flex;
   flex-direction: column;
-  padding: 0.3rem;
 
   .title {
     ${(props) => displayBorders(props.theme, "green")}

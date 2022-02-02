@@ -1,16 +1,17 @@
 import { StyledExperience } from "./styles/Experience.styled";
-import { StyledProjectCard } from "./styles/ProjectCard.styled";
+import { StyledCard } from "./styles/Card.styled";
+import TechStack from "./TechStack";
 
 export default function Experience() {
   return (
     <StyledExperience id="experience">
       <h1 id="title">Experience</h1>
-      <StyledProjectCard id="experienceBody">
+      <StyledCard id="experienceBody">
         <div id="IvyScope">
           <div id="Company">
             <div id="CompanyName">
               <a href="https://ivyscope.io/" target="blank">
-                <img src={require("./static/images/IvyScope.png")} />
+                <img src={require("../static/images/IvyScope.png")} />
               </a>
               <h2>IvyScope</h2>
             </div>
@@ -24,16 +25,11 @@ export default function Experience() {
                 schedule and host college tours online.
               </p>
               <p>Developed webpages in React using mobile first design.</p>
-              <div id="technologies">
-                <p>React</p>
-                <p>Material UI</p>
-                <p>SASS</p>
-                <p>Heroku</p>
-              </div>
+              <TechStack technologies={["React", "Material UI", "SASS", "Heroku"]} />
             </div>
           </div>
         </div>
-      </StyledProjectCard>
+      </StyledCard>
     </StyledExperience>
   );
 }

@@ -2,8 +2,6 @@ import styled, { css } from "styled-components";
 
 export const StyledAboutMe = styled.div`
   ${(props) => displayBorders(props.theme)}
-  padding-left: 0.3rem;
-  padding-right: 0.3rem;
   margin-top: 1rem;
   display: flex;
   flex-direction: row;
@@ -12,7 +10,7 @@ export const StyledAboutMe = styled.div`
   color: ${(props) => props.theme.colors.highContrastText};
 
   .aboutMeText {
-    margin-right: 1rem;
+    padding-right: 1rem;
   }
   .aboutMeImage {
     display: flex;

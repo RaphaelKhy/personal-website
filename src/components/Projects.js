@@ -1,6 +1,7 @@
 import { StyledProjects } from "./styles/Projects.styled";
 import { FiGithub, FiExternalLink } from "react-icons/fi";
-import { StyledProjectCard } from "./styles/ProjectCard.styled";
+import { StyledCard } from "./styles/Card.styled";
+import TechStack from "./TechStack";
 
 export default function Projects() {
   return (
@@ -8,7 +9,7 @@ export default function Projects() {
       <h1 className="title">Projects</h1>
       <div id="project">
         <h2 id="projectTitle">Portflio Visualizer</h2>
-        <StyledProjectCard>
+        <StyledCard>
           <div id="projectText">
             <div id="projectDescription">
               <p>
@@ -16,12 +17,9 @@ export default function Projects() {
                 stock portfolios.
               </p>
             </div>
-            <div id="technologies">
-              <p>JavaScript</p>
-              <p>Bootstrap</p>
-              <p>D3.js</p>
-              <p>jQuery</p>
-            </div>
+            <TechStack
+              technologies={["JavaScript", "Bootstrap", "D3.js", "jQuery"]}
+            />
             <a
               href="https://github.com/RaphaelKhy/RaphaelKhy.github.io"
               target="_blank"
@@ -36,11 +34,11 @@ export default function Projects() {
             <a href="https://raphaelkhy.github.io/" target="_blank">
               <img
                 id="image"
-                src={require("./static/images/PortfolioVisualizerLight.png")}
+                src={require("../static/images/PortfolioVisualizerLight.png")}
               />
             </a>
           </div>
-        </StyledProjectCard>
+        </StyledCard>
       </div>
     </StyledProjects>
   );
