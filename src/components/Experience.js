@@ -13,7 +13,9 @@ export default function Experience() {
               <a href="https://ivyscope.io/" target="blank">
                 <img src={require("../static/images/IvyScope.png")} />
               </a>
-              <h2>IvyScope</h2>
+              <a href="https://ivyscope.io/" target="blank">
+                <h2>IvyScope</h2>
+              </a>
             </div>
             <div id="CompanyDates">September 2021 - Present</div>
           </div>
@@ -25,7 +27,9 @@ export default function Experience() {
                 schedule and host college tours online.
               </p>
               <p>Developed webpages in React using mobile first design.</p>
-              <TechStack technologies={["React", "Material UI", "SASS", "Heroku"]} />
+              <TechStack
+                technologies={["React", "Material UI", "SASS", "Heroku"]}
+              />
             </div>
           </div>
         </div>

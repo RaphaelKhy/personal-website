@@ -1,4 +1,4 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle, css } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
 html{
@@ -6,10 +6,10 @@ html{
 }
 body{
     background-color: ${(props) => props.theme.colors.AppBg};
-    font-family: Sans-Serif;
-    margin-left: 8px;
-    margin-right: 8px;
+    font-family:  system-ui, sans-serif;
     margin-top: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
 
     & ::selection {
     background-color: ${(props) => props.theme.colors.select};
@@ -17,4 +17,14 @@ body{
 }
 `;
 
+function displayBorders(theme, color) {
+  if (theme.showBorders) {
+    return css`
+      outline-style: solid;
+      outline-color: ${color ? color : "burlywood"};
+    `;
+  }
+}
+
 export default GlobalStyle;
+export { displayBorders };

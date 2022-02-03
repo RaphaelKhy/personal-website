@@ -1,4 +1,5 @@
-import styled, { css } from "styled-components";
+import styled from "styled-components";
+import { displayBorders } from "./Global";
 
 export const StyledProjects = styled.div`
   ${(props) => displayBorders(props.theme, "brown")}
@@ -10,6 +11,7 @@ export const StyledProjects = styled.div`
     display: flex;
     justify-content: center;
     color: ${(props) => props.theme.colors.highContrastText};
+    font-weight: normal;
   }
 
   #project {
@@ -50,7 +52,7 @@ export const StyledProjects = styled.div`
   #PortfolioVisualizerImage {
     ${(props) => displayBorders(props.theme, "blue")}
     width: 50%;
-    
+
     img {
       max-width: 100%;
       max-height: 25rem;
@@ -66,12 +68,3 @@ export const StyledProjects = styled.div`
     }
   }
 `;
-
-function displayBorders(theme, color) {
-  if (theme.showBorders) {
-    return css`
-      outline-style: solid;
-      outline-color: ${color ? color : "burlywood"};
-    `;
-  }
-}

@@ -1,4 +1,5 @@
-import styled, { css } from "styled-components";
+import styled from "styled-components";
+import { displayBorders } from "./Global";
 
 export const StyledHeader = styled.header`
   ${(props) => displayBorders(props.theme)}
@@ -9,14 +10,5 @@ export const StyledHeader = styled.header`
   padding: 0px 25px 0px 25px;
   position: sticky;
   top: 0;
-  background-color: ${(props) => props.theme.colors.AppBg}
+  background-color: ${(props) => props.theme.colors.AppBg};
 `;
-
-function displayBorders(theme, color) {
-  if (theme.showBorders) {
-    return css`
-      outline-style: solid;
-      outline-color: ${color ? color : "burlywood"};
-    `;
-  }
-}

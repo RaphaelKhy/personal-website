@@ -1,7 +1,11 @@
-import { grayDark, gray, blue, blueDark } from "@radix-ui/colors";
+import { grayDark, gray, blue, blueDark, skyDark } from "@radix-ui/colors";
+
+const globalTheme = {
+  borders: false,
+}
 
 export const darkTheme = {
-  showBorders: false,
+  showBorders: globalTheme.borders,
   colors: {
     ...grayDark,
     ...blueDark,
@@ -20,7 +24,7 @@ export const darkTheme = {
 };
 
 export const lightTheme = {
-  showBorders: false,
+  showBorders: globalTheme.borders,
   colors: {
     ...gray,
     ...blue,

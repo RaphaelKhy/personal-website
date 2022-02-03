@@ -1,4 +1,5 @@
-import styled, { css } from "styled-components";
+import styled from "styled-components";
+import { displayBorders } from "./Global";
 
 export const StyledExperience = styled.div`
   ${(props) => displayBorders(props.theme)}
@@ -10,6 +11,7 @@ export const StyledExperience = styled.div`
   #title {
     display: flex;
     justify-content: center;
+    font-weight: normal;
   }
 
   #IvyScope {
@@ -36,6 +38,10 @@ export const StyledExperience = styled.div`
         height: 32px;
         width: 32px;
       }
+      a {
+        color: ${(props) => props.theme.colors.highContrastText};
+        text-decoration: none;
+      }
     }
     #CompanyDates {
       ${(props) => displayBorders(props.theme)}
@@ -61,27 +67,4 @@ export const StyledExperience = styled.div`
       }
     }
   }
-
-  #technologies {
-    display: flex;
-    flex-wrap: wrap;
-    column-gap: 1rem;
-    p {
-      padding: 0.3rem;
-      border-radius: 16px;
-      background-color: ${(props) => props.theme.colors.solidBg};
-      align-items: center;
-      display: flex;
-      margin-top: 0px;
-    }
-  }
 `;
-
-function displayBorders(theme, color) {
-  if (theme.showBorders) {
-    return css`
-      outline-style: solid;
-      outline-color: ${color ? color : "burlywood"};
-    `;
-  }
-}
