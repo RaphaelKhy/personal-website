@@ -1,7 +1,7 @@
 {
   "name": "personal-website",
   "version": "0.1.0",
-  "homepage": "https://raphaelkhy.github.io/Personal-website/",
+  "homepage": "https://raphaelkhaykin.com/",
   "private": true,
   "dependencies": {
     "@radix-ui/colors": "^0.1.8",
