@@ -11,7 +11,8 @@ export const StyledExperience = styled.div`
   #title {
     display: flex;
     justify-content: center;
-    font-weight: normal;
+    font-weight: 500;
+    ${(props) => displayBorders(props.theme)}
   }
 
   #IvyScope {
@@ -31,16 +32,20 @@ export const StyledExperience = styled.div`
       display: flex;
       flex-direction: row;
       align-items: center;
+      justify-content: start;
       flex-wrap: wrap;
       column-gap: 1rem;
       ${(props) => displayBorders(props.theme)}
       img {
-        height: 32px;
-        width: 32px;
+        height: 36px;
+        width: 36px;
       }
       a {
         color: ${(props) => props.theme.colors.highContrastText};
         text-decoration: none;
+      }
+      h2{
+        font-weight: 500;
       }
     }
     #CompanyDates {
@@ -60,6 +65,7 @@ export const StyledExperience = styled.div`
       flex-direction: column;
       justify-content: center;
       ${(props) => displayBorders(props.theme)}
+          font-weight: 500;
     }
     #ExperienceBody {
       p {

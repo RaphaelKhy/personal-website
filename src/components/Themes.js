@@ -1,4 +1,4 @@
-import { grayDark, gray, blue, blueDark, skyDark } from "@radix-ui/colors";
+import { grayDark, gray, blue, blueDark} from "@radix-ui/colors";
 
 const globalTheme = {
   borders: false,

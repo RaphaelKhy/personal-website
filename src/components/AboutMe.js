@@ -11,7 +11,7 @@ export default function AboutMe() {
         </p>
       </div>
       <div className="aboutMeImage">
-        <img src={require("../static/images/Programmer.jpg")} />
+        <img src={require("../static/images/Profile.jpg")} />
       </div>
     </StyledAboutMe>
   );

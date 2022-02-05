@@ -10,6 +10,7 @@ body{
     margin-top: 0px;
     margin-left: 0px;
     margin-right: 0px;
+    margin-bottom: 0px;
 
     & ::selection {
     background-color: ${(props) => props.theme.colors.select};

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { displayBorders } from "./Global";
 
 export const StyledCard = styled.div`
   display: flex;
@@ -9,6 +10,8 @@ export const StyledCard = styled.div`
   border-radius: 0.6rem;
   padding: 0.5rem;
   max-width: 800px;
+  ${(props) => displayBorders(props.theme, "yellow")}
+
   align-self: center;
   :hover {
     background-color: ${(props) => props.theme.colors.hoveredElementBg};

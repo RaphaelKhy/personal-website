@@ -30,7 +30,7 @@ export default function Projects() {
               <FiExternalLink size={20}></FiExternalLink>
             </a>
           </div>
-          <div id="PortfolioVisualizerImage">
+          <div id="projectImage">
             <a href="https://raphaelkhy.github.io/" target="_blank">
               <img
                 id="image"

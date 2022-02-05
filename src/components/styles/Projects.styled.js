@@ -11,60 +11,42 @@ export const StyledProjects = styled.div`
     display: flex;
     justify-content: center;
     color: ${(props) => props.theme.colors.highContrastText};
-    font-weight: normal;
+    font-weight: 500;
   }
 
   #project {
     display: flex;
     align-self: center;
     flex-direction: column;
-    max-width: 800px;
   }
 
   #projectTitle {
     padding: 0.5rem;
     margin-bottom: 0rem;
     color: ${(props) => props.theme.colors.highContrastText};
+    font-weight: 500;
   }
 
   #projectText {
     ${(props) => displayBorders(props.theme, "silver")}
     color: ${(props) => props.theme.colors.highContrastText};
     width: 50%;
-    #projectDescription {
+    a {
+      color: ${(props) => props.theme.colors.lowContrastText};
+      margin-right: 1rem;
+      :hover {
+        color: ${(props) => props.theme.colors.highContrastText};
+      }
     }
   }
 
-  #technologies {
-    display: flex;
-    flex-wrap: wrap;
-    column-gap: 1rem;
-    p {
-      padding: 0.3rem;
-      border-radius: 16px;
-      background-color: ${(props) => props.theme.colors.solidBg};
-      align-items: center;
-      display: flex;
-      margin-top: 0px;
-    }
-  }
-
-  #PortfolioVisualizerImage {
+  #projectImage {
     ${(props) => displayBorders(props.theme, "blue")}
     width: 50%;
-
     img {
       max-width: 100%;
       max-height: 25rem;
       border-radius: 0.6rem;
-    }
-  }
-
-  a {
-    color: ${(props) => props.theme.colors.lowContrastText};
-    margin-right: 1rem;
-    :hover {
-      color: ${(props) => props.theme.colors.highContrastText};
     }
   }
 `;
