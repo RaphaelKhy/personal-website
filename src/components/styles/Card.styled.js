@@ -14,7 +14,7 @@ export const StyledCard = styled.div`
 
   align-self: center;
   :hover {
-    background-color: ${(props) => props.theme.colors.hoveredElementBg};
-    border-color: ${(props) => props.theme.colors.hoveredElementBorder};
+    /* background-color: ${(props) => props.theme.colors.hoveredElementBg}; */
+    /* border-color: ${(props) => props.theme.colors.hoveredElementBorder}; */
   }
 `;

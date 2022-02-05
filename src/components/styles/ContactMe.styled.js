@@ -38,8 +38,8 @@ export const StyledContactMe = styled.div`
       height: 100px;
       width: 200px;
       h3 {
-        margin-top: 2px;
-        margin-bottom: 2px;
+        margin-top: 0px;
+        margin-bottom: 0px;
       }
     }
     #linkedIn {
@@ -69,12 +69,10 @@ export const StyledContactMe = styled.div`
     color: ${(props) => props.theme.colors.highContrastText};
     text-decoration: none;
     :hover {
-      background-color: ${(props) => props.theme.colors.hoveredElementBg};
       border-color: ${(props) => props.theme.colors.hoveredElementBorder};
+      background-color: ${(props) => props.theme.colors.hoveredElementBg};
+      /* box-shadow: 0 0 0.5rem ${(props) => props.theme.colors.hoveredElementBorder}; */
       #linkedinIcon {
-        color: #2867b2;
-      }
-      #emailIcon {
         color: #2867b2;
       }
     }
