@@ -11,10 +11,10 @@ export const StyledCard = styled.div`
   padding: 0.5rem;
   max-width: 800px;
   ${(props) => displayBorders(props.theme, "yellow")}
-
   align-self: center;
+
   :hover {
     /* background-color: ${(props) => props.theme.colors.hoveredElementBg}; */
-    /* border-color: ${(props) => props.theme.colors.hoveredElementBorder}; */
+    border-color: ${(props) => props.theme.colors.hoveredElementBorder};
   }
 `;

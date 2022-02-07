@@ -1,7 +1,8 @@
 import AboutMe from "./AboutMe";
-import ContactMe from "./ContactMe";
 import Experience from "./Experience";
+import Education from "./Education";
 import Projects from "./Projects";
+import ContactMe from "./ContactMe";
 import { StyledBody } from "./styles/Body.styled";
 
 export default function Body() {
@@ -9,6 +10,7 @@ export default function Body() {
     <StyledBody>
       <AboutMe />
       <Experience />
+      <Education />
       <Projects />
       <ContactMe />
     </StyledBody>

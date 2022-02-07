@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { displayBorders } from "./Global";
 
-export const StyledExperience = styled.div`
+export const StyledEducation = styled.div`
   ${(props) => displayBorders(props.theme)}
   display: flex;
   flex-direction: column;
@@ -21,14 +21,14 @@ export const StyledExperience = styled.div`
     justify-content: center;
   }
 
-  #Company {
+  #Education {
     display: flex;
     flex-direction: column;
     column-gap: 20px;
     ${(props) => displayBorders(props.theme, "black")}
-    width: 30%;
+    width: 100%;
     margin-right: 1rem;
-    #CompanyName {
+    #SchoolName {
       display: flex;
       flex-direction: row;
       align-items: center;
@@ -47,20 +47,20 @@ export const StyledExperience = styled.div`
         font-weight: 500;
       }
     }
-    #CompanyDates {
+    #SchoolDates {
       ${(props) => displayBorders(props.theme)}
       color: ${(props) => props.theme.colors.lowContrastText};
     }
   }
 
   #body {
-    #ExperienceTitle {
+    #major {
       display: flex;
       flex-direction: column;
       justify-content: center;
       ${(props) => displayBorders(props.theme)}
       font-weight: 500;
+      
     }
   }
-
 `;

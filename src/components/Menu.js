@@ -29,6 +29,7 @@ export default function Menu(props) {
     <StyledMenu>
       <a href="/#about" onClick={HandleClick}>About</a>
       <a href="/#experience" onClick={HandleClick}>Experience</a>
+      <a href="/#education" onClick={HandleClick}>Education</a>
       <a href="/#projects" onClick={HandleClick}>Projects</a>
       <a href="/#contact" onClick={HandleClick}>Contact</a>
       <a href={file} target="blank">
