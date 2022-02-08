@@ -27,7 +27,7 @@ export const StyledProjects = styled.div`
     font-weight: 500;
   }
 
-  #projectText {
+  #text {
     ${(props) => displayBorders(props.theme, "silver")}
     color: ${(props) => props.theme.colors.highContrastText};
     width: 50%;

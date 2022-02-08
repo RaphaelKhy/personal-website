@@ -2,19 +2,19 @@ import { createGlobalStyle, css } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
 html{
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 body{
-    background-color: ${(props) => props.theme.colors.AppBg};
-    font-family:  system-ui, sans-serif;
-    margin-top: 0px;
-    margin-left: 0px;
-    margin-right: 0px;
-    margin-bottom: 0px;
+  background-color: ${(props) => props.theme.colors.AppBg};
+  font-family:  system-ui, sans-serif;
+  margin-top: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
 
-    & ::selection {
-    background-color: ${(props) => props.theme.colors.select};
-    }
+  & ::selection {
+  background-color: ${(props) => props.theme.colors.select};
+  } 
 }
 `;
 

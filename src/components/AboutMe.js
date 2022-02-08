@@ -1,4 +1,5 @@
 import { StyledAboutMe } from "./styles/AboutMe.styled";
+import ProfileImage from "../static/images/Profile.jpg";
 
 export default function AboutMe() {
   return (
@@ -11,7 +12,7 @@ export default function AboutMe() {
         </p>
       </div>
       <div className="aboutMeImage">
-        <img src={require("../static/images/Profile.jpg")} />
+        <img src={ProfileImage} />
       </div>
     </StyledAboutMe>
   );

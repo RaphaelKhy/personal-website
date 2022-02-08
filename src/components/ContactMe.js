@@ -7,7 +7,7 @@ export default function ContactMe() {
       <h1 className="title" id="contact">
         Contact
       </h1>
-      <div id="contactBody">
+      <div id="body">
         <div id="email">
           <a href="mailto: raphaelkhaykin@gmail.com">
             <AiOutlineMail id="emailIcon" size={40}></AiOutlineMail>

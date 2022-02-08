@@ -47,14 +47,14 @@ export const StyledExperience = styled.div`
         font-weight: 500;
       }
     }
-    #CompanyDates {
+    #dates {
       ${(props) => displayBorders(props.theme)}
       color: ${(props) => props.theme.colors.lowContrastText};
     }
   }
 
   #body {
-    #ExperienceTitle {
+    #role {
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -62,5 +62,4 @@ export const StyledExperience = styled.div`
       font-weight: 500;
     }
   }
-
 `;

@@ -17,7 +17,7 @@ export const StyledContactMe = styled.div`
     font-weight: 500;
   }
 
-  #contactBody {
+  #body {
     ${(props) => displayBorders(props.theme)}
     display: inline-flex;
     flex-wrap: wrap;
@@ -68,10 +68,12 @@ export const StyledContactMe = styled.div`
     padding: 0.3rem;
     color: ${(props) => props.theme.colors.highContrastText};
     text-decoration: none;
+
     :hover {
       border-color: ${(props) => props.theme.colors.hoveredElementBorder};
       background-color: ${(props) => props.theme.colors.hoveredElementBg};
-      /* box-shadow: 0 0 0.5rem ${(props) => props.theme.colors.hoveredElementBorder}; */
+      /* box-shadow: 0 0 0.5rem ${(props) =>
+        props.theme.colors.hoveredElementBorder}; */
       #linkedinIcon {
         color: #2867b2;
       }

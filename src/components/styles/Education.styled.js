@@ -21,14 +21,14 @@ export const StyledEducation = styled.div`
     justify-content: center;
   }
 
-  #Education {
+  #school {
     display: flex;
     flex-direction: column;
     column-gap: 20px;
     ${(props) => displayBorders(props.theme, "black")}
     width: 100%;
     margin-right: 1rem;
-    #SchoolName {
+    #schoolName {
       display: flex;
       flex-direction: row;
       align-items: center;
@@ -37,7 +37,7 @@ export const StyledEducation = styled.div`
       column-gap: 1rem;
       ${(props) => displayBorders(props.theme)}
       img {
-        height: 36px;
+        width: 36px;
       }
       a {
         color: ${(props) => props.theme.colors.highContrastText};
@@ -47,7 +47,7 @@ export const StyledEducation = styled.div`
         font-weight: 500;
       }
     }
-    #SchoolDates {
+    #dates {
       ${(props) => displayBorders(props.theme)}
       color: ${(props) => props.theme.colors.lowContrastText};
     }
@@ -60,7 +60,6 @@ export const StyledEducation = styled.div`
       justify-content: center;
       ${(props) => displayBorders(props.theme)}
       font-weight: 500;
-      
     }
   }
 `;
