@@ -11,4 +11,8 @@ export const StyledHeader = styled.header`
   position: sticky;
   top: 0;
   background-color: ${(props) => props.theme.colors.AppBg};
+  transition: background-color
+      ${(props) => (props.isTransition ? props.theme.transitionTime : "0s")},
+    border-color
+      ${(props) => (props.isTransition ? props.theme.transitionTime : "0s")};
 `;

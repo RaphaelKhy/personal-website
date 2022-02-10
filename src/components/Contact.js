@@ -1,9 +1,9 @@
 import { StyledContact } from "./styles/Contact.styled";
 import { AiOutlineMail, AiFillLinkedin } from "react-icons/ai";
 
-export default function Contact() {
+export default function Contact(props) {
   return (
-    <StyledContact>
+    <StyledContact isTransition={props.isTransition}>
       <h1 className="title" id="contact">
         Contact
       </h1>

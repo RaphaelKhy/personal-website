@@ -4,17 +4,20 @@ import { StyledCard } from "./styles/Card.styled";
 import TechStack from "./TechStack";
 import PortfolioVisualizerLight from "../static/images/PortfolioVisualizerLight.png";
 
-export default function Projects() {
+export default function Projects(props) {
   return (
-    <StyledProjects id="projects">
+    <StyledProjects id="projects" isTransition={props.isTransition}>
       <h1 className="title">Projects</h1>
       {projectData.map((project) => (
         <div id="project">
           <h2 id="projectTitle">{project.title}</h2>
-          <StyledCard>
+          <StyledCard isTransition={props.isTransition}>
             <div id="text">
               <p>{project.description}</p>
-              <TechStack technologies={project.techStack} />
+              <TechStack
+                technologies={project.techStack}
+                isTransition={props.isTransition}
+              />
               <a href={project.gitHubLink} target="_blank">
                 <FiGithub size={20}></FiGithub>
               </a>

@@ -7,6 +7,8 @@ export const StyledExperience = styled.div`
   flex-direction: column;
   justify-content: center;
   color: ${(props) => props.theme.colors.highContrastText};
+  transition: color
+    ${(props) => (props.isTransition ? props.theme.transitionTime : "0s")};
 
   #title {
     display: flex;
@@ -25,9 +27,9 @@ export const StyledExperience = styled.div`
     display: flex;
     flex-direction: column;
     column-gap: 20px;
-    ${(props) => displayBorders(props.theme, "black")}
     width: 30%;
     margin-right: 1rem;
+    ${(props) => displayBorders(props.theme, "black")}
     #name {
       display: flex;
       flex-direction: row;
@@ -42,6 +44,8 @@ export const StyledExperience = styled.div`
       a {
         color: ${(props) => props.theme.colors.highContrastText};
         text-decoration: none;
+        transition: color
+          ${(props) => (props.isTransition ? props.theme.transitionTime : "0s")};
       }
       h2 {
         font-weight: 500;
@@ -50,6 +54,8 @@ export const StyledExperience = styled.div`
     #dates {
       ${(props) => displayBorders(props.theme)}
       color: ${(props) => props.theme.colors.lowContrastText};
+      transition: color
+        ${(props) => (props.isTransition ? props.theme.transitionTime : "0s")};
     }
   }
 

@@ -3,12 +3,12 @@ import { StyledCard } from "./styles/Card.styled";
 import TechStack from "./TechStack";
 import IvyScopeLogo from "../static/images/IvyScope.png";
 
-export default function Experience() {
+export default function Experience(props) {
   return (
-    <StyledExperience id="experience">
+    <StyledExperience id="experience" isTransition={props.isTransition}>
       <h1 id="title">Experience</h1>
       {experienceData.map((company) => (
-        <StyledCard>
+        <StyledCard isTransition={props.isTransition}>
           <div id="container">
             <div id="company">
               <div id="name">
@@ -26,7 +26,10 @@ export default function Experience() {
               {company.body.map((content) => (
                 <p>{content}</p>
               ))}
-              <TechStack technologies={company.techStack} />
+              <TechStack
+                technologies={company.techStack}
+                isTransition={props.isTransition}
+              />
             </div>
           </div>
         </StyledCard>

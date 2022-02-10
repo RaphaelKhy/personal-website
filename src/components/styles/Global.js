@@ -6,6 +6,8 @@ html{
 }
 body{
   background-color: ${(props) => props.theme.colors.AppBg};
+  transition: background-color ${(props) =>
+    props.isTransition ? props.theme.transitionTime : "0s"};
   font-family:  system-ui, sans-serif;
   margin-top: 0px;
   margin-left: 0px;
@@ -18,7 +20,7 @@ body{
 }
 `;
 
-function displayBorders(theme, color) {
+export function displayBorders(theme, color) {
   if (theme.showBorders) {
     return css`
       outline-style: solid;
@@ -28,4 +30,3 @@ function displayBorders(theme, color) {
 }
 
 export default GlobalStyle;
-export { displayBorders };

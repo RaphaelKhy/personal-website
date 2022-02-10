@@ -10,8 +10,10 @@ export const StyledProjects = styled.div`
     ${(props) => displayBorders(props.theme, "green")}
     display: flex;
     justify-content: center;
-    color: ${(props) => props.theme.colors.highContrastText};
     font-weight: 500;
+    color: ${(props) => props.theme.colors.highContrastText};
+    transition: color
+      ${(props) => (props.isTransition ? props.theme.transitionTime : "0s")};
   }
 
   #project {
@@ -23,16 +25,22 @@ export const StyledProjects = styled.div`
   #projectTitle {
     padding: 0.5rem;
     margin-bottom: 0rem;
-    color: ${(props) => props.theme.colors.highContrastText};
     font-weight: 500;
+    color: ${(props) => props.theme.colors.highContrastText};
+    transition: color
+      ${(props) => (props.isTransition ? props.theme.transitionTime : "0s")};
   }
 
   #text {
     ${(props) => displayBorders(props.theme, "silver")}
-    color: ${(props) => props.theme.colors.highContrastText};
     width: 50%;
+    color: ${(props) => props.theme.colors.highContrastText};
+    transition: color
+      ${(props) => (props.isTransition ? props.theme.transitionTime : "0s")};
     a {
       color: ${(props) => props.theme.colors.lowContrastText};
+      transition: color
+        ${(props) => (props.isTransition ? props.theme.transitionTime : "0s")};
       margin-right: 1rem;
       :hover {
         color: ${(props) => props.theme.colors.highContrastText};

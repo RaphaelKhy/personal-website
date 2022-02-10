@@ -1,9 +1,9 @@
 import { StyledAbout } from "./styles/About.styled";
 import ProfileImage from "../static/images/Profile.jpg";
 
-export default function About() {
+export default function About(props) {
   return (
-    <StyledAbout id="about">
+    <StyledAbout id="about" isTransition={props.isTransition}>
       <div className="aboutMeText">
         <h1>Hi, I'm Raphael Khaykin.</h1>
         <p>

@@ -2,23 +2,24 @@ import styled from "styled-components";
 import { displayBorders } from "./Global";
 
 export const StyledContact = styled.div`
-  ${(props) => displayBorders(props.theme)}
-  color: ${(props) => props.theme.colors.highContrastText};
   display: flex;
   flex-direction: column;
   justify-content: center;
   margin-bottom: 65px;
+  ${(props) => displayBorders(props.theme)}
+  color: ${(props) => props.theme.colors.highContrastText};
+  transition: color
+    ${(props) => (props.isTransition ? props.theme.transitionTime : "0s")};
 
   .title {
-    ${(props) => displayBorders(props.theme)}
     display: flex;
     justify-content: center;
     align-items: center;
     font-weight: 500;
+    ${(props) => displayBorders(props.theme)}
   }
 
   #body {
-    ${(props) => displayBorders(props.theme)}
     display: inline-flex;
     flex-wrap: wrap;
     align-items: center;
@@ -28,27 +29,28 @@ export const StyledContact = styled.div`
     width: 80%;
     max-width: 800px;
     align-self: center;
+    ${(props) => displayBorders(props.theme)}
 
     #email {
-      ${(props) => displayBorders(props.theme)}
       display: inline-flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       height: 100px;
       width: 200px;
+      ${(props) => displayBorders(props.theme)}
       h3 {
         margin-top: 0px;
         margin-bottom: 0px;
       }
     }
     #linkedIn {
-      ${(props) => displayBorders(props.theme)}
       display: flex;
       flex-direction: column;
       align-items: center;
       height: 100px;
       width: 200px;
+      ${(props) => displayBorders(props.theme)}
       h3 {
         margin-top: 2px;
         margin-bottom: 2px;
@@ -63,17 +65,23 @@ export const StyledContact = styled.div`
     height: 100px;
     width: 200px;
     border-style: solid;
-    border-color: ${(props) => props.theme.colors.elementBorder};
     border-radius: 0.3rem;
     padding: 0.3rem;
-    color: ${(props) => props.theme.colors.highContrastText};
     text-decoration: none;
+    color: ${(props) => props.theme.colors.highContrastText};
+    border-color: ${(props) => props.theme.colors.elementBorder};
+    transition: color
+        ${(props) => (props.isTransition ? props.theme.transitionTime : "0s")},
+      border-color
+        ${(props) => (props.isTransition ? props.theme.transitionTime : "0s")};
 
     :hover {
       border-color: ${(props) => props.theme.colors.hoveredElementBorder};
       background-color: ${(props) => props.theme.colors.hoveredElementBg};
-      /* box-shadow: 0 0 0.5rem ${(props) =>
-        props.theme.colors.hoveredElementBorder}; */
+      transition: background-color
+          ${(props) => (props.isTransition ? props.theme.transitionTime : "0s")},
+        border-color
+          ${(props) => (props.isTransition ? props.theme.transitionTime : "0s")};
       #linkedinIcon {
         color: #2867b2;
       }

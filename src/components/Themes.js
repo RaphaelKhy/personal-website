@@ -2,10 +2,12 @@ import { grayDark, gray, blue, blueDark } from "@radix-ui/colors";
 
 const globalTheme = {
   borders: false,
+  transitionTime: "0.5s",
 };
 
 export const darkTheme = {
   showBorders: globalTheme.borders,
+  transitionTime: globalTheme.transitionTime,
   colors: {
     ...grayDark,
     ...blueDark,
@@ -24,6 +26,7 @@ export const darkTheme = {
 
 export const lightTheme = {
   showBorders: globalTheme.borders,
+  transitionTime: globalTheme.transitionTime,
   colors: {
     ...gray,
     ...blue,

@@ -12,6 +12,8 @@ export const StyledMenu = styled.div`
   a {
     color: ${(props) => props.theme.colors.lowContrastText};
     text-decoration: none;
+    transition: color
+      ${(props) => (props.isTransition ? props.theme.transitionTime : "0s")};
     :hover {
       color: ${(props) => props.theme.colors.highContrastText};
     }
@@ -27,8 +29,12 @@ export const StyledMenu = styled.div`
     height: 40px;
     width: 40px;
     color: ${(props) => props.theme.colors.highContrastText};
+    transition: color
+      ${(props) => (props.isTransition ? props.theme.transitionTime : "0s")};
     :hover {
       background-color: ${(props) => props.theme.colors.hoveredElementBg};
+      transition: background-color
+        ${(props) => (props.isTransition ? props.theme.transitionTime : "0s")};
     }
     #svg {
       height: 1rem;

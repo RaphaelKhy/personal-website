@@ -13,6 +13,11 @@ export const StyledCard = styled.div`
   ${(props) => displayBorders(props.theme, "yellow")}
   align-self: center;
 
+  transition: border-color
+      ${(props) => (props.isTransition ? props.theme.transitionTime : "0s")},
+    background-color
+      ${(props) => (props.isTransition ? props.theme.transitionTime : "0s")};
+
   :hover {
     /* background-color: ${(props) => props.theme.colors.hoveredElementBg}; */
     border-color: ${(props) => props.theme.colors.hoveredElementBorder};

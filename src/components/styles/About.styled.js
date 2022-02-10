@@ -9,6 +9,8 @@ export const StyledAbout = styled.div`
   align-self: center;
   max-width: 800px;
   color: ${(props) => props.theme.colors.highContrastText};
+  transition: color
+    ${(props) => (props.isTransition ? props.theme.transitionTime : "0s")};
 
   .aboutMeText {
     padding-right: 1rem;
