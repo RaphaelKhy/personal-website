@@ -1,18 +1,18 @@
-import AboutMe from "./AboutMe";
+import About from "./About";
 import Experience from "./Experience";
 import Education from "./Education";
 import Projects from "./Projects";
-import ContactMe from "./ContactMe";
+import Contact from "./Contact";
 import { StyledBody } from "./styles/Body.styled";
 
 export default function Body() {
   return (
     <StyledBody>
-      <AboutMe />
+      <About />
       <Experience />
       <Education />
       <Projects />
-      <ContactMe />
+      <Contact />
     </StyledBody>
   );
 }

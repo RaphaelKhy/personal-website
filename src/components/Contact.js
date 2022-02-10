@@ -1,9 +1,9 @@
-import { StyledContactMe } from "./styles/ContactMe.styled";
+import { StyledContact } from "./styles/Contact.styled";
 import { AiOutlineMail, AiFillLinkedin } from "react-icons/ai";
 
-export default function ContactMe() {
+export default function Contact() {
   return (
-    <StyledContactMe>
+    <StyledContact>
       <h1 className="title" id="contact">
         Contact
       </h1>
@@ -25,6 +25,6 @@ export default function ContactMe() {
           </a>
         </div>
       </div>
-    </StyledContactMe>
+    </StyledContact>
   );
 }

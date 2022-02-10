@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { displayBorders } from "./Global";
 
-export const StyledContactMe = styled.div`
+export const StyledContact = styled.div`
   ${(props) => displayBorders(props.theme)}
   color: ${(props) => props.theme.colors.highContrastText};
   display: flex;

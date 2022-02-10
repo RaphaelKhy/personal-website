@@ -2,7 +2,7 @@ import { StyledMenu } from "./styles/Menu.styled";
 import { MdOutlineLightMode, MdOutlineDarkMode } from "react-icons/md";
 import { useTheme } from "styled-components";
 import { lightTheme } from "./Themes";
-import file from "../static/Resume.pdf";
+import resume from "../static/Resume.pdf";
 
 export default function Menu(props) {
   const HandleClick = (e) => {
@@ -40,7 +40,7 @@ export default function Menu(props) {
       <a href="/#contact" onClick={HandleClick}>
         Contact
       </a>
-      <a href={file} target="blank">
+      <a href={resume} target="blank">
         Resume
       </a>
       <button onClick={props.handleToggle}>{icon(useTheme())}</button>

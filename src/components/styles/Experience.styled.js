@@ -21,14 +21,14 @@ export const StyledExperience = styled.div`
     justify-content: center;
   }
 
-  #Company {
+  #company {
     display: flex;
     flex-direction: column;
     column-gap: 20px;
     ${(props) => displayBorders(props.theme, "black")}
     width: 30%;
     margin-right: 1rem;
-    #CompanyName {
+    #name {
       display: flex;
       flex-direction: row;
       align-items: center;

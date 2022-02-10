@@ -10,10 +10,14 @@ export default function Experience() {
       {experienceData.map((company) => (
         <StyledCard>
           <div id="container">
-            <div id="Company">
-              <div id="CompanyName">
-                <img src={company.logo} />
-                <h2>{company.name}</h2>
+            <div id="company">
+              <div id="name">
+                <a href={company.link} target="blank">
+                  <img src={company.logo} />
+                </a>
+                <a href={company.link} target="blank">
+                  <h2>{company.name}</h2>
+                </a>
               </div>
               <div id="dates">{company.dates}</div>
             </div>

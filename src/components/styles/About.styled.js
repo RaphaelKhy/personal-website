@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { displayBorders } from "./Global";
 
-export const StyledAboutMe = styled.div`
+export const StyledAbout = styled.div`
   ${(props) => displayBorders(props.theme)}
   margin-top: 1rem;
   display: flex;

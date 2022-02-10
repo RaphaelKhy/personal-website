@@ -1,9 +1,9 @@
-import { StyledAboutMe } from "./styles/AboutMe.styled";
+import { StyledAbout } from "./styles/About.styled";
 import ProfileImage from "../static/images/Profile.jpg";
 
-export default function AboutMe() {
+export default function About() {
   return (
-    <StyledAboutMe id="about">
+    <StyledAbout id="about">
       <div className="aboutMeText">
         <h1>Hi, I'm Raphael Khaykin.</h1>
         <p>
@@ -14,6 +14,6 @@ export default function AboutMe() {
       <div className="aboutMeImage">
         <img src={ProfileImage} />
       </div>
-    </StyledAboutMe>
+    </StyledAbout>
   );
 }
