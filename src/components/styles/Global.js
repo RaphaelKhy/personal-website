@@ -6,13 +6,13 @@ html{
 }
 body{
   background-color: ${(props) => props.theme.colors.AppBg};
-  transition: background-color ${(props) =>
-    props.isTransition ? props.theme.transitionTime : "0s"};
-  font-family:  system-ui, sans-serif;
+  font-family: 'Montserrat', sans-serif;
   margin-top: 0px;
   margin-left: 0px;
   margin-right: 0px;
   margin-bottom: 0px;
+  transition: background-color ${(props) =>
+    props.isTransition ? props.theme.transitionTime : "0s"};
 
   & ::selection {
   background-color: ${(props) => props.theme.colors.select};

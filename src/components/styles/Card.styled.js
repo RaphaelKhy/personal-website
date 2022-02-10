@@ -9,7 +9,7 @@ export const StyledCard = styled.div`
   border-color: ${(props) => props.theme.colors.elementBorder};
   border-radius: 0.6rem;
   padding: 0.5rem;
-  max-width: 800px;
+  max-width: 850px;
   ${(props) => displayBorders(props.theme, "yellow")}
   align-self: center;
 

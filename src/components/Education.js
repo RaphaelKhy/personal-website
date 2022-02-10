@@ -41,7 +41,7 @@ const educationData = [
     dates: "Aug 2019 - Expected May 2023",
     major: "Information Systems Major",
     body: [
-      "Relevant Coursework: Data Structures and Algorithms, Object Oriented Programming, Computer Networks, Database Design, Computer Security, Discrete Mathematics",
+      "Coursework: Data Structures and Algorithms, Object Oriented Programming, Computer Networks, Database Design, Computer Security, Discrete Mathematics",
     ],
   },
 ];

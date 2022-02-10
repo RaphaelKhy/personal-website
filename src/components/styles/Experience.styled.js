@@ -6,6 +6,7 @@ export const StyledExperience = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin-top: 65px;
   color: ${(props) => props.theme.colors.highContrastText};
   transition: color
     ${(props) => (props.isTransition ? props.theme.transitionTime : "0s")};

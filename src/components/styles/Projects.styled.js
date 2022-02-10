@@ -5,6 +5,7 @@ export const StyledProjects = styled.div`
   ${(props) => displayBorders(props.theme, "brown")}
   display: flex;
   flex-direction: column;
+  margin-top: 65px;
 
   .title {
     ${(props) => displayBorders(props.theme, "green")}
@@ -26,6 +27,7 @@ export const StyledProjects = styled.div`
     padding: 0.5rem;
     margin-bottom: 0rem;
     font-weight: 500;
+    margin-top: 0px;
     color: ${(props) => props.theme.colors.highContrastText};
     transition: color
       ${(props) => (props.isTransition ? props.theme.transitionTime : "0s")};

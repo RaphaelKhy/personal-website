@@ -13,9 +13,11 @@ export const StyledTechStack = styled.div`
     padding-left: 12px;
     padding-right: 12px;
     border-radius: 16px;
+    border-style: solid;
+    border-color: ${(props) => props.theme.colors.hoveredElementBorder};
     color: ${(props) => props.theme.colors.highContrastText};
-    background-color: ${(props) => props.theme.colors.solidBg};
-    transition: background-color
+    /* background-color: ${(props) => props.theme.colors.solidBg}; */
+    transition: border-color
         ${(props) => (props.isTransition ? props.theme.transitionTime : "0s")},
       color
         ${(props) => (props.isTransition ? props.theme.transitionTime : "0s")};

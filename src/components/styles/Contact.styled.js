@@ -6,6 +6,7 @@ export const StyledContact = styled.div`
   flex-direction: column;
   justify-content: center;
   margin-bottom: 65px;
+  margin-top: 65px;
   ${(props) => displayBorders(props.theme)}
   color: ${(props) => props.theme.colors.highContrastText};
   transition: color
@@ -37,7 +38,7 @@ export const StyledContact = styled.div`
       justify-content: center;
       align-items: center;
       height: 100px;
-      width: 200px;
+      width: 230px;
       ${(props) => displayBorders(props.theme)}
       h3 {
         margin-top: 0px;
@@ -49,7 +50,7 @@ export const StyledContact = styled.div`
       flex-direction: column;
       align-items: center;
       height: 100px;
-      width: 200px;
+      width: 230px;
       ${(props) => displayBorders(props.theme)}
       h3 {
         margin-top: 2px;
@@ -63,7 +64,7 @@ export const StyledContact = styled.div`
     flex-direction: column;
     align-items: center;
     height: 100px;
-    width: 200px;
+    width: 230px;
     border-style: solid;
     border-radius: 0.3rem;
     padding: 0.3rem;

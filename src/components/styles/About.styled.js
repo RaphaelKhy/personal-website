@@ -7,7 +7,7 @@ export const StyledAbout = styled.div`
   display: flex;
   flex-direction: row;
   align-self: center;
-  max-width: 800px;
+  max-width: 850px;
   color: ${(props) => props.theme.colors.highContrastText};
   transition: color
     ${(props) => (props.isTransition ? props.theme.transitionTime : "0s")};

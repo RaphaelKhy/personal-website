@@ -25,9 +25,9 @@ export const StyledMenu = styled.div`
     justify-content: center;
     border: unset;
     background-color: unset;
-    border-radius: 4px;
-    height: 40px;
-    width: 40px;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
     color: ${(props) => props.theme.colors.highContrastText};
     transition: color
       ${(props) => (props.isTransition ? props.theme.transitionTime : "0s")};

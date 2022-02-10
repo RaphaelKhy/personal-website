@@ -47,4 +47,5 @@ const projectData = [
     gitHubLink: "https://github.com/RaphaelKhy/RaphaelKhy.github.io",
     image: PortfolioVisualizerLight,
   },
+  
 ];
