@@ -21,6 +21,7 @@ export const darkTheme = {
     lowContrastText: grayDark.gray11,
     highContrastText: grayDark.gray12,
     select: blueDark.blue6,
+    logoShadow: blueDark.blue8,
   },
 };
 
@@ -40,5 +41,6 @@ export const lightTheme = {
     lowContrastText: gray.gray11,
     highContrastText: gray.gray12,
     select: blue.blue6,
+    logoShadow: blue.blue6,
   },
 };

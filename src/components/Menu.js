@@ -18,17 +18,17 @@ export default function Menu(props) {
 
   const icon = (theme) => {
     if (theme === lightTheme) {
-      return <MdOutlineLightMode id="svg" />;
-    } else {
       return <MdOutlineDarkMode id="svg" />;
+    } else {
+      return <MdOutlineLightMode id="svg" />;
     }
   };
 
   return (
     <StyledMenu isTransition={props.isTransition}>
-      <a href="/#about" onClick={HandleClick}>
+      {/* <a href="/#about" onClick={HandleClick}>
         About
-      </a>
+      </a> */}
       <a href="/#experience" onClick={HandleClick}>
         Experience
       </a>

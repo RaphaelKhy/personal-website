@@ -13,11 +13,13 @@ export const StyledAbout = styled.div`
     ${(props) => (props.isTransition ? props.theme.transitionTime : "0s")};
 
   .aboutMeText {
-    padding-right: 1rem;
+    padding-right: 0.5rem;
+    max-width: 600px;
   }
   .aboutMeImage {
     display: flex;
-    max-width: 400px;
+    width: 250px;
+    height: 250px;
     img {
       max-width: 100%;
       border-radius: 1rem;
