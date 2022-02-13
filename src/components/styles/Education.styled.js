@@ -25,6 +25,7 @@ export const StyledEducation = styled.div`
   }
 
   #school {
+    padding: 1rem;
     display: flex;
     flex-direction: column;
     column-gap: 20px;

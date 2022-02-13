@@ -25,6 +25,7 @@ export const StyledExperience = styled.div`
   }
 
   #company {
+    padding: 1rem;
     display: flex;
     flex-direction: column;
     column-gap: 20px;

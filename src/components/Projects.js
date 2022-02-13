@@ -1,48 +1,52 @@
-import { StyledProjects } from "./styles/Projects.styled";
 import { FiGithub, FiExternalLink } from "react-icons/fi";
 import { StyledCard } from "./styles/Card.styled";
 import TechStack from "./TechStack";
-import PortfolioVisualizerLight from "../static/images/PortfolioVisualizerLight.png";
+import PortfolioVisualizerDark from "../static/images/Portfolio Visualizer Dark Theme.png";
 import ToolTip from "./ToolTip";
+import { StyledProjects } from "./styles/Projects.styled";
 
 export default function Projects(props) {
   return (
     <StyledProjects id="projects" isTransition={props.isTransition}>
       <h1 className="title">Projects</h1>
       {projectData.map((project) => (
-        <div id="project">
-          <h2 id="projectTitle">{project.title}</h2>
-          <StyledCard isTransition={props.isTransition}>
-            <div id="text">
-              <p>{project.description}</p>
-              <TechStack
-                technologies={project.techStack}
-                isTransition={props.isTransition}
-              />
-              <ToolTip
-                text="GitHub"
-                content={
-                  <a href={project.gitHubLink} target="_blank">
-                    <FiGithub size={20}></FiGithub>
-                  </a>
-                }
-              ></ToolTip>
-              <ToolTip
-                text="External Link"
-                content={
-                  <a href={project.link} target="_blank">
-                    <FiExternalLink size={20}></FiExternalLink>
-                  </a>
-                }
-              ></ToolTip>
-            </div>
+        <StyledCard isTransition={props.isTransition}>
+          <div id="project">
             <div id="projectImage">
-              <a href={project.link} target="_blank">
-                <img src={project.image} />
-              </a>
+              <img src={project.image} />
             </div>
-          </StyledCard>
-        </div>
+            <div id="body">
+              <div id="header">
+                <h2 id="projectTitle">{project.title}</h2>
+                <div id="links">
+                  <ToolTip
+                    text="GitHub"
+                    content={
+                      <a href={project.gitHubLink} target="_blank">
+                        <FiGithub size={20}></FiGithub>
+                      </a>
+                    }
+                  ></ToolTip>
+                  <ToolTip
+                    text="External Link"
+                    content={
+                      <a href={project.link} target="_blank">
+                        <FiExternalLink size={20}></FiExternalLink>
+                      </a>
+                    }
+                  ></ToolTip>
+                </div>
+              </div>
+              <div id="text">
+                <TechStack
+                  technologies={project.techStack}
+                  isTransition={props.isTransition}
+                />
+                <p>{project.description}</p>
+              </div>
+            </div>
+          </div>
+        </StyledCard>
       ))}
     </StyledProjects>
   );
@@ -56,6 +60,6 @@ const projectData = [
     techStack: ["JavaScript", "Bootstrap", "jQuery", "D3.js"],
     link: "https://raphaelkhy.github.io/",
     gitHubLink: "https://github.com/RaphaelKhy/RaphaelKhy.github.io",
-    image: PortfolioVisualizerLight,
+    image: PortfolioVisualizerDark,
   },
 ];
