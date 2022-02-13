@@ -1,11 +1,8 @@
 import { StyledMenu } from "./styles/Menu.styled";
-import { MdOutlineLightMode, MdOutlineDarkMode } from "react-icons/md";
-import { useTheme } from "styled-components";
-import { lightTheme } from "./Themes";
 import resume from "../static/Resume.pdf";
+import ThemeButton from "./ThemeButton";
 
 export default function Menu(props) {
-  
   const HandleClick = (e) => {
     e.preventDefault();
     var target = e.target.getAttribute("href").substring(2);
@@ -14,14 +11,6 @@ export default function Menu(props) {
       left: 0,
       top: location - 65,
     });
-  };
-
-  const icon = (theme) => {
-    if (theme === lightTheme) {
-      return <MdOutlineDarkMode id="svg" />;
-    } else {
-      return <MdOutlineLightMode id="svg" />;
-    }
   };
 
   return (
@@ -41,7 +30,10 @@ export default function Menu(props) {
       <a href={resume} target="blank">
         Resume
       </a>
-      <button onClick={props.handleToggle}>{icon(useTheme())}</button>
+      <ThemeButton
+        handleToggle={props.handleToggle}
+        isTransition={props.isTransition}
+      ></ThemeButton>
     </StyledMenu>
   );
 }

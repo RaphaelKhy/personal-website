@@ -9,30 +9,6 @@ export const StyledMobileMenu = styled.div`
   column-gap: 20px;
   height: 65px;
 
-  button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: unset;
-    background-color: unset;
-    border-radius: 0.5rem;
-    height: 50px;
-    width: 50px;
-    color: ${(props) => props.theme.colors.highContrastText};
-    transition: color
-      ${(props) => (props.isTransition ? props.theme.transitionTime : "0s")};
-    :hover {
-      cursor: pointer;
-      background-color: ${(props) => props.theme.colors.hoveredElementBg};
-      transition: background-color
-        ${(props) => (props.isTransition ? props.theme.transitionTime : "0s")};
-    }
-    #svg {
-      height: 1rem;
-      width: 1rem;
-    }
-  }
-
   .hamburger-react {
     color: ${(props) => props.theme.colors.highContrastText};
   }

@@ -52,8 +52,8 @@ const projectData = [
   {
     title: "Portflio Visualizer",
     description:
-      "A single page web application to create and backtest custom stock portfolios.",
-    techStack: ["JavaScript", "Bootstrap", "D3.js", "jQuery"],
+      "An analytics tool to backtest custom stock portfolios. Provides key performance statistics such as historical return, max drawdown, and percent allocation.",
+    techStack: ["JavaScript", "Bootstrap", "jQuery", "D3.js"],
     link: "https://raphaelkhy.github.io/",
     gitHubLink: "https://github.com/RaphaelKhy/RaphaelKhy.github.io",
     image: PortfolioVisualizerLight,

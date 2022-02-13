@@ -1,21 +1,11 @@
-import { MdOutlineLightMode, MdOutlineDarkMode } from "react-icons/md";
-import { useTheme } from "styled-components";
-import { lightTheme } from "./Themes";
 import resume from "../static/Resume.pdf";
 import { StyledMobileMenu } from "./styles/MobileMenu.styled";
 import React, { useState } from "react";
 import Hamburger from "hamburger-react";
-import { globalTheme } from "./Themes";
+import ThemeButton from "./ThemeButton";
 
 export default function MobileMenu(props) {
   const [isActive, setActive] = useState(false);
-  const icon = (theme) => {
-    if (theme === lightTheme) {
-      return <MdOutlineDarkMode id="svg" />;
-    } else {
-      return <MdOutlineLightMode id="svg" />;
-    }
-  };
 
   const HandleClick = (e) => {
     setActive(false);
@@ -30,7 +20,10 @@ export default function MobileMenu(props) {
 
   return (
     <StyledMobileMenu isTransition={props.isTransition}>
-      <button onClick={props.handleToggle}>{icon(useTheme())}</button>
+      <ThemeButton
+        handleToggle={props.handleToggle}
+        isTransition={props.isTransition}
+      ></ThemeButton>
       <Hamburger
         duration={"0.5"}
         direction={"left"}
