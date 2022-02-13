@@ -16,7 +16,7 @@ export default function Header(props) {
           window.removeEventListener('resize', handleWindowSizeChange);
       }
   }, []);
-  const isMobile = width <= 760;
+  const isMobile = width <= 800;
 
   function getMenu() {
     if (isMobile) {

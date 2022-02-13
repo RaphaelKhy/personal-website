@@ -10,8 +10,10 @@ export default function Contact(props) {
       <div id="body">
         <div id="email">
           <a href="mailto: raphaelkhaykin@gmail.com">
-            <AiOutlineMail id="emailIcon" size={40}></AiOutlineMail>
-            <h3>Email Me At</h3>
+            <div id="title">
+              <AiOutlineMail id="emailIcon" size={30}></AiOutlineMail>
+              <h3>Email Me At</h3>
+            </div>
             raphaelkhaykin@gmail.com
           </a>
         </div>

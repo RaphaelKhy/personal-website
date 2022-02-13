@@ -40,6 +40,15 @@ export const StyledContact = styled.div`
       height: 100px;
       width: 230px;
       ${(props) => displayBorders(props.theme)}
+      a{
+        justify-content: space-around;
+      }
+      #title{
+        display:flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+      }
       h3 {
         margin-top: 0px;
         margin-bottom: 0px;
@@ -52,6 +61,9 @@ export const StyledContact = styled.div`
       height: 100px;
       width: 230px;
       ${(props) => displayBorders(props.theme)}
+      a{
+        justify-content: space-around;
+      }
       h3 {
         margin-top: 2px;
         margin-bottom: 2px;

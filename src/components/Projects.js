@@ -3,6 +3,7 @@ import { FiGithub, FiExternalLink } from "react-icons/fi";
 import { StyledCard } from "./styles/Card.styled";
 import TechStack from "./TechStack";
 import PortfolioVisualizerLight from "../static/images/PortfolioVisualizerLight.png";
+import ToolTip from "./ToolTip";
 
 export default function Projects(props) {
   return (
@@ -18,12 +19,22 @@ export default function Projects(props) {
                 technologies={project.techStack}
                 isTransition={props.isTransition}
               />
-              <a href={project.gitHubLink} target="_blank">
-                <FiGithub size={20}></FiGithub>
-              </a>
-              <a href={project.link} target="_blank">
-                <FiExternalLink size={20}></FiExternalLink>
-              </a>
+              <ToolTip
+                text="GitHub"
+                content={
+                  <a href={project.gitHubLink} target="_blank">
+                    <FiGithub size={20}></FiGithub>
+                  </a>
+                }
+              ></ToolTip>
+              <ToolTip
+                text="External Link"
+                content={
+                  <a href={project.link} target="_blank">
+                    <FiExternalLink size={20}></FiExternalLink>
+                  </a>
+                }
+              ></ToolTip>
             </div>
             <div id="projectImage">
               <a href={project.link} target="_blank">
@@ -47,5 +58,4 @@ const projectData = [
     gitHubLink: "https://github.com/RaphaelKhy/RaphaelKhy.github.io",
     image: PortfolioVisualizerLight,
   },
-  
 ];

@@ -9,22 +9,6 @@ export const StyledMobileMenu = styled.div`
   column-gap: 20px;
   height: 65px;
 
-  /* a {
-    color: ${(props) => props.theme.colors.highContrastText};
-    text-decoration: none;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    transition: color
-      ${(props) => (props.isTransition ? props.theme.transitionTime : "0s")};
-    background: linear-gradient(currentColor 0 0) bottom / var(--d, 0) 2px
-      no-repeat;
-    :hover {
-      color: ${(props) => props.theme.colors.highContrastText};
-      --d: 100%;
-      transition: 0.5s;
-    }
-  } */
-
   button {
     display: flex;
     align-items: center;
