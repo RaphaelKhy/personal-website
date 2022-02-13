@@ -26,9 +26,6 @@ export default function Menu(props) {
 
   return (
     <StyledMenu isTransition={props.isTransition}>
-      {/* <a href="/#about" onClick={HandleClick}>
-        About
-      </a> */}
       <a href="/#experience" onClick={HandleClick}>
         Experience
       </a>
