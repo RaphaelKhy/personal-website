@@ -6,7 +6,7 @@ import Body from "./components/Body";
 import GlobalStyle from "./components/styles/Global";
 
 function App() {
-  const [theme, setTheme] = useState(lightTheme);
+  const [theme, setTheme] = useState(darkTheme);
   const [isTransition, setIsTransition] = useState(false);
   const handleToggle = () => {
     theme === lightTheme ? setTheme(darkTheme) : setTheme(lightTheme);

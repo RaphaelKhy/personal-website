@@ -46,7 +46,7 @@ const experienceData = [
     dates: "Sep 2021 - Present",
     role: "Front-End Developer",
     body: [
-      "Worked with a small team to build a platform for students to schedule and host college tours online.",
+      "Worked at a startup to build a platform for students to schedule and host college tours online.",
       "Developed webpages in React using mobile first design.",
     ],
     techStack: ["React", "Material UI", "SASS", "Heroku"],

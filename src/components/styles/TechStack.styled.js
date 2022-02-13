@@ -6,6 +6,7 @@ export const StyledTechStack = styled.div`
   column-gap: 1rem;
   p {
     display: flex;
+    column-gap: 0.5rem;
     justify-content: center;
     align-items: center;
     margin-top: 0px;
@@ -14,11 +15,16 @@ export const StyledTechStack = styled.div`
     padding-right: 12px;
     border-radius: 16px;
     border-style: solid;
-    border-color: ${(props) => props.theme.colors.hoveredElementBorder};
+    border-color: ${(props) => props.theme.colors.elementBorder};
     color: ${(props) => props.theme.colors.highContrastText};
     transition: border-color
         ${(props) => (props.isTransition ? props.theme.transitionTime : "0s")},
       color
         ${(props) => (props.isTransition ? props.theme.transitionTime : "0s")};
+    svg {
+      color: ${(props) => props.theme.colors.highContrastText};
+      transition: color
+        ${(props) => (props.isTransition ? props.theme.transitionTime : "0s")};
+    }
   }
 `;

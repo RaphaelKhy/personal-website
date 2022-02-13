@@ -44,8 +44,8 @@ export const StyledMenu = styled.div`
         ${(props) => (props.isTransition ? props.theme.transitionTime : "0s")};
     }
     #svg {
-      height: 1rem;
-      width: 1rem;
+      height: 20px;
+      width: 20px;
     }
   }
 `;
