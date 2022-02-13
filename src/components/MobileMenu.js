@@ -4,14 +4,11 @@ import { lightTheme } from "./Themes";
 import resume from "../static/Resume.pdf";
 import { StyledMobileMenu } from "./styles/MobileMenu.styled";
 import React, { useState } from "react";
+import Hamburger from "hamburger-react";
+import { globalTheme } from "./Themes";
 
 export default function MobileMenu(props) {
   const [isActive, setActive] = useState(false);
-
-  const menuToggle = () => {
-    setActive(!isActive);
-  };
-
   const icon = (theme) => {
     if (theme === lightTheme) {
       return <MdOutlineDarkMode id="svg" />;
@@ -34,12 +31,12 @@ export default function MobileMenu(props) {
   return (
     <StyledMobileMenu isTransition={props.isTransition}>
       <button onClick={props.handleToggle}>{icon(useTheme())}</button>
-      <button
-        className={"hamburger " + (isActive ? "is-active" : null)}
-        onClick={menuToggle}
-      >
-        <div class="bar"></div>
-      </button>{" "}
+      <Hamburger
+        duration={"0.5"}
+        direction={"left"}
+        toggled={isActive}
+        toggle={setActive}
+      />
       <nav className={"mobile-nav " + (isActive ? "is-active" : null)}>
         <a href="/#experience" onClick={HandleClick}>
           Experience

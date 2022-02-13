@@ -33,40 +33,8 @@ export const StyledMobileMenu = styled.div`
     }
   }
 
-  .hamburger {
-    position: relative;
-    display: block;
-    cursor: pointer;
-
-    appearance: none;
-    background: none;
-    outline: none;
-    border: none;
-  }
-
-  .hamburger .bar,
-  .hamburger:after,
-  .hamburger:before {
-    content: "";
-    display: block;
-    width: 100%;
-    height: 4px;
-    background-color: ${(props) => props.theme.colors.highContrastText};
-    margin: 8px 0px;
-    transition: 0.4s;
-    
-  }
-
-  .hamburger.is-active:before {
-    transform: rotate(-45deg) translate(-9px, 8px);
-  }
-
-  .hamburger.is-active:after {
-    transform: rotate(45deg) translate(-9px, -8px);
-  }
-
-  .hamburger.is-active .bar {
-    opacity: 0;
+  .hamburger-react {
+    color: ${(props) => props.theme.colors.highContrastText};
   }
 
   .mobile-nav {
