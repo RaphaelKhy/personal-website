@@ -10,7 +10,7 @@ export default function Body(props) {
     <StyledBody>
       <About isTransition={props.isTransition} />
       <Experience isTransition={props.isTransition} />
-      <Education isTransition={props.isTransition} />
+      {/* <Education isTransition={props.isTransition} /> */}
       <Projects isTransition={props.isTransition} />
       <Contact isTransition={props.isTransition} />
     </StyledBody>

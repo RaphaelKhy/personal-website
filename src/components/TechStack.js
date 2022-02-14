@@ -5,6 +5,8 @@ import { DiHeroku } from "react-icons/di";
 import { DiJavascript1 } from "react-icons/di";
 import { BsBootstrap } from "react-icons/bs";
 import { DiJqueryLogo } from "react-icons/di";
+import { SiStyledcomponents } from "react-icons/si";
+
 export default function TechStack(props) {
   return (
     <StyledTechStack isTransition={props.isTransition}>
@@ -25,4 +27,5 @@ const technologyIcons = {
   JavaScript: <DiJavascript1 size={"1rem"}></DiJavascript1>,
   Bootstrap: <BsBootstrap size={"1rem"}></BsBootstrap>,
   jQuery: <DiJqueryLogo size={"1rem"}></DiJqueryLogo>,
+  "Styed Components": <SiStyledcomponents size={"2rem"}></SiStyledcomponents>,
 };

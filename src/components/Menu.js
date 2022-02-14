@@ -18,9 +18,9 @@ export default function Menu(props) {
       <a href="/#experience" onClick={HandleClick}>
         Experience
       </a>
-      <a href="/#education" onClick={HandleClick}>
+      {/* <a href="/#education" onClick={HandleClick}>
         Education
-      </a>
+      </a> */}
       <a href="/#projects" onClick={HandleClick}>
         Projects
       </a>

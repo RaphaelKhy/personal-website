@@ -43,8 +43,8 @@ const experienceData = [
     logo: IvyScopeLogo,
     name: "IvyScope",
     link: "https://ivyscope.io/",
-    dates: "Sep 2021 - Present",
-    role: "Front-End Developer",
+    dates: "Sep 2021 - Jan 2022",
+    role: "Front-End Software Engineer",
     body: [
       "Worked at a startup to build a platform for students to schedule and host college tours online.",
       "Developed webpages in React using mobile first design.",

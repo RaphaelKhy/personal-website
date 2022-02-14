@@ -10,7 +10,7 @@ export default function Projects(props) {
     <StyledProjects id="projects" isTransition={props.isTransition}>
       <h1 className="title">Projects</h1>
       {projectData.map((project) => (
-        <StyledCard isTransition={props.isTransition}>
+        <StyledCard isTransition={props.isTransition} id="projectCard">
           <div id="project">
             <div id="projectImage">
               <img src={project.image} />
@@ -61,5 +61,12 @@ const projectData = [
     link: "https://raphaelkhy.github.io/",
     gitHubLink: "https://github.com/RaphaelKhy/RaphaelKhy.github.io",
     image: PortfolioVisualizerDark,
+  },
+  {
+    title: "Personal Website",
+    description: "A website to share my experience, projects, and interests.",
+    techStack: ["React", "Styed Components", "Tippy.js"],
+    link: "raphaelkhaykin.com",
+    gitHubLink: "https://github.com/RaphaelKhy/Personal-website",
   },
 ];

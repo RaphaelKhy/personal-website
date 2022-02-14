@@ -21,6 +21,7 @@ export const StyledProjects = styled.div`
     display: flex;
     align-self: center;
     flex-direction: column;
+    width: 100%;
   }
 
   #projectImage {
@@ -36,6 +37,7 @@ export const StyledProjects = styled.div`
   }
 
   #header {
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -75,5 +77,9 @@ export const StyledProjects = styled.div`
     color: ${(props) => props.theme.colors.highContrastText};
     transition: color
       ${(props) => (props.isTransition ? props.theme.transitionTime : "0s")};
+  }
+
+  #projectCard{
+    margin-bottom: 50px;
   }
 `;
