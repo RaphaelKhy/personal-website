@@ -8,9 +8,9 @@ import { HandleClick } from "./Menu";
 export default function MobileMenu(props) {
   const [isActive, setActive] = useState(false);
 
-  const onClick = () => {
+  const onClick = (e) => {
     setActive(false);
-    HandleClick();
+    HandleClick(e);
   };
 
   return (
