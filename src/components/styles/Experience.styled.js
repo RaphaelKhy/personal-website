@@ -22,10 +22,10 @@ export const StyledExperience = styled.div`
     display: flex;
     flex-direction: row;
     justify-content: center;
+    padding: 0.5rem;
   }
 
   #company {
-    padding: 1rem;
     display: flex;
     flex-direction: column;
     column-gap: 20px;

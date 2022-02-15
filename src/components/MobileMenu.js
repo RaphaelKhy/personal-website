@@ -3,19 +3,14 @@ import { StyledMobileMenu } from "./styles/MobileMenu.styled";
 import React, { useState } from "react";
 import Hamburger from "hamburger-react";
 import ThemeButton from "./ThemeButton";
+import { HandleClick } from "./Menu";
 
 export default function MobileMenu(props) {
   const [isActive, setActive] = useState(false);
 
-  const HandleClick = (e) => {
+  const onClick = () => {
     setActive(false);
-    e.preventDefault();
-    var target = e.target.getAttribute("href").substring(2);
-    const location = document.getElementById(target).offsetTop;
-    window.scrollTo({
-      left: 0,
-      top: location - 65,
-    });
+    HandleClick();
   };
 
   return (
@@ -31,16 +26,13 @@ export default function MobileMenu(props) {
         toggle={setActive}
       />
       <nav className={"mobile-nav " + (isActive ? "is-active" : null)}>
-        <a href="/#experience" onClick={HandleClick}>
+        <a href="/#experience" onClick={onClick}>
           Experience
         </a>
-        {/* <a href="/#education" onClick={HandleClick}>
-          Education
-        </a> */}
-        <a href="/#projects" onClick={HandleClick}>
+        <a href="/#projects" onClick={onClick}>
           Projects
         </a>
-        <a href="/#contact" onClick={HandleClick}>
+        <a href="/#contact" onClick={onClick}>
           Contact
         </a>
         <a href={resume} target="blank">

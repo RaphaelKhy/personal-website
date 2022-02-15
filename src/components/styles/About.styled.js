@@ -7,7 +7,8 @@ export const StyledAbout = styled.div`
   display: flex;
   flex-direction: row;
   align-self: center;
-  max-width: 850px;
+  max-width: 890px;
+  width: -webkit-fill-available;
   color: ${(props) => props.theme.colors.highContrastText};
   transition: color
     ${(props) => (props.isTransition ? props.theme.transitionTime : "0s")};
@@ -24,6 +25,14 @@ export const StyledAbout = styled.div`
       max-width: 100%;
       border-radius: 1rem;
       object-fit: cover;
+    }
+  }
+  a {
+    color: ${(props) => props.theme.colors.highContrastText};
+    transition: color
+      ${(props) => (props.isTransition ? props.theme.transitionTime : "0s")};
+    :hover {
+      color: ${(props) => props.theme.colors.link};
     }
   }
 `;

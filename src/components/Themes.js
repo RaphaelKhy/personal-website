@@ -11,6 +11,8 @@ export const globalTheme = {
   borders: false,
   transitionTime: "0.5s",
   menuTime: "0.4s",
+  link2: "rgb(17, 236, 229)",
+  link3: "#fabe81",
 };
 
 export const darkTheme = {
@@ -20,6 +22,7 @@ export const darkTheme = {
   colors: {
     ...grayDark,
     ...blueDark,
+    ...blue,
 
     AppBg: grayDark.gray1,
     elementBg: grayDark.gray3,
@@ -29,7 +32,7 @@ export const darkTheme = {
     solidBg: grayDark.gray8,
     lowContrastText: grayDark.gray11,
     highContrastText: grayDark.gray12,
-    select: blueDark.blue6,
+    link: globalTheme.link3,
   },
 };
 
@@ -40,6 +43,7 @@ export const lightTheme = {
   colors: {
     ...gray,
     ...blue,
+    ...blueDark,
 
     AppBg: gray.gray1,
     elementBg: gray.gray3,
@@ -49,7 +53,7 @@ export const lightTheme = {
     solidBg: gray.gray8,
     lowContrastText: gray.gray11,
     highContrastText: gray.gray12,
-    select: blue.blue6,
+    link: globalTheme.link3,
   },
 };
 

@@ -6,6 +6,7 @@ export const StyledProjects = styled.div`
   display: flex;
   flex-direction: column;
   margin-top: 65px;
+  column-gap: 50px;
 
   .title {
     ${(props) => displayBorders(props.theme, "green")}
@@ -15,6 +16,13 @@ export const StyledProjects = styled.div`
     color: ${(props) => props.theme.colors.highContrastText};
     transition: color
       ${(props) => (props.isTransition ? props.theme.transitionTime : "0s")};
+  }
+
+  #projectCards {
+    display: flex;
+    align-self: center;
+    flex-direction: column;
+    row-gap: 50px;
   }
 
   #project {
@@ -37,11 +45,10 @@ export const StyledProjects = styled.div`
   }
 
   #header {
-    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-  } 
+  }
 
   #links {
     a {
@@ -54,8 +61,8 @@ export const StyledProjects = styled.div`
       }
     }
   }
-  
-  #body{
+
+  #body {
     padding-left: 1rem;
     padding-right: 1rem;
   }
@@ -66,20 +73,19 @@ export const StyledProjects = styled.div`
     margin-bottom: 0rem;
     font-weight: 500;
     margin-top: 0px;
-    color: ${(props) => props.theme.colors.highContrastText};
-    transition: color
-      ${(props) => (props.isTransition ? props.theme.transitionTime : "0s")};
+
+    a {
+      color: ${(props) => props.theme.colors.highContrastText};
+      text-decoration: none;
+      transition: color
+        ${(props) => (props.isTransition ? props.theme.transitionTime : "0s")};
+    }
   }
 
   #text {
     ${(props) => displayBorders(props.theme, "silver")}
-    width: 100%;
     color: ${(props) => props.theme.colors.highContrastText};
     transition: color
       ${(props) => (props.isTransition ? props.theme.transitionTime : "0s")};
-  }
-
-  #projectCard{
-    margin-bottom: 50px;
   }
 `;

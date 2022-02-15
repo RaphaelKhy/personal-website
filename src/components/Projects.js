@@ -7,47 +7,53 @@ import { StyledProjects } from "./styles/Projects.styled";
 
 export default function Projects(props) {
   return (
-    <StyledProjects id="projects" isTransition={props.isTransition}>
+    <StyledProjects isTransition={props.isTransition} id="projects">
       <h1 className="title">Projects</h1>
-      {projectData.map((project) => (
-        <StyledCard isTransition={props.isTransition} id="projectCard">
-          <div id="project">
-            <div id="projectImage">
-              <img src={project.image} />
-            </div>
-            <div id="body">
-              <div id="header">
-                <h2 id="projectTitle">{project.title}</h2>
-                <div id="links">
-                  <ToolTip
-                    text="GitHub"
-                    content={
-                      <a href={project.gitHubLink} target="_blank">
-                        <FiGithub size={20}></FiGithub>
-                      </a>
-                    }
-                  ></ToolTip>
-                  <ToolTip
-                    text="External Link"
-                    content={
-                      <a href={project.link} target="_blank">
-                        <FiExternalLink size={20}></FiExternalLink>
-                      </a>
-                    }
-                  ></ToolTip>
+      <div id="projectCards">
+        {projectData.map((project) => (
+          <StyledCard isTransition={props.isTransition}>
+            <div id="project">
+              <div id="projectImage">
+                <img src={project.image} />
+              </div>
+              <div id="body">
+                <div id="header">
+                  <h2 id="projectTitle">
+                    <a href={project.link} target="_blank">
+                      {project.title}
+                    </a>
+                  </h2>
+                  <div id="links">
+                    <ToolTip
+                      text="GitHub"
+                      content={
+                        <a href={project.gitHubLink} target="_blank">
+                          <FiGithub size={20}></FiGithub>
+                        </a>
+                      }
+                    ></ToolTip>
+                    <ToolTip
+                      text="External Link"
+                      content={
+                        <a href={project.link} target="_blank">
+                          <FiExternalLink size={20}></FiExternalLink>
+                        </a>
+                      }
+                    ></ToolTip>
+                  </div>
+                </div>
+                <div id="text">
+                  <TechStack
+                    technologies={project.techStack}
+                    isTransition={props.isTransition}
+                  />
+                  <p>{project.description}</p>
                 </div>
               </div>
-              <div id="text">
-                <TechStack
-                  technologies={project.techStack}
-                  isTransition={props.isTransition}
-                />
-                <p>{project.description}</p>
-              </div>
             </div>
-          </div>
-        </StyledCard>
-      ))}
+          </StyledCard>
+        ))}
+      </div>
     </StyledProjects>
   );
 }
@@ -66,7 +72,7 @@ const projectData = [
     title: "Personal Website",
     description: "A website to share my experience, projects, and interests.",
     techStack: ["React", "Styed Components", "Tippy.js"],
-    link: "raphaelkhaykin.com",
+    link: "https://raphaelkhaykin.com",
     gitHubLink: "https://github.com/RaphaelKhy/Personal-website",
   },
 ];
