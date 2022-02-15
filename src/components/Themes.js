@@ -3,8 +3,6 @@ import {
   gray,
   blue,
   blueDark,
-  sky,
-  slateDark,
 } from "@radix-ui/colors";
 
 export const globalTheme = {
@@ -12,7 +10,8 @@ export const globalTheme = {
   transitionTime: "0.5s",
   menuTime: "0.4s",
   link2: "rgb(17, 236, 229)",
-  link3: "#fabe81",
+  orange: "#fabe81",
+  lightBlue: "rgb(79, 229, 255)",
 };
 
 export const darkTheme = {
@@ -32,7 +31,7 @@ export const darkTheme = {
     solidBg: grayDark.gray8,
     lowContrastText: grayDark.gray11,
     highContrastText: grayDark.gray12,
-    link: globalTheme.link3,
+    link: globalTheme.lightBlue,
   },
 };
 
@@ -53,7 +52,7 @@ export const lightTheme = {
     solidBg: gray.gray8,
     lowContrastText: gray.gray11,
     highContrastText: gray.gray12,
-    link: globalTheme.link3,
+    link: globalTheme.orange,
   },
 };
 

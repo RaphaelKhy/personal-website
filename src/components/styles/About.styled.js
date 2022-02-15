@@ -5,6 +5,7 @@ export const StyledAbout = styled.div`
   ${(props) => displayBorders(props.theme)}
   margin-top: 1rem;
   display: flex;
+  justify-content: space-between;
   flex-direction: row;
   align-self: center;
   max-width: 890px;

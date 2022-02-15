@@ -13,9 +13,9 @@ export default function Projects(props) {
         {projectData.map((project) => (
           <StyledCard isTransition={props.isTransition}>
             <div id="project">
-              <div id="projectImage">
+              <a id="projectImage" href={project.link} target="_blank">
                 <img src={project.image} />
-              </div>
+              </a>
               <div id="body">
                 <div id="header">
                   <h2 id="projectTitle">

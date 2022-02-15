@@ -26,5 +26,16 @@ export const StyledTechStack = styled.div`
       transition: color
         ${(props) => (props.isTransition ? props.theme.transitionTime : "0s")};
     }
+    :hover {
+      transition: color 0.2s ease 0s, transform 0.2s ease 0s,
+        background-position 0.3s ease-out 0s;
+      background-image: linear-gradient(
+        120deg,
+        transparent 0%,
+        transparent 50%,
+        rgb(24, 41, 62) 50%
+      );
+      background-size: 225%;
+    }
   }
 `;
