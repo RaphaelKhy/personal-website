@@ -14,10 +14,6 @@ export const StyledAbout = styled.div`
   transition: color
     ${(props) => (props.isTransition ? props.theme.transitionTime : "0s")};
 
-  .aboutMeText {
-    padding-right: 0.5rem;
-    max-width: 600px;
-  }
   .aboutMeImage {
     display: flex;
     width: 250px;

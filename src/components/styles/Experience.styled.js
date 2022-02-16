@@ -5,7 +5,7 @@ export const StyledExperience = styled.div`
   ${(props) => displayBorders(props.theme)}
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   margin-top: 65px;
   color: ${(props) => props.theme.colors.highContrastText};
   transition: color
@@ -19,6 +19,7 @@ export const StyledExperience = styled.div`
   }
 
   #container {
+    width: -webkit-fill-available;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -29,7 +30,8 @@ export const StyledExperience = styled.div`
     display: flex;
     flex-direction: column;
     column-gap: 20px;
-    width: 30%;
+    width: -webkit-fill-available;
+    max-width: 180px;
     margin-right: 1rem;
     ${(props) => displayBorders(props.theme, "black")}
     #name {
@@ -62,6 +64,7 @@ export const StyledExperience = styled.div`
   }
 
   #body {
+    width: -webkit-fill-available;
     #role {
       display: flex;
       flex-direction: column;
@@ -69,5 +72,12 @@ export const StyledExperience = styled.div`
       ${(props) => displayBorders(props.theme)}
       font-weight: 500;
     }
+  }
+
+  #experienceCards{
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+    row-gap: 50px;
   }
 `;

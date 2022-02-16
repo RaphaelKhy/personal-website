@@ -10,43 +10,24 @@ export const StyledMenu = styled.div`
   height: 65px;
 
   a {
+    display: inline-block;
     color: ${(props) => props.theme.colors.highContrastText};
     text-decoration: none;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    padding-top: 0.1em;
     transition: color
       ${(props) => (props.isTransition ? props.theme.transitionTime : "0s")};
   }
 
-  a {
-    display: block;
-    position: relative;
-    padding: 0.2em 0;
-  }
-
-  a::after {
+  a:after {
     content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
+    width: 0px;
     height: 0.1em;
-    background-color: ${(props) => props.theme.colors.link};
-    opacity: 0;
-    transition: opacity 300ms, transform 300ms;
+    display: block;
+    background: ${(props) => props.theme.colors.link};
+    transition: 300ms;
   }
 
-  a {
-    overflow: hidden;
-  }
-
-  a::after {
-    opacity: 1;
-    transform: translate3d(-100%, 0, 0);
-  }
-
-  a:hover::after,
-  a:focus::after {
-    transform: translate3d(0, 0, 0);
+  a:hover:after {
+    width: 100%;
   }
 `;

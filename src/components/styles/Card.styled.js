@@ -3,7 +3,6 @@ import { displayBorders } from "./Global";
 
 export const StyledCard = styled.div`
   display: flex;
-  justify-content: center;
   background-color: ${(props) => props.theme.colors.elementBg};
   border-style: solid;
   border-color: ${(props) => props.theme.colors.elementBorder};

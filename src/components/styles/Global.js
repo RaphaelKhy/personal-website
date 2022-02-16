@@ -6,7 +6,7 @@ html{
 }
 body{
   background-color: ${(props) => props.theme.colors.AppBg};
-  font-family: 'Ubuntu', 'Montserrat', sans-serif;
+  font-family: 'Space Grotesk', sans-serif;
   margin-top: 0px;
   margin-left: 0px;
   margin-right: 0px;
