@@ -20,7 +20,7 @@ export default function MobileMenu(props) {
         isTransition={props.isTransition}
       ></ThemeButton>
       <Hamburger
-        duration={"0.5"}
+        duration={"0.3"}
         direction={"left"}
         toggled={isActive}
         toggle={setActive}

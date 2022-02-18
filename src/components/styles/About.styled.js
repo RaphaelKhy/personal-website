@@ -14,6 +14,17 @@ export const StyledAbout = styled.div`
   transition: color
     ${(props) => (props.isTransition ? props.theme.transitionTime : "0s")};
 
+  #name {
+    margin-bottom: 0.5rem;
+  }
+
+  #title {
+    color: ${(props) => props.theme.colors.lowContrastText};
+    transition: color
+      ${(props) => (props.isTransition ? props.theme.transitionTime : "0s")};
+    margin-top: 0.5rem;
+  }
+
   .aboutMeImage {
     display: flex;
     width: 250px;

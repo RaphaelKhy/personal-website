@@ -57,7 +57,7 @@ export const StyledProjects = styled.div`
         ${(props) => (props.isTransition ? props.theme.transitionTime : "0s")};
       margin-right: 1rem;
       :hover {
-        color: ${(props) => props.theme.colors.highContrastText};
+        color: ${(props) => props.theme.colors.link};
       }
     }
   }

@@ -5,7 +5,7 @@ export default function Contact(props) {
   return (
     <StyledContact isTransition={props.isTransition}>
       <h1 className="title" id="contact">
-        Contact
+        Feel free to reach out.
       </h1>
       <div id="body">
         <div id="email">
