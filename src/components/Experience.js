@@ -8,7 +8,7 @@ import TikTokLogo from "../static/images/TikTok_logo.png";
 export default function Experience(props) {
   return (
     <StyledExperience id="experience" isTransition={props.isTransition}>
-      <h1 id="title">Experience</h1>
+      <h2 id="title">Where I’ve Worked</h2>
       <div id="experienceCards">
         {experienceData.map((company) => (
           <StyledCard isTransition={props.isTransition}>

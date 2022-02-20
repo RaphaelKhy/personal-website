@@ -6,6 +6,7 @@ import { StyledHeader } from "./styles/Header.styled";
 
 export default function Header(props) {
   const [width, setWidth] = useState(window.innerWidth);
+  const [isMobileMenuActive, setIsMobileMenuActive] = useState(false);
 
   function handleWindowSizeChange() {
     setWidth(window.innerWidth);
@@ -24,6 +25,8 @@ export default function Header(props) {
         <MobileMenu
           handleToggle={props.handleToggle}
           isTransition={props.isTransition}
+          isMobileMenuActive={isMobileMenuActive}
+          setIsMobileMenuActive={setIsMobileMenuActive}
         />
       );
     } else {
@@ -37,9 +40,12 @@ export default function Header(props) {
   }
 
   return (
-    <StyledHeader isTransition={props.isTransition}>
+    <StyledHeader isTransition={props.isTransition} id="header">
       <div id="container">
-        <Logo isTransition={props.isTransition}></Logo>
+        <Logo
+          isTransition={props.isTransition}
+          setIsMobileMenuActive={setIsMobileMenuActive}
+        ></Logo>
         {getMenu()}
       </div>
     </StyledHeader>

@@ -9,7 +9,7 @@ export default function MobileMenu(props) {
   const [isActive, setActive] = useState(false);
 
   const onClick = (e) => {
-    setActive(false);
+    props.setIsMobileMenuActive(false);
     HandleClick(e);
   };
 
@@ -22,10 +22,10 @@ export default function MobileMenu(props) {
       <Hamburger
         duration={"0.3"}
         direction={"left"}
-        toggled={isActive}
-        toggle={setActive}
+        toggled={props.isMobileMenuActive}
+        toggle={props.setIsMobileMenuActive}
       />
-      <nav className={"mobile-nav " + (isActive ? "is-active" : null)}>
+      <nav className={"mobile-nav " + (props.isMobileMenuActive ? "is-active" : null)}>
         <a href="/#experience" onClick={onClick}>
           Experience
         </a>

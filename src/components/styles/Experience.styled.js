@@ -16,6 +16,12 @@ export const StyledExperience = styled.div`
     justify-content: center;
     font-weight: 500;
     ${(props) => displayBorders(props.theme)}
+    max-width: 890px;
+    justify-content: flex-start;
+    width: -webkit-fill-available;
+    align-self: center;
+    display: flex;
+    flex-direction: row;
   }
 
   #container {
@@ -74,8 +80,8 @@ export const StyledExperience = styled.div`
     }
   }
 
-  #experienceCards{
-    display:flex;
+  #experienceCards {
+    display: flex;
     justify-content: center;
     flex-direction: column;
     row-gap: 50px;

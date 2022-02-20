@@ -6,7 +6,7 @@ export const StyledCard = styled.div`
   background-color: ${(props) => props.theme.colors.elementBg};
   border-style: solid;
   border-color: ${(props) => props.theme.colors.elementBorder};
-  border-radius: 0.5rem;
+  border-radius: 16px;
   max-width: 890px;
   width: -webkit-fill-available;
   width: -moz-available; 

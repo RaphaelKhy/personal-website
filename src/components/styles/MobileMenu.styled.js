@@ -22,8 +22,13 @@ export const StyledMobileMenu = styled.div`
     min-height: 100vh;
     display: block;
     background-color: ${(props) => props.theme.colors.AppBg};
+    color: ${(props) => props.theme.colors.highContrastText};
     padding-top: 120px;
-    transition: 0.5s;
+    transition: all 0.3s,
+      background-color
+        ${(props) => (props.isTransition ? props.theme.transitionTime : "0s")},
+      color
+        ${(props) => (props.isTransition ? props.theme.transitionTime : "0s")};
   }
 
   .mobile-nav.is-active {

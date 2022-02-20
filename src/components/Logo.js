@@ -2,6 +2,7 @@ import { StyledLogo } from "./styles/Logo.styled";
 
 export default function Logo(props) {
   const HandleClick = () => {
+    props.setIsMobileMenuActive(false);
     window.scrollTo({ top: 0 });
   };
 

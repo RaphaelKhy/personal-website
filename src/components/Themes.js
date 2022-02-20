@@ -1,9 +1,4 @@
-import {
-  grayDark,
-  gray,
-  blue,
-  blueDark,
-} from "@radix-ui/colors";
+import { grayDark, gray, blue, blueDark, slateDark, sky } from "@radix-ui/colors";
 
 export const globalTheme = {
   borders: false,
@@ -24,6 +19,7 @@ export const darkTheme = {
     ...blue,
 
     AppBg: grayDark.gray1,
+    headerBg: "rgba(22, 22, 22, 0.8)",
     elementBg: grayDark.gray3,
     hoveredElementBg: grayDark.gray4,
     elementBorder: grayDark.gray7,
@@ -32,6 +28,7 @@ export const darkTheme = {
     lowContrastText: grayDark.gray11,
     highContrastText: grayDark.gray12,
     link: globalTheme.lightBlue,
+    title: globalTheme.link2,
   },
 };
 
@@ -45,6 +42,7 @@ export const lightTheme = {
     ...blueDark,
 
     AppBg: gray.gray1,
+    headerBg: "rgba(252,252,252, 0.8)",
     elementBg: gray.gray3,
     hoveredElementBg: gray.gray4,
     elementBorder: gray.gray7,

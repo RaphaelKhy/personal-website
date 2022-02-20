@@ -16,6 +16,12 @@ export const StyledProjects = styled.div`
     color: ${(props) => props.theme.colors.highContrastText};
     transition: color
       ${(props) => (props.isTransition ? props.theme.transitionTime : "0s")};
+    max-width: 890px;
+    justify-content: flex-start;
+    width: -webkit-fill-available;
+    align-self: center;
+    display: flex;
+    flex-direction: row;
   }
 
   #projectCards {
@@ -39,7 +45,8 @@ export const StyledProjects = styled.div`
     img {
       max-width: 100%;
       max-height: 500px;
-      border-radius: 0.5rem;
+      border-top-left-radius: 16px;
+      border-top-right-radius: 16px;
       object-fit: cover;
     }
   }
@@ -83,6 +90,9 @@ export const StyledProjects = styled.div`
   }
 
   #text {
+    p{
+      margin-top: 0.5rem;
+    }
     ${(props) => displayBorders(props.theme, "silver")}
     color: ${(props) => props.theme.colors.highContrastText};
     transition: color
