@@ -36,6 +36,7 @@ export const StyledMobileMenu = styled.div`
   }
 
   .mobile-nav a {
+    font-size: larger;
     display: block;
     width: 100%;
     max-width: 200px;
