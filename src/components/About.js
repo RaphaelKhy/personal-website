@@ -7,7 +7,7 @@ export default function About(props) {
       <div className="aboutMeText">
         <h1 id="name">Hi, I'm Raphael.</h1>
         <p>
-          I'm a software engineer bassed in New York. I love building{" "}
+          I'm a software engineer bassed in New York City. I love building{" "}
           <a href="/#projects" onClick={HandleClick}>
             projects
           </a>{" "}

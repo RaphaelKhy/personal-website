@@ -28,6 +28,7 @@ export const StyledAbout = styled.div`
   }
 
   a {
+    font-weight: 600;
     color: ${(props) => props.theme.colors.brightFont};
     text-decoration-color: ${(props) => props.theme.colors.link};
     transition: color
