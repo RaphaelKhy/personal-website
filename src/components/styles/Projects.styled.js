@@ -7,22 +7,24 @@ export const StyledProjects = styled.div`
   flex-direction: column;
   margin-top: 65px;
   column-gap: 50px;
+  color: ${(props) => props.theme.colors.brightFont};
+    transition: color
+      ${(props) => (props.isTransition ? props.theme.transitionTime : "0s")};
 
   .title {
-    font-family: 'Manrope', sans-serif;
-    ${(props) => displayBorders(props.theme, "green")}
+    font-family: "Manrope", sans-serif;
+    font-size: 1.9rem;
+    margin-bottom: 0.5rem;
     display: flex;
     justify-content: center;
     font-weight: 500;
-    color: ${(props) => props.theme.colors.brightFont};
-    transition: color
-      ${(props) => (props.isTransition ? props.theme.transitionTime : "0s")};
     max-width: 890px;
     justify-content: flex-start;
     width: -webkit-fill-available;
     align-self: center;
     display: flex;
     flex-direction: row;
+    ${(props) => displayBorders(props.theme, "green")}
   }
 
   #projectCards {
@@ -76,6 +78,7 @@ export const StyledProjects = styled.div`
   }
 
   #projectTitle {
+    font-family: "Manrope", sans-serif;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
     margin-bottom: 0rem;
@@ -91,8 +94,14 @@ export const StyledProjects = styled.div`
   }
 
   #text {
-    p{
+    p {
       margin-top: 0.5rem;
+    }
+    .description {
+      font-size: 1.2rem;
+      color: ${(props) => props.theme.colors.darkFont};
+      transition: color
+        ${(props) => (props.isTransition ? props.theme.transitionTime : "0s")};
     }
     ${(props) => displayBorders(props.theme, "silver")}
     color: ${(props) => props.theme.colors.brightFont};

@@ -9,6 +9,8 @@ export const StyledMenu = styled.div`
   column-gap: 20px;
 
   a {
+    font-weight: 400;
+    font-size: 1rem;
     display: inline-block;
     color: ${(props) => props.theme.colors.brightFont};
     text-decoration: none;

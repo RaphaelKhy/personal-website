@@ -18,7 +18,7 @@ export const StyledHeader = styled.header`
     display: flex;
     justify-content: space-between;
     padding: 0px 25px 0px 25px;
-    max-width: 80rem;
+    max-width: 890px;
     margin: auto;
     height: 60px;
   }

@@ -4,13 +4,12 @@ import TechStack from "./TechStack";
 import IvyScopeLogo from "../static/ivyscope.png";
 import TikTokLogo from "../static/tiktok-logo.png";
 
-
 export default function Experience(props) {
   return (
     <StyledExperience id="experience" isTransition={props.isTransition}>
       <h2 id="title">Experience</h2>
       <div id="experienceCards">
-        {experienceData.map((company) => (
+        {experienceList.map((company) => (
           <StyledCard isTransition={props.isTransition}>
             <div id="container">
               <div id="company">
@@ -27,7 +26,7 @@ export default function Experience(props) {
               <div id="body">
                 <h2 id="role">{company.role}</h2>
                 {company.body.map((content) => (
-                  <p>{content}</p>
+                  <p className="description">{content}</p>
                 ))}
                 <TechStack
                   technologies={company.techStack}
@@ -42,7 +41,7 @@ export default function Experience(props) {
   );
 }
 
-const experienceData = [
+const experienceList = [
   {
     logo: IvyScopeLogo,
     name: "IvyScope",
@@ -61,9 +60,7 @@ const experienceData = [
     link: "https://www.tiktok.com/about?lang=en",
     dates: "Jun 2022 - Aug 2022",
     role: "Incoming Software Engineer Intern",
-    body: [
-      "Will be working on the content creation and consumption team.",
-    ],
+    body: ["Will be working on the content creation and consumption team."],
     techStack: [],
   },
 ];

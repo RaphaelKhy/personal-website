@@ -16,7 +16,7 @@ export const StyledTechStack = styled.div`
     border-radius: 0.5rem;
     border-style: solid;
     border-color: ${(props) => props.theme.colors.elementBorder};
-    color: ${(props) => props.theme.colors.brightFont};
+    color: ${(props) => props.theme.colors.darkFont};
     transition: border-color
         ${(props) => (props.isTransition ? props.theme.transitionTime : "0s")},
       color

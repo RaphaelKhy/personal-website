@@ -10,7 +10,7 @@ export default function Projects(props) {
     <StyledProjects isTransition={props.isTransition} id="projects">
       <h2 className="title">Projects</h2>
       <div id="projectCards">
-        {projectData.map((project) => (
+        {projectList.map((project) => (
           <StyledCard isTransition={props.isTransition}>
             <div id="project">
               <a id="projectImage" href={project.link} target="_blank">
@@ -47,7 +47,7 @@ export default function Projects(props) {
                     technologies={project.techStack}
                     isTransition={props.isTransition}
                   />
-                  <p>{project.description}</p>
+                  <p className="description">{project.description}</p>
                 </div>
               </div>
             </div>
@@ -58,7 +58,7 @@ export default function Projects(props) {
   );
 }
 
-const projectData = [
+const projectList = [
   {
     title: "Portflio Visualizer",
     description:

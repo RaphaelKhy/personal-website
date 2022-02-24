@@ -16,6 +16,8 @@ export const StyledLogo = styled.div`
 
   #logo {
     display: inline-block;
+    font-weight: 500;
+    font-size: 1rem;
     color: ${(props) => props.theme.colors.brightFont};
     text-decoration: none;
     padding-top: 0.1em;

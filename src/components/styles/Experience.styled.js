@@ -12,7 +12,9 @@ export const StyledExperience = styled.div`
     ${(props) => (props.isTransition ? props.theme.transitionTime : "0s")};
 
   #title {
-    font-family: 'Manrope', sans-serif;
+    font-family: "Manrope", sans-serif;
+    font-size: 1.9rem;
+    margin-bottom: 0.5rem;
     display: flex;
     justify-content: center;
     font-weight: 500;
@@ -42,6 +44,7 @@ export const StyledExperience = styled.div`
     margin-right: 1rem;
     ${(props) => displayBorders(props.theme, "black")}
     #name {
+      font-family: "Manrope", sans-serif;
       display: flex;
       flex-direction: row;
       align-items: center;
@@ -73,11 +76,18 @@ export const StyledExperience = styled.div`
   #body {
     width: -webkit-fill-available;
     #role {
+      font-family: "Manrope", sans-serif;
       display: flex;
       flex-direction: column;
       justify-content: center;
       ${(props) => displayBorders(props.theme)}
       font-weight: 500;
+    }
+    .description{
+      font-size: 1.2rem;
+      color: ${(props) => props.theme.colors.darkFont};
+      transition: color
+        ${(props) => (props.isTransition ? props.theme.transitionTime : "0s")};
     }
   }
 

@@ -13,6 +13,7 @@ export const StyledContact = styled.div`
     ${(props) => (props.isTransition ? props.theme.transitionTime : "0s")};
 
   .title {
+    font-family: "Manrope", sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -40,11 +41,11 @@ export const StyledContact = styled.div`
       height: 100px;
       width: 230px;
       ${(props) => displayBorders(props.theme)}
-      a{
+      a {
         justify-content: space-around;
       }
-      #title{
-        display:flex;
+      #title {
+        display: flex;
         flex-direction: row;
         justify-content: center;
         align-items: center;
@@ -61,7 +62,7 @@ export const StyledContact = styled.div`
       height: 100px;
       width: 230px;
       ${(props) => displayBorders(props.theme)}
-      a{
+      a {
         justify-content: space-around;
       }
       h3 {
@@ -95,8 +96,11 @@ export const StyledContact = styled.div`
           ${(props) => (props.isTransition ? props.theme.transitionTime : "0s")},
         border-color
           ${(props) => (props.isTransition ? props.theme.transitionTime : "0s")};
+      #emailIcon {
+        color: ${(props) => props.theme.colors.ThemeButton};
+      }
       #linkedinIcon {
-        color: #2867b2;
+        color: ${(props) => props.theme.colors.ThemeButton};
       }
     }
   }

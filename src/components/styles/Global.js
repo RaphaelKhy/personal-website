@@ -15,7 +15,9 @@ body{
     props.isTransition ? props.theme.transitionTime : "0s"};
 
   & ::selection {
-  background-color: ${(props) => props.theme.colors.select};
+    color: ${(props) => props.theme.colors.AppBg};
+    background-color: ${(props) => props.theme.colors.link};
+
   } 
 }
 `;

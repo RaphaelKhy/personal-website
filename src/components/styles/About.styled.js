@@ -36,7 +36,8 @@ export const StyledAbout = styled.div`
       text-decoration-color
         ${(props) => (props.isTransition ? props.theme.transitionTime : "0s")};
     :hover {
-      color: ${(props) => props.theme.colors.link};
+      color: ${(props) => props.theme.colors.AppBg};
+      background-color: ${(props) => props.theme.colors.link};
     }
   }
 `;
