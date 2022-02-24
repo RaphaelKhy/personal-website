@@ -10,12 +10,12 @@ export const StyledThemeButton = styled.div`
     border-radius: 0.5rem;
     height: 50px;
     width: 50px;
-    color: ${(props) => props.theme.colors.highContrastText};
+    color: ${(props) => props.theme.colors.brightFont};
     transition: color
       ${(props) => (props.isTransition ? props.theme.transitionTime : "0s")};
     :hover {
       cursor: pointer;
-      background-color: ${(props) => props.theme.colors.hoveredElementBg};
+      background-color: ${(props) => props.theme.colors.buttonHover};
       transition: background-color
           ${(props) => (props.isTransition ? props.theme.transitionTime : "0s")},
         color

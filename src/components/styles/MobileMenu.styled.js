@@ -7,10 +7,9 @@ export const StyledMobileMenu = styled.div`
   align-items: center;
   flex-wrap: wrap;
   column-gap: 20px;
-  height: 65px;
 
   .hamburger-react {
-    color: ${(props) => props.theme.colors.highContrastText};
+    color: ${(props) => props.theme.colors.brightFont};
   }
 
   .mobile-nav {
@@ -18,11 +17,11 @@ export const StyledMobileMenu = styled.div`
     top: 0;
     left: 100%;
     width: 100%;
-    margin-top: 66px;
+    margin-top: 61px;
     min-height: 100vh;
     display: block;
     background-color: ${(props) => props.theme.colors.AppBg};
-    color: ${(props) => props.theme.colors.highContrastText};
+    color: ${(props) => props.theme.colors.brightFont};
     padding-top: 120px;
     transition: all 0.3s,
       background-color
@@ -43,7 +42,7 @@ export const StyledMobileMenu = styled.div`
     margin: 0 auto 16px;
     text-align: center;
     padding: 12px 16px;
-    color: ${(props) => props.theme.colors.highContrastText};
+    color: ${(props) => props.theme.colors.brightFont};
     text-decoration: none;
   }
 

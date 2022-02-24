@@ -7,11 +7,12 @@ export const StyledExperience = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   margin-top: 65px;
-  color: ${(props) => props.theme.colors.highContrastText};
+  color: ${(props) => props.theme.colors.brightFont};
   transition: color
     ${(props) => (props.isTransition ? props.theme.transitionTime : "0s")};
 
   #title {
+    font-family: 'Manrope', sans-serif;
     display: flex;
     justify-content: center;
     font-weight: 500;
@@ -52,7 +53,7 @@ export const StyledExperience = styled.div`
         height: 36px;
       }
       a {
-        color: ${(props) => props.theme.colors.highContrastText};
+        color: ${(props) => props.theme.colors.brightFont};
         text-decoration: none;
         transition: color
           ${(props) => (props.isTransition ? props.theme.transitionTime : "0s")};
@@ -63,7 +64,7 @@ export const StyledExperience = styled.div`
     }
     #dates {
       ${(props) => displayBorders(props.theme)}
-      color: ${(props) => props.theme.colors.lowContrastText};
+      color: ${(props) => props.theme.colors.darkFont};
       transition: color
         ${(props) => (props.isTransition ? props.theme.transitionTime : "0s")};
     }

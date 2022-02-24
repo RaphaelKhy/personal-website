@@ -16,13 +16,13 @@ export const StyledTechStack = styled.div`
     border-radius: 0.5rem;
     border-style: solid;
     border-color: ${(props) => props.theme.colors.elementBorder};
-    color: ${(props) => props.theme.colors.highContrastText};
+    color: ${(props) => props.theme.colors.brightFont};
     transition: border-color
         ${(props) => (props.isTransition ? props.theme.transitionTime : "0s")},
       color
         ${(props) => (props.isTransition ? props.theme.transitionTime : "0s")};
     svg {
-      color: ${(props) => props.theme.colors.highContrastText};
+      color: ${(props) => props.theme.colors.brightFont};
       transition: color
         ${(props) => (props.isTransition ? props.theme.transitionTime : "0s")};
     }

@@ -9,7 +9,7 @@ export default function Logo(props) {
   return (
     <StyledLogo isTransition={props.isTransition}>
       <div id="logo" onClick={HandleClick}>
-        RK
+        Raphael Khaykin
       </div>
     </StyledLogo>
   );

@@ -7,11 +7,10 @@ export const StyledMenu = styled.div`
   align-items: center;
   flex-wrap: wrap;
   column-gap: 20px;
-  height: 65px;
 
   a {
     display: inline-block;
-    color: ${(props) => props.theme.colors.highContrastText};
+    color: ${(props) => props.theme.colors.brightFont};
     text-decoration: none;
     padding-top: 0.1em;
     transition: color

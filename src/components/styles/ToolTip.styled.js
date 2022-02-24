@@ -10,7 +10,7 @@ export const StyledToolTip = styled(Tippy)`
   height: auto;
   width: auto;
   background-color: ${(props) => props.theme.colors.AppBg};
-  color: ${(props) => props.theme.colors.highContrastText};
+  color: ${(props) => props.theme.colors.brightFont};
   border-color: ${(props) => props.theme.colors.hoveredElementBorder};
   border-style: solid;
   border-width: 1px;

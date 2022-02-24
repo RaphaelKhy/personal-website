@@ -8,7 +8,7 @@ export const StyledContact = styled.div`
   margin-bottom: 65px;
   margin-top: 65px;
   ${(props) => displayBorders(props.theme)}
-  color: ${(props) => props.theme.colors.highContrastText};
+  color: ${(props) => props.theme.colors.brightFont};
   transition: color
     ${(props) => (props.isTransition ? props.theme.transitionTime : "0s")};
 
@@ -81,7 +81,7 @@ export const StyledContact = styled.div`
     border-radius: 0.3rem;
     padding: 0.3rem;
     text-decoration: none;
-    color: ${(props) => props.theme.colors.highContrastText};
+    color: ${(props) => props.theme.colors.brightFont};
     border-color: ${(props) => props.theme.colors.elementBorder};
     transition: color
         ${(props) => (props.isTransition ? props.theme.transitionTime : "0s")},

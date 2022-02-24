@@ -2,43 +2,38 @@ import styled from "styled-components";
 import { displayBorders } from "./Global";
 
 export const StyledAbout = styled.div`
-  ${(props) => displayBorders(props.theme)}
-  margin-top: 1rem;
+  ${(props) => displayBorders(props.theme, "green")}
+  margin-top: 60px;
   display: flex;
   justify-content: space-between;
   flex-direction: row;
   align-self: center;
   max-width: 890px;
   width: -webkit-fill-available;
-  color: ${(props) => props.theme.colors.highContrastText};
+  color: ${(props) => props.theme.colors.brightFont};
   transition: color
     ${(props) => (props.isTransition ? props.theme.transitionTime : "0s")};
 
   #name {
     margin-bottom: 0.5rem;
+    font-family: "Manrope", sans-serif;
+    font-size: 3rem;
   }
 
-  #title {
-    color: ${(props) => props.theme.colors.lowContrastText};
+  p {
+    color: ${(props) => props.theme.colors.darkFont};
     transition: color
       ${(props) => (props.isTransition ? props.theme.transitionTime : "0s")};
-    margin-top: 0.5rem;
+    font-size: 1.3rem;
   }
 
-  .aboutMeImage {
-    display: flex;
-    width: 250px;
-    height: 250px;
-    img {
-      max-width: 100%;
-      border-radius: 1rem;
-      object-fit: cover;
-    }
-  }
   a {
-    color: ${(props) => props.theme.colors.highContrastText};
+    color: ${(props) => props.theme.colors.brightFont};
+    text-decoration-color: ${(props) => props.theme.colors.link};
     transition: color
-      ${(props) => (props.isTransition ? props.theme.transitionTime : "0s")};
+        ${(props) => (props.isTransition ? props.theme.transitionTime : "0s")},
+      text-decoration-color
+        ${(props) => (props.isTransition ? props.theme.transitionTime : "0s")};
     :hover {
       color: ${(props) => props.theme.colors.link};
     }

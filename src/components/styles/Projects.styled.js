@@ -9,11 +9,12 @@ export const StyledProjects = styled.div`
   column-gap: 50px;
 
   .title {
+    font-family: 'Manrope', sans-serif;
     ${(props) => displayBorders(props.theme, "green")}
     display: flex;
     justify-content: center;
     font-weight: 500;
-    color: ${(props) => props.theme.colors.highContrastText};
+    color: ${(props) => props.theme.colors.brightFont};
     transition: color
       ${(props) => (props.isTransition ? props.theme.transitionTime : "0s")};
     max-width: 890px;
@@ -59,7 +60,7 @@ export const StyledProjects = styled.div`
 
   #links {
     a {
-      color: ${(props) => props.theme.colors.lowContrastText};
+      color: ${(props) => props.theme.colors.darkFont};
       transition: color
         ${(props) => (props.isTransition ? props.theme.transitionTime : "0s")};
       margin-right: 1rem;
@@ -82,7 +83,7 @@ export const StyledProjects = styled.div`
     margin-top: 0px;
 
     a {
-      color: ${(props) => props.theme.colors.highContrastText};
+      color: ${(props) => props.theme.colors.brightFont};
       text-decoration: none;
       transition: color
         ${(props) => (props.isTransition ? props.theme.transitionTime : "0s")};
@@ -94,7 +95,7 @@ export const StyledProjects = styled.div`
       margin-top: 0.5rem;
     }
     ${(props) => displayBorders(props.theme, "silver")}
-    color: ${(props) => props.theme.colors.highContrastText};
+    color: ${(props) => props.theme.colors.brightFont};
     transition: color
       ${(props) => (props.isTransition ? props.theme.transitionTime : "0s")};
   }

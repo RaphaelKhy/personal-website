@@ -8,7 +8,7 @@ import { StyledProjects } from "./styles/Projects.styled";
 export default function Projects(props) {
   return (
     <StyledProjects isTransition={props.isTransition} id="projects">
-      <h2 className="title">Things I’ve Built</h2>
+      <h2 className="title">Projects</h2>
       <div id="projectCards">
         {projectData.map((project) => (
           <StyledCard isTransition={props.isTransition}>

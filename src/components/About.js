@@ -5,19 +5,14 @@ export default function About(props) {
   return (
     <StyledAbout id="about" isTransition={props.isTransition}>
       <div className="aboutMeText">
-        <h1 id="name">Raphael Khaykin</h1>
-        <h1 id="title">Software Engineer</h1>
+        <h1 id="name">Hi, I'm Raphael.</h1>
         <p>
-          I'm currently studying Information Systems at Stony Brook University.
-          You can see some of my projects{" "}
+          I'm a software engineer bassed in New York. I love building{" "}
           <a href="/#projects" onClick={HandleClick}>
-            here
+            projects
           </a>{" "}
-          or more on my{" "}
-          <a href="https://github.com/RaphaelKhy" target="blank">
-            GitHub
-          </a>
-          .
+          and learning new technologies. I'm currently studying Information
+          Systems at Stony Brook University.
         </p>
       </div>
     </StyledAbout>

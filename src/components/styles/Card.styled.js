@@ -18,8 +18,4 @@ export const StyledCard = styled.div`
     background-color
       ${(props) => (props.isTransition ? props.theme.transitionTime : "0s")};
 
-  :hover {
-    /* background-color: ${(props) => props.theme.colors.hoveredElementBg}; */
-    /* border-color: ${(props) => props.theme.colors.hoveredElementBorder}; */
-  }
 `;

@@ -7,13 +7,12 @@ export const StyledHeader = styled.header`
   border-bottom: 1px solid ${(props) => props.theme.colors.elementBorder};
   position: sticky;
   top: 0;
-  background-color: ${(props) => props.theme.colors.AppBg};
+  background-color: ${(props) => props.theme.colors.headerBg};
 
   transition: background-color
       ${(props) => (props.isTransition ? props.theme.transitionTime : "0s")},
     border-color
       ${(props) => (props.isTransition ? props.theme.transitionTime : "0s")};
-
 
   #container {
     display: flex;
@@ -21,5 +20,6 @@ export const StyledHeader = styled.header`
     padding: 0px 25px 0px 25px;
     max-width: 80rem;
     margin: auto;
+    height: 60px;
   }
 `;
