@@ -1,7 +1,7 @@
 import { FiGithub, FiExternalLink } from "react-icons/fi";
 import { StyledCard } from "./styles/Card.styled";
 import TechStack from "./TechStack";
-import PortfolioVisualizerDark from "../static/images/Portfolio Visualizer Dark Theme.png";
+import PortfolioVisualizerDark from "../static/portfolio-visualizer.png";
 import ToolTip from "./ToolTip";
 import { StyledProjects } from "./styles/Projects.styled";
 

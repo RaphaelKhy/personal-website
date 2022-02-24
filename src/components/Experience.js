@@ -1,8 +1,8 @@
 import { StyledExperience } from "./styles/Experience.styled";
 import { StyledCard } from "./styles/Card.styled";
 import TechStack from "./TechStack";
-import IvyScopeLogo from "../static/images/IvyScope.png";
-import TikTokLogo from "../static/images/TikTok_logo.png";
+import IvyScopeLogo from "../static/ivyscope.png";
+import TikTokLogo from "../static/tiktok-logo.png";
 
 
 export default function Experience(props) {
