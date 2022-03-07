@@ -6,10 +6,9 @@ export const StyledProjects = styled.div`
   display: flex;
   flex-direction: column;
   margin-top: 65px;
-  column-gap: 50px;
   color: ${(props) => props.theme.colors.brightFont};
-    transition: color
-      ${(props) => (props.isTransition ? props.theme.transitionTime : "0s")};
+  transition: color
+    ${(props) => (props.isTransition ? props.theme.transitionTime : "0s")};
 
   .title {
     font-family: "Manrope", sans-serif;
@@ -31,7 +30,7 @@ export const StyledProjects = styled.div`
     display: flex;
     align-self: center;
     flex-direction: column;
-    row-gap: 50px;
+    row-gap: 30px;
   }
 
   #project {
@@ -98,7 +97,6 @@ export const StyledProjects = styled.div`
       margin-top: 0.5rem;
     }
     .description {
-      font-size: 1.2rem;
       color: ${(props) => props.theme.colors.darkFont};
       transition: color
         ${(props) => (props.isTransition ? props.theme.transitionTime : "0s")};

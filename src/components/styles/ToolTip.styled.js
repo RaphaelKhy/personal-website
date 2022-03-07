@@ -11,7 +11,7 @@ export const StyledToolTip = styled(Tippy)`
   width: auto;
   background-color: ${(props) => props.theme.colors.AppBg};
   color: ${(props) => props.theme.colors.brightFont};
-  border-color: ${(props) => props.theme.colors.hoveredElementBorder};
+  border-color: ${(props) => props.theme.colors.elementBorder};
   border-style: solid;
   border-width: 1px;
   border-radius: 0.5rem;

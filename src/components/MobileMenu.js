@@ -2,7 +2,7 @@ import resume from "../static/resume.pdf";
 import { StyledMobileMenu } from "./styles/MobileMenu.styled";
 import React, { useState } from "react";
 import Hamburger from "hamburger-react";
-import ThemeButton from "./ThemeButton";
+import {ThemeButton} from "./ThemeButton";
 import { HandleClick } from "./Menu";
 
 export default function MobileMenu(props) {

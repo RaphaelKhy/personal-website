@@ -1,6 +1,6 @@
 import { StyledMenu } from "./styles/Menu.styled";
 import resume from "../static/resume.pdf";
-import ThemeButton from "./ThemeButton";
+import {ThemeButton} from "./ThemeButton";
 
 export default function Menu(props) {
   return (

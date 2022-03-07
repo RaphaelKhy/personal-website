@@ -38,7 +38,6 @@ export const StyledExperience = styled.div`
   #company {
     display: flex;
     flex-direction: column;
-    column-gap: 20px;
     width: -webkit-fill-available;
     max-width: 180px;
     margin-right: 1rem;
@@ -66,6 +65,7 @@ export const StyledExperience = styled.div`
       }
     }
     #dates {
+      font-size: 1rem;
       ${(props) => displayBorders(props.theme)}
       color: ${(props) => props.theme.colors.darkFont};
       transition: color
@@ -83,8 +83,7 @@ export const StyledExperience = styled.div`
       ${(props) => displayBorders(props.theme)}
       font-weight: 500;
     }
-    .description{
-      font-size: 1.2rem;
+    .description {
       color: ${(props) => props.theme.colors.darkFont};
       transition: color
         ${(props) => (props.isTransition ? props.theme.transitionTime : "0s")};
@@ -95,6 +94,6 @@ export const StyledExperience = styled.div`
     display: flex;
     justify-content: center;
     flex-direction: column;
-    row-gap: 50px;
+    row-gap: 30px;
   }
 `;

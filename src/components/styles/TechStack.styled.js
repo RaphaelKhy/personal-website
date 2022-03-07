@@ -11,10 +11,11 @@ export const StyledTechStack = styled.div`
     align-items: center;
     margin-top: 0px;
     height: 30px;
-    padding-left: 12px;
-    padding-right: 12px;
-    border-radius: 0.5rem;
+    padding:0px 12px 0px 12px;
+    border-radius: 8px;
+    border-width: 1px;
     border-style: solid;
+    font-size: 1rem;
     border-color: ${(props) => props.theme.colors.elementBorder};
     color: ${(props) => props.theme.colors.darkFont};
     transition: border-color

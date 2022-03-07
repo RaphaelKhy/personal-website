@@ -17,7 +17,7 @@ export const StyledContact = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    font-weight: 500;
+    font-weight: 400;
     ${(props) => displayBorders(props.theme)}
   }
 
@@ -83,19 +83,24 @@ export const StyledContact = styled.div`
     padding: 0.3rem;
     text-decoration: none;
     color: ${(props) => props.theme.colors.brightFont};
-    border-color: ${(props) => props.theme.colors.elementBorder};
+    border: unset;
+    box-shadow: 0 0 0 1px ${(props) => props.theme.colors.elementBorder};
+    background-color: ${(props) => props.theme.colors.elementBg};
     transition: color
         ${(props) => (props.isTransition ? props.theme.transitionTime : "0s")},
-      border-color
+      box-shadow
+        ${(props) => (props.isTransition ? props.theme.transitionTime : "0s")},
+      background-color
         ${(props) => (props.isTransition ? props.theme.transitionTime : "0s")};
 
     :hover {
-      border-color: ${(props) => props.theme.colors.hoveredElementBorder};
-      background-color: ${(props) => props.theme.colors.hoveredElementBg};
+      transform: translate(0, -2px);
+      box-shadow: 0 0 6px 0px ${(props) => props.theme.colors.link};
       transition: background-color
           ${(props) => (props.isTransition ? props.theme.transitionTime : "0s")},
         border-color
-          ${(props) => (props.isTransition ? props.theme.transitionTime : "0s")};
+          ${(props) => (props.isTransition ? props.theme.transitionTime : "0s")},
+        transform 0.2s, box-shadow 0.2s;
       #emailIcon {
         color: ${(props) => props.theme.colors.ThemeButton};
       }

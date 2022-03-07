@@ -20,6 +20,6 @@ export const StyledHeader = styled.header`
     padding: 0px 25px 0px 25px;
     max-width: 890px;
     margin: auto;
-    height: 60px;
+    height: 55px;
   }
 `;

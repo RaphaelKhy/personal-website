@@ -18,6 +18,7 @@ export const StyledAbout = styled.div`
     margin-bottom: 0.5rem;
     font-family: "Manrope", sans-serif;
     font-size: 3rem;
+    font-weight: 600;
   }
 
   p {
@@ -25,6 +26,7 @@ export const StyledAbout = styled.div`
     transition: color
       ${(props) => (props.isTransition ? props.theme.transitionTime : "0s")};
     font-size: 1.3rem;
+    line-height: 2rem;
   }
 
   a {

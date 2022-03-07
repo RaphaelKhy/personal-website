@@ -8,8 +8,8 @@ export const StyledThemeButton = styled.div`
     border: unset;
     background-color: unset;
     border-radius: 0.5rem;
-    height: 50px;
-    width: 50px;
+    height: 47px;
+    width: 47px;
     color: ${(props) => props.theme.colors.brightFont};
     transition: color
       ${(props) => (props.isTransition ? props.theme.transitionTime : "0s")};

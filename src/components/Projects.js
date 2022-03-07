@@ -26,6 +26,7 @@ export default function Projects(props) {
                   <div id="links">
                     <ToolTip
                       text="GitHub"
+                      delay="300"
                       content={
                         <a href={project.gitHubLink} target="_blank">
                           <FiGithub size={20}></FiGithub>
@@ -34,6 +35,7 @@ export default function Projects(props) {
                     ></ToolTip>
                     <ToolTip
                       text="External Link"
+                      delay="300"
                       content={
                         <a href={project.link} target="_blank">
                           <FiExternalLink size={20}></FiExternalLink>

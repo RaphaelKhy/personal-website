@@ -4,6 +4,7 @@ import { displayBorders } from "./Global";
 export const StyledCard = styled.div`
   display: flex;
   background-color: ${(props) => props.theme.colors.elementBg};
+  border-width: 1px;
   border-style: solid;
   border-color: ${(props) => props.theme.colors.elementBorder};
   border-radius: 16px;

@@ -2,8 +2,11 @@ import { StyledThemeButton } from "./styles/ThemeButton.styled";
 import { MdOutlineLightMode, MdOutlineDarkMode } from "react-icons/md";
 import { useTheme } from "styled-components";
 import { lightTheme } from "./Themes";
+import React from "react";
+import ToolTip from "./ToolTip";
 
-export default function ThemeButton(props) {
+export const ThemeButton = (props) => {
+  const theme = useTheme();
   const icon = (theme) => {
     if (theme === lightTheme) {
       return <MdOutlineDarkMode id="svg" />;
@@ -13,10 +16,16 @@ export default function ThemeButton(props) {
   };
 
   return (
-    <StyledThemeButton isTransition={props.isTransition}>
-      <button id="button" onClick={props.handleToggle}>
-        {icon(useTheme())}
-      </button>
-    </StyledThemeButton>
+    <ToolTip
+      text={theme === lightTheme ? "Activate dark mode" : "Activate light mode"}
+      delay="0"
+      content={
+        <StyledThemeButton isTransition={props.isTransition}>
+          <button id="button" onClick={props.handleToggle}>
+            {icon(useTheme())}
+          </button>
+        </StyledThemeButton>
+      }
+    ></ToolTip>
   );
-}
+};

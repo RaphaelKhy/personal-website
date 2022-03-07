@@ -9,7 +9,7 @@ export default function ToolTip(props) {
       content={props.text}
       placement="bottom"
       allowHTML={true}
-      delay={500}
+      delay={props.delay}
     >
       {props.content}
     </StyledToolTip>

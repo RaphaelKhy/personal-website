@@ -17,7 +17,7 @@ export const StyledMobileMenu = styled.div`
     top: 0;
     left: 100%;
     width: 100%;
-    margin-top: 61px;
+    margin-top: 56px;
     min-height: 100vh;
     display: block;
     background-color: ${(props) => props.theme.colors.AppBg};
