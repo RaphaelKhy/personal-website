@@ -22,8 +22,8 @@ export const StyledThemeButton = styled.div`
           ${(props) => (props.isTransition ? props.theme.transitionTime : "0s")};
     }
     #svg {
-      height: 20px;
-      width: 20px;
+      height: 25px;
+      width: 25px;
     }
   }
 `;

@@ -95,7 +95,17 @@ export const StyledContact = styled.div`
 
     :hover {
       transform: translate(0, -2px);
-      box-shadow: 0 0 6px 0px ${(props) => props.theme.colors.link};
+      box-shadow: 0px 0px 0px 1px ${(props) => props.theme.colors.elementBorder},
+        0px 0.5px 0.5px rgba(0, 0, 0, 0.015),
+        0px 1.1px 1.1px rgba(0, 0, 0, 0.022),
+        0px 1.8px 1.9px rgba(0, 0, 0, 0.027),
+        0px 2.7px 2.9px rgba(0, 0, 0, 0.031),
+        0px 3.9px 4.1px rgba(0, 0, 0, 0.035),
+        0px 5.5px 5.8px rgba(0, 0, 0, 0.039),
+        0px 7.8px 8.3px rgba(0, 0, 0, 0.043),
+        0px 11.3px 12px rgba(0, 0, 0, 0.048),
+        0px 17.4px 18.6px rgba(0, 0, 0, 0.055),
+        0px 31px 33px rgba(0, 0, 0, 0.07);
       transition: background-color
           ${(props) => (props.isTransition ? props.theme.transitionTime : "0s")},
         border-color

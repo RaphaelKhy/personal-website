@@ -27,7 +27,7 @@ export const lightTheme = {
   transitionTime: globalTheme.transitionTime,
   menuTime: globalTheme.menuTime,
   colors: {
-    AppBg: "#f5faff",
+    AppBg: "#f6f8fa",
     headerBg: "#ffffff",
     elementBg: "#ffffff",
     elementBorder: "#ccc",

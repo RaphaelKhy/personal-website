@@ -10,6 +10,11 @@ export const StyledMobileMenu = styled.div`
 
   .hamburger-react {
     color: ${(props) => props.theme.colors.brightFont};
+    transition: all 0s;
+  }
+
+  #hamburger{
+    transition: all 0s;
   }
 
   .mobile-nav {

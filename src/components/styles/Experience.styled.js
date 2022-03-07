@@ -32,7 +32,6 @@ export const StyledExperience = styled.div`
     display: flex;
     flex-direction: row;
     justify-content: center;
-    padding: 0.5rem;
   }
 
   #company {
@@ -40,7 +39,8 @@ export const StyledExperience = styled.div`
     flex-direction: column;
     width: -webkit-fill-available;
     max-width: 180px;
-    margin-right: 1rem;
+    margin-right: 8px;
+    margin-left: 16px;
     ${(props) => displayBorders(props.theme, "black")}
     #name {
       font-family: "Manrope", sans-serif;
