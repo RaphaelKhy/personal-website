@@ -10,6 +10,7 @@ export const StyledTechStack = styled.div`
     justify-content: center;
     align-items: center;
     margin-top: 0px;
+    margin-bottom: 8px;
     height: 30px;
     padding:0px 12px 0px 12px;
     border-radius: 8px;

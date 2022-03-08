@@ -14,7 +14,7 @@ export const StyledExperience = styled.div`
   #title {
     font-family: "Manrope", sans-serif;
     font-size: 1.9rem;
-    margin-bottom: 0.5rem;
+    margin: 15px 0px 15px 0px;
     display: flex;
     justify-content: center;
     font-weight: 500;
@@ -23,8 +23,26 @@ export const StyledExperience = styled.div`
     justify-content: flex-start;
     width: -webkit-fill-available;
     align-self: center;
+    align-items: center;
     display: flex;
     flex-direction: row;
+    &:after {
+      content: "";
+      display: block;
+      position: relative;
+      width: 300px;
+      height: 1px;
+      margin-left: 15px;
+      background: linear-gradient(
+        to left,
+        ${(props) => props.theme.colors.AppBg},
+        25%,
+        ${(props) => props.theme.colors.darkFont}
+      );
+      transition: all
+        ${(props) => (props.isTransition ? props.theme.transitionTime : "0s")};
+      z-index: -2;
+    }
   }
 
   #container {

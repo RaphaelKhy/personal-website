@@ -19,7 +19,6 @@ export const ThemeButton = (props) => {
     <ToolTip
       text={theme === lightTheme ? "Activate dark mode" : "Activate light mode"}
       delay="0"
-      placement="bottom-end"
       content={
         <StyledThemeButton isTransition={props.isTransition}>
           <button id="button" onClick={props.handleToggle}>

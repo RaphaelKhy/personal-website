@@ -7,7 +7,7 @@ export default function ToolTip(props) {
       arrow={false}
       animation="shift-away"
       content={props.text}
-      placement={props.placement}
+      placement={"bottom"}
       allowHTML={true}
       delay={props.delay}
     >

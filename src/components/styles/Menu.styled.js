@@ -22,7 +22,7 @@ export const StyledMenu = styled.div`
   a:after {
     content: "";
     width: 0px;
-    height: 0.1em;
+    height: 1.5px;
     display: block;
     background: ${(props) => props.theme.colors.link};
     transition: 300ms;
