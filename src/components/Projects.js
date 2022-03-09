@@ -4,6 +4,7 @@ import TechStack from "./TechStack";
 import PortfolioVisualizerDark from "../static/portfolio-visualizer.png";
 import ToolTip from "./ToolTip";
 import { StyledProjects } from "./styles/Projects.styled";
+import { motion } from "framer-motion";
 
 export default function Projects({ isTransition }) {
   return (
@@ -11,7 +12,14 @@ export default function Projects({ isTransition }) {
       <h2 className="title">Projects</h2>
       <div id="projectCards">
         {projectList.map((project) => (
-          <StyledCard isTransition={isTransition}>
+          <StyledCard
+            isTransition={isTransition}
+            as={motion.div}
+            initial={{ x: 50, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+          >
             <div id="project">
               <a id="projectImage" href={project.link} target="_blank">
                 <img src={project.image} />
@@ -62,7 +70,7 @@ export default function Projects({ isTransition }) {
 
 const projectList = [
   {
-    title: "Portflio Visualizer",
+    title: "Portfolio Visualizer",
     description:
       "An analytics tool to backtest custom stock portfolios. Provides key performance statistics such as historical return, max drawdown, and percent allocation.",
     techStack: ["JavaScript", "Bootstrap", "jQuery", "D3.js"],
