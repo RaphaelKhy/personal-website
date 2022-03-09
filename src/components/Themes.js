@@ -1,6 +1,6 @@
 export const globalTheme = {
   borders: false,
-  transitionTime: "0.4s",
+  transitionTime: "0.3s",
   menuTime: "0.4s",
 };
 

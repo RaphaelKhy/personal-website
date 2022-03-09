@@ -1,6 +1,7 @@
 import { StyledExperienceMobile } from "./styles/ExperienceMobile.styled.";
 import { StyledCard } from "./styles/Card.styled";
 import TechStack from "./TechStack";
+import { motion } from "framer-motion";
 
 export default function ExperienceMobile({ isTransition }) {
   return (
@@ -8,10 +9,17 @@ export default function ExperienceMobile({ isTransition }) {
       <h2 id="title">Experience</h2>
       <div id="experienceCards">
         {experienceList.map((company) => (
-          <StyledCard isTransition={isTransition}>
+          <StyledCard
+            isTransition={isTransition}
+            as={motion.div}
+            initial={{ x: 50, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            transition={{ duration: 0.5, delay: 0.25 }}
+            viewport={{ once: true }}
+          >
             <div id="container">
               <h2 id="role">
-                {company.role}
+                <div>{company.role}</div>
                 <div id="at-sign">&nbsp;@&nbsp;</div>
                 <a id="company" href={company.link} target="blank">
                   {company.name}

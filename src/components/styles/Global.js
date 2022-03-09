@@ -3,7 +3,9 @@ import { createGlobalStyle, css } from "styled-components";
 const GlobalStyle = createGlobalStyle`
 html{
   scroll-behavior: smooth;
+  overflow-x: clip;
 }
+
 body{
   background-color: ${(props) => props.theme.colors.AppBg};
   font-family: 'Inter', serif;
@@ -13,6 +15,7 @@ body{
   margin-bottom: 0px;
   transition: background-color ${(props) =>
     props.isTransition ? props.theme.transitionTime : "0s"};
+  overflow-x: clip;
 
   & ::selection {
     color: ${(props) => props.theme.colors.AppBg};

@@ -9,6 +9,7 @@ export const StyledHeader = styled.header`
   top: 0;
   background-color: ${(props) => props.theme.colors.headerBg};
   z-index: 2;
+  overflow: unset;
 
   transition: background-color
       ${(props) => (props.isTransition ? props.theme.transitionTime : "0s")},
