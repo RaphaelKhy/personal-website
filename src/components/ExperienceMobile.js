@@ -2,13 +2,13 @@ import { StyledExperienceMobile } from "./styles/ExperienceMobile.styled.";
 import { StyledCard } from "./styles/Card.styled";
 import TechStack from "./TechStack";
 
-export default function ExperienceMobile(props) {
+export default function ExperienceMobile({ isTransition }) {
   return (
-    <StyledExperienceMobile id="experience" isTransition={props.isTransition}>
+    <StyledExperienceMobile id="experience" isTransition={isTransition}>
       <h2 id="title">Experience</h2>
       <div id="experienceCards">
         {experienceList.map((company) => (
-          <StyledCard isTransition={props.isTransition}>
+          <StyledCard isTransition={isTransition}>
             <div id="container">
               <h2 id="role">
                 {company.role}
@@ -25,7 +25,7 @@ export default function ExperienceMobile(props) {
               </div>
               <TechStack
                 technologies={company.techStack}
-                isTransition={props.isTransition}
+                isTransition={isTransition}
               />
             </div>
           </StyledCard>
@@ -52,7 +52,7 @@ const experienceList = [
     link: "https://www.tiktok.com/about?lang=en",
     dates: "June 2022 - August 2022",
     role: "Incoming Software Engineer Intern",
-    body: ["Will be working on the content creation and consumption team."],
+    body: [],
     techStack: [],
   },
 ];

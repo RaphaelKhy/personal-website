@@ -56,6 +56,7 @@ export const StyledExperienceMobile = styled.div`
 
   #role {
     display: flex;
+    flex-wrap: wrap;
     padding-top: 20px;
     padding-bottom: 2px;
     margin: unset;

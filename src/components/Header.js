@@ -4,7 +4,7 @@ import Menu from "./Menu";
 import MobileMenu from "./MobileMenu";
 import { StyledHeader } from "./styles/Header.styled";
 
-export default function Header(props) {
+export default function Header({ handleToggle, isTransition }) {
   const [width, setWidth] = useState(window.innerWidth);
   const [isMobileMenuActive, setIsMobileMenuActive] = useState(false);
 
@@ -23,27 +23,22 @@ export default function Header(props) {
     if (isMobile) {
       return (
         <MobileMenu
-          handleToggle={props.handleToggle}
-          isTransition={props.isTransition}
+          handleToggle={handleToggle}
+          isTransition={isTransition}
           isMobileMenuActive={isMobileMenuActive}
           setIsMobileMenuActive={setIsMobileMenuActive}
         />
       );
     } else {
-      return (
-        <Menu
-          handleToggle={props.handleToggle}
-          isTransition={props.isTransition}
-        />
-      );
+      return <Menu handleToggle={handleToggle} isTransition={isTransition} />;
     }
   }
 
   return (
-    <StyledHeader isTransition={props.isTransition} id="header">
+    <StyledHeader isTransition={isTransition} id="header">
       <div id="container">
         <Logo
-          isTransition={props.isTransition}
+          isTransition={isTransition}
           setIsMobileMenuActive={setIsMobileMenuActive}
         ></Logo>
         {getMenu()}

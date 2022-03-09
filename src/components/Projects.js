@@ -5,13 +5,13 @@ import PortfolioVisualizerDark from "../static/portfolio-visualizer.png";
 import ToolTip from "./ToolTip";
 import { StyledProjects } from "./styles/Projects.styled";
 
-export default function Projects(props) {
+export default function Projects({ isTransition }) {
   return (
-    <StyledProjects isTransition={props.isTransition} id="projects">
+    <StyledProjects isTransition={isTransition} id="projects">
       <h2 className="title">Projects</h2>
       <div id="projectCards">
         {projectList.map((project) => (
-          <StyledCard isTransition={props.isTransition}>
+          <StyledCard isTransition={isTransition}>
             <div id="project">
               <a id="projectImage" href={project.link} target="_blank">
                 <img src={project.image} />
@@ -47,7 +47,7 @@ export default function Projects(props) {
                 <div id="text">
                   <TechStack
                     technologies={project.techStack}
-                    isTransition={props.isTransition}
+                    isTransition={isTransition}
                   />
                   <p className="description">{project.description}</p>
                 </div>

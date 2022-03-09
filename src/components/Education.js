@@ -2,12 +2,12 @@ import { StyledEducation } from "./styles/Education.styled";
 import { StyledCard } from "./styles/Card.styled";
 import IvyScopeLogo from "../static/images/sbu_logo.png";
 
-export default function Education(props) {
+export default function Education({ isTransition }) {
   return (
-    <StyledEducation id="education" isTransition={props.isTransition}>
+    <StyledEducation id="education" isTransition={isTransition}>
       <h1 id="title">Education</h1>
       {educationData.map((school, index) => (
-        <StyledCard key={index} isTransition={props.isTransition}>
+        <StyledCard key={index} isTransition={isTransition}>
           <div id="container">
             <div id="school">
               <div id="schoolName">

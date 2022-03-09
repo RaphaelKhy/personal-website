@@ -1,9 +1,9 @@
 import { StyledAbout } from "./styles/About.styled";
 import { HandleClick } from "./Menu";
 
-export default function About(props) {
+export default function About({ isTransition }) {
   return (
-    <StyledAbout id="about" isTransition={props.isTransition}>
+    <StyledAbout id="about" isTransition={isTransition}>
       <div className="aboutMeText">
         <h1 id="name">Hi, I'm Raphael.</h1>
         <p>

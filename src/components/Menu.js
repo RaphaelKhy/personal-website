@@ -1,10 +1,10 @@
 import { StyledMenu } from "./styles/Menu.styled";
 import resume from "../static/resume.pdf";
-import {ThemeButton} from "./ThemeButton";
+import { ThemeButton } from "./ThemeButton";
 
-export default function Menu(props) {
+export default function Menu({ isTransition, handleToggle }) {
   return (
-    <StyledMenu isTransition={props.isTransition}>
+    <StyledMenu isTransition={isTransition}>
       <a href="/#experience" onClick={HandleClick}>
         Experience
       </a>
@@ -18,8 +18,8 @@ export default function Menu(props) {
         Resume
       </a>
       <ThemeButton
-        handleToggle={props.handleToggle}
-        isTransition={props.isTransition}
+        handleToggle={handleToggle}
+        isTransition={isTransition}
       ></ThemeButton>
     </StyledMenu>
   );
