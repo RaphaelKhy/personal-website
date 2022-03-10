@@ -11,8 +11,8 @@ export default function Contact(props) {
       <div id="body">
         <motion.div
           initial={{ x: 50, opacity: 0 }}
-          whileInView={{ x: 0, opacity: 1 }}
-          transition={{ duration: 0.5 }}
+            transition={{ duration: 0.5}}
+            whileInView={{ x: 0, opacity: 1 }}
           viewport={{ once: true }}
         >
           <div id="button">
@@ -27,7 +27,7 @@ export default function Contact(props) {
           <motion.div
             initial={{ x: 50, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 0.5}}
             viewport={{ once: true }}
           >
             <a
@@ -43,7 +43,7 @@ export default function Contact(props) {
           <motion.div
             initial={{ x: 50, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 0.5}}
             viewport={{ once: true }}
           >
             <a href="https://github.com/RaphaelKhy" target="_blank">
