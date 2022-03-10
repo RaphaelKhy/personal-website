@@ -8,13 +8,14 @@ export default function ExperienceMobile({ isTransition }) {
     <StyledExperienceMobile id="experience" isTransition={isTransition}>
       <h2 id="title">Experience</h2>
       <div id="experienceCards">
-        {experienceList.map((company) => (
+        {experienceList.map((company, index) => (
           <StyledCard
             isTransition={isTransition}
+            key={index}
             as={motion.div}
             initial={{ x: 50, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
-            transition={{ duration: 0.5}}
+            transition={{ duration: 0.5 }}
             viewport={{ once: true }}
           >
             <div id="container">
@@ -27,8 +28,10 @@ export default function ExperienceMobile({ isTransition }) {
               </h2>
               <div id="body">
                 <div id="dates">{company.dates}</div>
-                {company.body.map((content) => (
-                  <li className="description">{content}</li>
+                {company.body.map((content, i) => (
+                  <li key={i} className="description">
+                    {content}
+                  </li>
                 ))}
               </div>
               <TechStack

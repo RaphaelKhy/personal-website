@@ -3,6 +3,11 @@ import { AiOutlineMail, AiFillLinkedin, AiOutlineGithub } from "react-icons/ai";
 import { motion } from "framer-motion";
 
 export default function Contact(props) {
+  const buttonVariants = {
+    hidden: { x: 50, opacity: 0 },
+    visible: { x: 0, opacity: 1, transition: { duration: 0.5 } },
+  };
+
   return (
     <StyledContact isTransition={props.isTransition}>
       <h1 className="title" id="contact">
@@ -10,9 +15,9 @@ export default function Contact(props) {
       </h1>
       <div id="body">
         <motion.div
-          initial={{ x: 50, opacity: 0 }}
-            transition={{ duration: 0.5}}
-            whileInView={{ x: 0, opacity: 1 }}
+          variants={buttonVariants}
+          initial="hidden"
+          whileInView="visible"
           viewport={{ once: true }}
         >
           <div id="button">
@@ -25,9 +30,9 @@ export default function Contact(props) {
 
         <div id="button">
           <motion.div
-            initial={{ x: 50, opacity: 0 }}
-            whileInView={{ x: 0, opacity: 1 }}
-            transition={{ duration: 0.5}}
+            variants={buttonVariants}
+            initial="hidden"
+            whileInView="visible"
             viewport={{ once: true }}
           >
             <a
@@ -41,9 +46,9 @@ export default function Contact(props) {
         </div>
         <div id="button">
           <motion.div
-            initial={{ x: 50, opacity: 0 }}
-            whileInView={{ x: 0, opacity: 1 }}
-            transition={{ duration: 0.5}}
+            variants={buttonVariants}
+            initial="hidden"
+            whileInView="visible"
             viewport={{ once: true }}
           >
             <a href="https://github.com/RaphaelKhy" target="_blank">

@@ -11,13 +11,14 @@ export default function Projects({ isTransition }) {
     <StyledProjects isTransition={isTransition} id="projects">
       <h2 className="title">Projects</h2>
       <div id="projectCards">
-        {projectList.map((project) => (
+        {projectList.map((project, index) => (
           <StyledCard
+            key={index}
             isTransition={isTransition}
             as={motion.div}
             initial={{ x: 50, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
-            transition={{ duration: 0.5}}
+            transition={{ duration: 0.5 }}
             viewport={{ once: true }}
           >
             <div id="project">

@@ -1,4 +1,4 @@
-import resume from "../static/resume.pdf";
+import resume from "../static/Resume.pdf";
 import { StyledMobileMenu } from "./styles/MobileMenu.styled";
 import React from "react";
 import { Squash as Hamburger } from 'hamburger-react'

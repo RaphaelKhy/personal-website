@@ -1,5 +1,5 @@
 import { StyledMenu } from "./styles/Menu.styled";
-import resume from "../static/resume.pdf";
+import resume from "../static/Resume.pdf";
 import { ThemeButton } from "./ThemeButton";
 
 export default function Menu({ isTransition, handleToggle }) {
