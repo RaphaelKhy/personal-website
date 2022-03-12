@@ -124,7 +124,7 @@ export const StyledContact = styled.div`
 
   @media only screen and (max-width: 800px) {
     #body{
-      justify-content: center;
+      justify-content: space-evenly;
     }
     h4 {
       visibility: hidden;
