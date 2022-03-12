@@ -3,6 +3,49 @@ import { AiOutlineMail, AiFillLinkedin, AiOutlineGithub } from "react-icons/ai";
 import { motion } from "framer-motion";
 
 export default function Contact(props) {
+  const buttonVariants = {
+    hidden: { y: 25, opacity: 0},
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        type: "spring",
+        stiffness: 70,
+        damping: 10,
+        mass: 0.75,
+      },
+    },
+  };
+  const buttonVariants2 = {
+    hidden: { y: 50, opacity: 0},
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        type: "spring",
+        stiffness: 70,
+        damping: 10,
+        mass: 0.75,
+        delay: 0.1,
+      },
+    },
+  };
+  const buttonVariants3 = {
+    hidden: { y: 50, opacity: 0},
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        type: "spring",
+        stiffness: 70,
+        damping: 10,
+        mass: 0.75,
+        delay: 0.2,
+
+      },
+    },
+  };
+
   return (
     <StyledContact isTransition={props.isTransition}>
       <h1 className="title" id="contact">
@@ -10,9 +53,9 @@ export default function Contact(props) {
       </h1>
       <div id="body">
         <motion.div
-          initial={{ x: 50, opacity: 0 }}
-            transition={{ duration: 0.5}}
-            whileInView={{ x: 0, opacity: 1 }}
+          variants={buttonVariants}
+          initial="hidden"
+          whileInView="visible"
           viewport={{ once: true }}
         >
           <div id="button">
@@ -25,9 +68,9 @@ export default function Contact(props) {
 
         <div id="button">
           <motion.div
-            initial={{ x: 50, opacity: 0 }}
-            whileInView={{ x: 0, opacity: 1 }}
-            transition={{ duration: 0.5}}
+            variants={buttonVariants2}
+            initial="hidden"
+            whileInView="visible"
             viewport={{ once: true }}
           >
             <a
@@ -41,9 +84,9 @@ export default function Contact(props) {
         </div>
         <div id="button">
           <motion.div
-            initial={{ x: 50, opacity: 0 }}
-            whileInView={{ x: 0, opacity: 1 }}
-            transition={{ duration: 0.5}}
+            variants={buttonVariants3}
+            initial="hidden"
+            whileInView="visible"
             viewport={{ once: true }}
           >
             <a href="https://github.com/RaphaelKhy" target="_blank">

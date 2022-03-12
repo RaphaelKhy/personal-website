@@ -39,6 +39,7 @@ export const StyledAbout = styled.div`
         ${(props) => (props.isTransition ? props.theme.transitionTime : "0s")};
     :hover {
       color: ${(props) => props.theme.colors.AppBg};
+      transition: color 0s;
       background-color: ${(props) => props.theme.colors.link};
     }
   }

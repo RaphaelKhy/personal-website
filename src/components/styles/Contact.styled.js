@@ -57,22 +57,20 @@ export const StyledContact = styled.div`
     max-width: 890px;
     align-self: center;
     ${(props) => displayBorders(props.theme)}
-
-    #button {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      height: 100px;
-      width: 230px;
-      ${(props) => displayBorders(props.theme)}
-      h3,
-      h4 {
-        margin-top: 0px;
-        margin-bottom: 10px;
-      }
-    }
   }
 
+  #button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100px;
+    width: 230px;
+    ${(props) => displayBorders(props.theme)}
+  }
+  h4 {
+    margin-top: 0px;
+    margin-bottom: 10px;
+  }
   #icon {
     height: 40px;
     width: 40px;
@@ -121,6 +119,38 @@ export const StyledContact = styled.div`
       #icon {
         color: ${(props) => props.theme.colors.ThemeButton};
       }
+    }
+  }
+
+  @media only screen and (max-width: 800px) {
+    #body{
+      justify-content: space-evenly;
+    }
+    h4 {
+      visibility: hidden;
+      height: 0px;
+      width: 0px;
+      margin: 0;
+    }
+    #button {
+      height: 100px;
+      width: 100px;
+    }
+    a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      height: 100px;
+      width: 100px;
+    }
+    #icon {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 40px;
+      width: 40px;
+      margin: 0;
     }
   }
 `;

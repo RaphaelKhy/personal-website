@@ -10,8 +10,8 @@ import { SiStyledcomponents } from "react-icons/si";
 export default function TechStack(props) {
   return (
     <StyledTechStack isTransition={props.isTransition}>
-      {props.technologies.map((technology) => (
-        <p>
+      {props.technologies.map((technology, index) => (
+        <p key={index}>
           {technologyIcons[technology]}
           {technology}
         </p>
