@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { displayBorders } from "./Global";
 import { useTheme, css } from "styled-components";
-import { lightTheme, darkTheme } from "../Themes";
+import { lightTheme } from "../Themes";
 
 const GetShadow = () => {
   const theme = useTheme();

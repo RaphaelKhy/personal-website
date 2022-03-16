@@ -1,66 +1,74 @@
-import { StyledExperience } from "./styles/Experience.styled";
+import { StyledExperienceMobile } from "./styles/ExperienceMobile.styled.";
 import { StyledCard } from "./styles/Card.styled";
 import TechStack from "./TechStack";
-import IvyScopeLogo from "../static/ivyscope.png";
-import TikTokLogo from "../static/tiktok-logo.png";
+import { motion } from "framer-motion";
 
-export default function Experience(props) {
+export default function ExperienceMobile({ isTransition }) {
   return (
-    <StyledExperience id="experience" isTransition={props.isTransition}>
+    <StyledExperienceMobile id="experience" isTransition={isTransition}>
       <h2 id="title">Experience</h2>
       <div id="experienceCards">
-        {experienceList.map((company) => (
-          <StyledCard isTransition={props.isTransition}>
+        {experienceList.map((company, index) => (
+          <StyledCard
+            isTransition={isTransition}
+            key={index}
+            as={motion.div}
+            initial={{ y: 50, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{
+              type: "spring",
+              stiffness: 70,
+              damping: 10,
+              mass: 0.75,
+            }}
+            viewport={{ once: true }}
+          >
             <div id="container">
-              <div id="company">
-                <div id="name">
-                  <a href={company.link} target="blank">
-                    <img src={company.logo} />
-                  </a>
-                  <a href={company.link} target="blank">
-                    <h2>{company.name}</h2>
-                  </a>
-                </div>
-                <div id="dates">{company.dates}</div>
-              </div>
+              <h2 id="role">
+                <div>{company.role}</div>
+                <div id="at-sign">&nbsp;@&nbsp;</div>
+                <a id="company" href={company.link} target="blank">
+                  {company.name}
+                </a>
+              </h2>
               <div id="body">
-                <h2 id="role">{company.role}</h2>
-                {company.body.map((content) => (
-                  <p className="description">{content}</p>
+                <div id="dates">{company.dates}</div>
+                {company.body.map((content, i) => (
+                  <li key={i} className="description">
+                    {content}
+                  </li>
                 ))}
-                <TechStack
-                  technologies={company.techStack}
-                  isTransition={props.isTransition}
-                />
               </div>
+              <TechStack
+                technologies={company.techStack}
+                isTransition={isTransition}
+              />
             </div>
           </StyledCard>
         ))}
       </div>
-    </StyledExperience>
+    </StyledExperienceMobile>
   );
 }
 
 const experienceList = [
   {
-    logo: IvyScopeLogo,
     name: "IvyScope",
     link: "https://ivyscope.io/",
-    dates: "Sep 2021 - Jan 2022",
+    dates: "September 2021 - January 2022",
     role: "Front-End Software Engineer",
     body: [
-      "Worked at a startup to build a platform for students to schedule and host college tours online.",
+      "Built a platform for students to schedule and host college tours online.",
       "Developed webpages in React using mobile first design.",
     ],
     techStack: ["React", "SASS", "Heroku", "Material UI"],
   },
   {
-    logo: TikTokLogo,
     name: "TikTok",
     link: "https://www.tiktok.com/about?lang=en",
-    dates: "Jun 2022 - Aug 2022",
+    dates: "June 2022 - August 2022",
     role: "Incoming Software Engineer Intern",
-    body: ["Will be working on the content creation and consumption team."],
+    body: [],
     techStack: [],
   },
 ];

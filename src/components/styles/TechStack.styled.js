@@ -12,13 +12,13 @@ export const StyledTechStack = styled.div`
     margin-top: 0px;
     margin-bottom: 8px;
     height: 30px;
-    padding:0px 12px 0px 12px;
+    padding: 0px 12px 0px 12px;
     border-radius: 8px;
     border-width: 1px;
     border-style: solid;
     font-size: 1rem;
     border-color: ${(props) => props.theme.colors.elementBorder};
-    color: ${(props) => props.theme.colors.darkFont};
+    color: ${(props) => props.theme.colors.brightFont};
     transition: border-color
         ${(props) => (props.isTransition ? props.theme.transitionTime : "0s")},
       color

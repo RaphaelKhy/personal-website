@@ -1,6 +1,7 @@
 import { StyledTechStack } from "./styles/TechStack.styled";
 import { FaReact } from "react-icons/fa";
 import { FaSass } from "react-icons/fa";
+import { FiFramer } from "react-icons/fi";
 import { DiHeroku } from "react-icons/di";
 import { DiJavascript1 } from "react-icons/di";
 import { BsBootstrap } from "react-icons/bs";
@@ -21,11 +22,12 @@ export default function TechStack(props) {
 }
 
 const technologyIcons = {
-  React: <FaReact size={"1rem"}></FaReact>,
-  SASS: <FaSass size={"1rem"}></FaSass>,
+  React: <FaReact size={"1rem"} />,
+  SASS: <FaSass size={"1rem"} />,
   Heroku: <DiHeroku size={"1rem"}></DiHeroku>,
-  JavaScript: <DiJavascript1 size={"1rem"}></DiJavascript1>,
-  Bootstrap: <BsBootstrap size={"1rem"}></BsBootstrap>,
-  jQuery: <DiJqueryLogo size={"1rem"}></DiJqueryLogo>,
-  "Styed Components": <SiStyledcomponents size={"2rem"}></SiStyledcomponents>,
+  JavaScript: <DiJavascript1 size={"1rem"} />,
+  Bootstrap: <BsBootstrap size={"1rem"} />,
+  jQuery: <DiJqueryLogo size={"1rem"} />,
+  "Framer Motion": <FiFramer size={"1rem"} />,
+  "Styed Components": <SiStyledcomponents size={"2rem"} />,
 };

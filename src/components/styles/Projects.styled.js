@@ -114,6 +114,7 @@ export const StyledProjects = styled.div`
   #text {
     p {
       margin-top: 0.5rem;
+      margin-bottom: 0.5rem;
     }
     .description {
       color: ${(props) => props.theme.colors.darkFont};

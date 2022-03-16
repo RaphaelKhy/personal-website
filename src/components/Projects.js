@@ -27,7 +27,12 @@ export default function Projects({ isTransition }) {
             viewport={{ once: true }}
           >
             <div id="project">
-              <a id="projectImage" href={project.link} target="_blank">
+              <a
+                id="projectImage"
+                href={project.link}
+                target="_blank"
+                rel="noreferrer"
+              >
                 <img src={project.image} />
               </a>
               <div id="body">
@@ -59,11 +64,11 @@ export default function Projects({ isTransition }) {
                   </div>
                 </div>
                 <div id="text">
+                  <p className="description">{project.description}</p>
                   <TechStack
                     technologies={project.techStack}
                     isTransition={isTransition}
                   />
-                  <p className="description">{project.description}</p>
                 </div>
               </div>
             </div>
@@ -80,14 +85,14 @@ const projectList = [
     description:
       "An analytics tool to backtest custom stock portfolios. Provides key performance statistics such as historical return, max drawdown, and percent allocation.",
     techStack: ["JavaScript", "Bootstrap", "jQuery", "D3.js"],
-    link: "https://raphaelkhy.github.io/",
-    gitHubLink: "https://github.com/RaphaelKhy/RaphaelKhy.github.io",
+    link: "https://raphaelkhy.github.io/Portfolio-Visualizer/",
+    gitHubLink: "https://github.com/RaphaelKhy/Portfolio-Visualizer",
     image: PortfolioVisualizerDark,
   },
   {
     title: "Personal Website",
     description: "A website to share my experience, projects, and interests.",
-    techStack: ["React", "Styed Components", "Tippy.js"],
+    techStack: ["React", "Styed Components", "Framer Motion", "Tippy.js"],
     link: "https://raphaelkhaykin.com",
     gitHubLink: "https://github.com/RaphaelKhy/Personal-website",
   },
