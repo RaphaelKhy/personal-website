@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { ThemeProvider } from "styled-components";
-import { darkTheme, lightTheme } from "./components/Themes";
-import Header from "./components/Header";
-import Body from "./components/Body";
+import { darkTheme, lightTheme } from "./components/styles/Themes";
+import { Header } from "./views/Header";
+import {Body} from "./views/Body";
 import GlobalStyle from "./components/styles/Global";
 import React, { useEffect } from "react";
 

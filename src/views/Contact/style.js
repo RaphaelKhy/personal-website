@@ -1,5 +1,4 @@
-import styled from "styled-components";
-import { displayBorders } from "./Global";
+import styled, { css } from "styled-components";
 
 export const StyledContact = styled.div`
   display: flex;
@@ -123,7 +122,7 @@ export const StyledContact = styled.div`
   }
 
   @media only screen and (max-width: 800px) {
-    #body{
+    #body {
       justify-content: space-evenly;
     }
     h4 {
@@ -154,3 +153,12 @@ export const StyledContact = styled.div`
     }
   }
 `;
+
+function displayBorders(theme, color) {
+  if (theme.showBorders) {
+    return css`
+      outline-style: solid;
+      outline-color: ${color ? color : "burlywood"};
+    `;
+  }
+}

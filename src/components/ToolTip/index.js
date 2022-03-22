@@ -1,5 +1,5 @@
 import React from "react";
-import { StyledToolTip } from "./styles/ToolTip.styled";
+import { StyledToolTip } from "./style";
 
 export default function ToolTip(props) {
   return (

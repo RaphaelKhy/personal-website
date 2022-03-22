@@ -1,9 +1,9 @@
-import { StyledExperienceMobile } from "./styles/ExperienceMobile.styled.";
-import { StyledCard } from "./styles/Card.styled";
-import TechStack from "./TechStack";
+import { StyledExperienceMobile } from "./style";
+import { StyledCard } from "../../components/styles/Card.styled";
+import { TechStack } from "../../components/TechStack";
 import { motion } from "framer-motion";
 
-export default function ExperienceMobile({ isTransition }) {
+export default function Experience({ isTransition }) {
   return (
     <StyledExperienceMobile id="experience" isTransition={isTransition}>
       <h2 id="title">Experience</h2>

@@ -1,5 +1,5 @@
-import { StyledEducation } from "./styles/Education.styled";
-import { StyledCard } from "./styles/Card.styled";
+import { StyledEducation } from "../../components/styles/Education.styled";
+import { StyledCard } from "../../components/styles/Card.styled";
 import IvyScopeLogo from "../static/images/sbu_logo.png";
 
 export default function Education({ isTransition }) {

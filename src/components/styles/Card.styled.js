@@ -1,7 +1,5 @@
-import styled from "styled-components";
-import { displayBorders } from "./Global";
-import { useTheme, css } from "styled-components";
-import { lightTheme } from "../Themes";
+import styled, { useTheme, css } from "styled-components";
+import { lightTheme } from "./Themes";
 
 const GetShadow = () => {
   const theme = useTheme();
@@ -34,3 +32,12 @@ export const StyledCard = styled.div`
     background-color
       ${(props) => (props.isTransition ? props.theme.transitionTime : "0s")};
 `;
+
+function displayBorders(theme, color) {
+  if (theme.showBorders) {
+    return css`
+      outline-style: solid;
+      outline-color: ${color ? color : "burlywood"};
+    `;
+  }
+}

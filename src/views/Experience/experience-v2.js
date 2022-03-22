@@ -1,6 +1,6 @@
-import { StyledExperience } from "./styles/Experience.styled";
-import { StyledCard } from "./styles/Card.styled";
-import TechStack from "./TechStack";
+import { StyledExperience } from "../../components/styles/Experience.styled";
+import { StyledCard } from "../../components/styles/Card.styled";
+import { TechStack } from "../../components/TechStack";
 import IvyScopeLogo from "../static/ivyscope.png";
 import TikTokLogo from "../static/tiktok-logo.png";
 

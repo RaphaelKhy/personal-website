@@ -1,12 +1,11 @@
-import resume from "../static/Resume.pdf";
-import { StyledMobileMenu } from "./styles/MobileMenu.styled";
 import React from "react";
-import { Squash as Hamburger } from 'hamburger-react'
-import { ThemeButton } from "./ThemeButton";
-import { HandleClick } from "./Menu";
+import { ThemeButton } from "./themeButton";
+import { HandleClick } from "./menu";
+import { StyledMobileMenu } from "./style";
+import { Squash as Hamburger } from "hamburger-react";
+import resume from "../../static/Resume.pdf";
 
 export default function MobileMenu(props) {
-
   const onClick = (e) => {
     props.setIsMobileMenuActive(false);
     HandleClick(e);
@@ -17,7 +16,7 @@ export default function MobileMenu(props) {
       <ThemeButton
         handleToggle={props.handleToggle}
         isTransition={props.isTransition}
-      ></ThemeButton>
+      />
       <Hamburger
         id="hamburger"
         duration={"0.3"}

@@ -1,4 +1,4 @@
-import { StyledTechStack } from "./styles/TechStack.styled";
+import { StyledTechStack } from "./style";
 import { FaReact } from "react-icons/fa";
 import { FaSass } from "react-icons/fa";
 import { FiFramer } from "react-icons/fi";
@@ -8,7 +8,7 @@ import { BsBootstrap } from "react-icons/bs";
 import { DiJqueryLogo } from "react-icons/di";
 import { SiStyledcomponents } from "react-icons/si";
 
-export default function TechStack(props) {
+function TechStack(props) {
   return (
     <StyledTechStack isTransition={props.isTransition}>
       {props.technologies.map((technology, index) => (
@@ -31,3 +31,5 @@ const technologyIcons = {
   "Framer Motion": <FiFramer size={"1rem"} />,
   "Styed Components": <SiStyledcomponents size={"2rem"} />,
 };
+
+export { TechStack };

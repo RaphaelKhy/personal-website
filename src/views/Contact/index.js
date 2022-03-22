@@ -1,10 +1,10 @@
-import { StyledContact } from "./styles/Contact.styled";
+import { StyledContact } from "./style";
 import { AiOutlineMail, AiFillLinkedin, AiOutlineGithub } from "react-icons/ai";
 import { motion } from "framer-motion";
 
-export default function Contact(props) {
+function Contact(props) {
   const buttonVariants = {
-    hidden: { y: 25, opacity: 0},
+    hidden: { y: 25, opacity: 0 },
     visible: {
       y: 0,
       opacity: 1,
@@ -17,7 +17,7 @@ export default function Contact(props) {
     },
   };
   const buttonVariants2 = {
-    hidden: { y: 50, opacity: 0},
+    hidden: { y: 50, opacity: 0 },
     visible: {
       y: 0,
       opacity: 1,
@@ -31,7 +31,7 @@ export default function Contact(props) {
     },
   };
   const buttonVariants3 = {
-    hidden: { y: 50, opacity: 0},
+    hidden: { y: 50, opacity: 0 },
     visible: {
       y: 0,
       opacity: 1,
@@ -41,7 +41,6 @@ export default function Contact(props) {
         damping: 10,
         mass: 0.75,
         delay: 0.2,
-
       },
     },
   };
@@ -59,7 +58,7 @@ export default function Contact(props) {
           viewport={{ once: true }}
         >
           <div id="button">
-            <a href="mailto: raphaelkhaykin@gmail.com">
+            <a href="mailto: raphaelkhaykin@gmail.com" rel="noreferrer">
               <AiOutlineMail id="icon" size={30}></AiOutlineMail>
               <h4>raphaelkhaykin@gmail.com</h4>
             </a>
@@ -76,6 +75,7 @@ export default function Contact(props) {
             <a
               href="https://www.linkedin.com/in/raphael-khaykin-23465718a/"
               target="_blank"
+              rel="noreferrer"
             >
               <AiFillLinkedin id="icon" size={40}></AiFillLinkedin>
               <h4>Connect on LinkedIn</h4>
@@ -89,7 +89,11 @@ export default function Contact(props) {
             whileInView="visible"
             viewport={{ once: true }}
           >
-            <a href="https://github.com/RaphaelKhy" target="_blank">
+            <a
+              href="https://github.com/RaphaelKhy"
+              target="_blank"
+              rel="noreferrer"
+            >
               <AiOutlineGithub id="icon" size={40}></AiOutlineGithub>
               <h4>View my GitHub</h4>
             </a>
@@ -99,3 +103,5 @@ export default function Contact(props) {
     </StyledContact>
   );
 }
+
+export { Contact };

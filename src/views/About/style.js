@@ -1,5 +1,4 @@
-import styled from "styled-components";
-import { displayBorders } from "./Global";
+import styled, { css } from "styled-components";
 
 export const StyledAbout = styled.div`
   ${(props) => displayBorders(props.theme, "green")}
@@ -44,3 +43,12 @@ export const StyledAbout = styled.div`
     }
   }
 `;
+
+function displayBorders(theme, color) {
+  if (theme.showBorders) {
+    return css`
+      outline-style: solid;
+      outline-color: ${color ? color : "burlywood"};
+    `;
+  }
+}

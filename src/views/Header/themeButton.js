@@ -1,9 +1,9 @@
-import { StyledThemeButton } from "./styles/ThemeButton.styled";
+import { StyledThemeButton } from "./style";
 import { MdOutlineLightMode, MdOutlineDarkMode } from "react-icons/md";
 import { useTheme } from "styled-components";
-import { lightTheme } from "./Themes";
+import { lightTheme } from "../../components/styles/Themes";
 import React from "react";
-import ToolTip from "./ToolTip";
+import ToolTip from "../../components/ToolTip";
 
 export const ThemeButton = (props) => {
   const theme = useTheme();
@@ -26,6 +26,6 @@ export const ThemeButton = (props) => {
           </button>
         </StyledThemeButton>
       }
-    ></ToolTip>
+    />
   );
 };

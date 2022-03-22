@@ -1,12 +1,12 @@
 import { FiGithub, FiExternalLink } from "react-icons/fi";
-import { StyledCard } from "./styles/Card.styled";
-import TechStack from "./TechStack";
-import PortfolioVisualizerDark from "../static/portfolio-visualizer.png";
-import ToolTip from "./ToolTip";
-import { StyledProjects } from "./styles/Projects.styled";
+import { StyledCard } from "../../components/styles/Card.styled";
+import { TechStack } from "../../components/TechStack";
+import PortfolioVisualizerDark from "../../static/portfolio-visualizer.png";
+import ToolTip from "../../components/ToolTip";
+import { StyledProjects } from "./style";
 import { motion } from "framer-motion";
 
-export default function Projects({ isTransition }) {
+function Projects({ isTransition }) {
   return (
     <StyledProjects isTransition={isTransition} id="projects">
       <h2 className="title">Projects</h2>
@@ -33,12 +33,12 @@ export default function Projects({ isTransition }) {
                 target="_blank"
                 rel="noreferrer"
               >
-                <img src={project.image} />
+                <img src={project.image} alt="" />
               </a>
               <div id="body">
                 <div id="header">
                   <h2 id="projectTitle">
-                    <a href={project.link} target="_blank">
+                    <a href={project.link} target="_blank" rel="noreferrer">
                       {project.title}
                     </a>
                   </h2>
@@ -47,8 +47,12 @@ export default function Projects({ isTransition }) {
                       text="GitHub"
                       delay="300"
                       content={
-                        <a href={project.gitHubLink} target="_blank">
-                          <FiGithub size={20}></FiGithub>
+                        <a
+                          href={project.gitHubLink}
+                          target="_blank"
+                          rel="noreferrer"
+                        >
+                          <FiGithub size={20} />
                         </a>
                       }
                     ></ToolTip>
@@ -56,11 +60,11 @@ export default function Projects({ isTransition }) {
                       text="External Link"
                       delay="300"
                       content={
-                        <a href={project.link} target="_blank">
-                          <FiExternalLink size={20}></FiExternalLink>
+                        <a href={project.link} target="_blank" rel="noreferrer">
+                          <FiExternalLink size={20} />
                         </a>
                       }
-                    ></ToolTip>
+                    />
                   </div>
                 </div>
                 <div id="text">
@@ -97,3 +101,5 @@ const projectList = [
     gitHubLink: "https://github.com/RaphaelKhy/Personal-website",
   },
 ];
+
+export { Projects };
