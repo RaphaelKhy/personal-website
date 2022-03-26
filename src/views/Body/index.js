@@ -4,16 +4,13 @@ import { Contact } from "../Contact";
 import { StyledBody } from "./style";
 import { Experience } from "../Experience";
 
-function Body(props) {
-  const isTransition = props;
+export const Body = () => {
   return (
     <StyledBody>
-      <About isTransition={isTransition} />
-      <Experience isTransition={isTransition} />
-      <Projects isTransition={isTransition} />
-      <Contact isTransition={isTransition} />
+      <About />
+      <Experience />
+      <Projects />
+      <Contact />
     </StyledBody>
   );
-}
-
-export { Body };
+};

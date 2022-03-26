@@ -1,107 +1,63 @@
 import { StyledContact } from "./style";
 import { AiOutlineMail, AiFillLinkedin, AiOutlineGithub } from "react-icons/ai";
-import { motion } from "framer-motion";
+import { ContactAnimation } from "../../components/Animations";
+import { themeTransitionContext } from "../../App";
+import { useContext } from "react";
 
-function Contact(props) {
-  const buttonVariants = {
-    hidden: { y: 25, opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        type: "spring",
-        stiffness: 70,
-        damping: 10,
-        mass: 0.75,
-      },
-    },
-  };
-  const buttonVariants2 = {
-    hidden: { y: 50, opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        type: "spring",
-        stiffness: 70,
-        damping: 10,
-        mass: 0.75,
-        delay: 0.1,
-      },
-    },
-  };
-  const buttonVariants3 = {
-    hidden: { y: 50, opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        type: "spring",
-        stiffness: 70,
-        damping: 10,
-        mass: 0.75,
-        delay: 0.2,
-      },
-    },
-  };
+export const Contact = () => {
+  const isTransition = useContext(themeTransitionContext);
 
   return (
-    <StyledContact isTransition={props.isTransition}>
+    <StyledContact isTransition={isTransition}>
       <h1 className="title" id="contact">
         Contact
       </h1>
-      <div id="body">
-        <motion.div
-          variants={buttonVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-        >
-          <div id="button">
-            <a href="mailto: raphaelkhaykin@gmail.com" rel="noreferrer">
-              <AiOutlineMail id="icon" size={30}></AiOutlineMail>
-              <h4>raphaelkhaykin@gmail.com</h4>
-            </a>
-          </div>
-        </motion.div>
 
-        <div id="button">
-          <motion.div
-            variants={buttonVariants2}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-          >
-            <a
-              href="https://www.linkedin.com/in/raphael-khaykin-23465718a/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <AiFillLinkedin id="icon" size={40}></AiFillLinkedin>
-              <h4>Connect on LinkedIn</h4>
-            </a>
-          </motion.div>
-        </div>
-        <div id="button">
-          <motion.div
-            variants={buttonVariants3}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-          >
-            <a
-              href="https://github.com/RaphaelKhy"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <AiOutlineGithub id="icon" size={40}></AiOutlineGithub>
-              <h4>View my GitHub</h4>
-            </a>
-          </motion.div>
-        </div>
+      <div id="body">
+        <ContactAnimation
+          delay={0}
+          children={
+            <div id="button">
+              <a href="mailto: raphaelkhaykin@gmail.com" rel="noreferrer">
+                <AiOutlineMail id="icon" size={30} />
+                <h4>raphaelkhaykin@gmail.com</h4>
+              </a>
+            </div>
+          }
+        />
+
+        <ContactAnimation
+          delay={0.1}
+          children={
+            <div id="button">
+              <a
+                href="https://www.linkedin.com/in/raphael-khaykin-23465718a/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <AiFillLinkedin id="icon" size={40} />
+                <h4>Connect on LinkedIn</h4>
+              </a>
+            </div>
+          }
+        />
+
+        <ContactAnimation
+          delay={0.2}
+          children={
+            <div id="button">
+              <a
+                href="https://github.com/RaphaelKhy"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <AiOutlineGithub id="icon" size={40} />
+                <h4>View my GitHub</h4>
+              </a>
+            </div>
+          }
+        />
       </div>
     </StyledContact>
   );
-}
-
-export { Contact };
+};

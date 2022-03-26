@@ -1,33 +1,32 @@
-import React from "react";
+import React, { useContext } from "react";
 import { ThemeButton } from "./themeButton";
 import { HandleClick } from "./menu";
-import { StyledMobileMenu } from "./style";
+import { StyledMobileMenu } from "../style";
 import { Squash as Hamburger } from "hamburger-react";
-import resume from "../../static/Resume.pdf";
+import resume from "../../../static/Resume.pdf";
+import { themeTransitionContext } from "../../../App";
 
 export default function MobileMenu(props) {
+  const { handleToggle, isMobileMenuActive, setIsMobileMenuActive } = props;
+  const isTransition = useContext(themeTransitionContext);
+
   const onClick = (e) => {
-    props.setIsMobileMenuActive(false);
+    setIsMobileMenuActive(false);
     HandleClick(e);
   };
 
   return (
-    <StyledMobileMenu isTransition={props.isTransition}>
-      <ThemeButton
-        handleToggle={props.handleToggle}
-        isTransition={props.isTransition}
-      />
+    <StyledMobileMenu isTransition={isTransition}>
+      <ThemeButton handleToggle={handleToggle} isTransition={isTransition} />
       <Hamburger
         id="hamburger"
         duration={"0.3"}
         direction={"left"}
-        toggled={props.isMobileMenuActive}
-        toggle={props.setIsMobileMenuActive}
+        toggled={isMobileMenuActive}
+        toggle={setIsMobileMenuActive}
       />
       <nav
-        className={
-          "mobile-nav " + (props.isMobileMenuActive ? "is-active" : null)
-        }
+        className={"mobile-nav " + (isMobileMenuActive ? "is-active" : null)}
       >
         <a href="/#experience" onClick={onClick}>
           Experience

@@ -1,8 +1,10 @@
 import { StyledAbout } from "./style.js";
 import { handleNavClick } from "../../hooks/handleNavClick.js";
+import { useContext } from "react";
+import { themeTransitionContext } from "../../App";
 
-function About(props) {
-  const isTransition = props;
+const About = () => {
+  const isTransition = useContext(themeTransitionContext);
   return (
     <StyledAbout id="about" isTransition={isTransition}>
       <div className="aboutMeText">
@@ -18,6 +20,6 @@ function About(props) {
       </div>
     </StyledAbout>
   );
-}
+};
 
 export { About };

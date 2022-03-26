@@ -1,23 +1,20 @@
 import styled from "styled-components";
 
-export const StyledTechStack = styled.div`
+export const StyledTags = styled.div`
   display: flex;
   flex-wrap: wrap;
-  column-gap: 1rem;
+  column-gap: 16px;
   p {
     display: flex;
-    column-gap: 0.25rem;
     justify-content: center;
     align-items: center;
+    column-gap: 0.25rem;
     margin-top: 0px;
     margin-bottom: 8px;
     height: 30px;
-    padding: 0px 12px 0px 12px;
-    border-radius: 8px;
-    border-width: 1px;
-    border-style: solid;
-    font-size: 1rem;
-    border-color: ${(props) => props.theme.colors.elementBorder};
+    padding: 0 12px 0 12px;
+    border-radius: 16px;
+    border: 1px solid ${(props) => props.theme.colors.elementBorder};
     color: ${(props) => props.theme.colors.brightFont};
     transition: border-color
         ${(props) => (props.isTransition ? props.theme.transitionTime : "0s")},

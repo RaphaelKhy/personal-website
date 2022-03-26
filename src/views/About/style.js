@@ -1,7 +1,8 @@
-import styled, { css } from "styled-components";
+import styled from "styled-components";
+import { DebugBorder } from "../../components/styles/Global";
 
 export const StyledAbout = styled.div`
-  ${(props) => displayBorders(props.theme, "green")}
+  ${(props) => DebugBorder(props.theme, "blue")}
   margin-top: 60px;
   display: flex;
   justify-content: space-between;
@@ -14,9 +15,9 @@ export const StyledAbout = styled.div`
     ${(props) => (props.isTransition ? props.theme.transitionTime : "0s")};
 
   #name {
-    margin-bottom: 0.5rem;
     font-family: "Manrope", sans-serif;
     font-size: 3rem;
+    margin-bottom: 0.5rem;
     font-weight: 600;
   }
 
@@ -38,17 +39,8 @@ export const StyledAbout = styled.div`
         ${(props) => (props.isTransition ? props.theme.transitionTime : "0s")};
     :hover {
       color: ${(props) => props.theme.colors.AppBg};
-      transition: color 0s;
       background-color: ${(props) => props.theme.colors.link};
+      transition: color 0s, background-color 0s;
     }
   }
 `;
-
-function displayBorders(theme, color) {
-  if (theme.showBorders) {
-    return css`
-      outline-style: solid;
-      outline-color: ${color ? color : "burlywood"};
-    `;
-  }
-}

@@ -1,12 +1,14 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
 import Logo from "./logo";
 import Menu from "./menu";
 import MobileMenu from "./mobileMenu";
-import { StyledHeader } from "./style";
+import { StyledHeader } from "../style";
+import { themeTransitionContext } from "../../../App";
 
-export default function Header({ handleToggle, isTransition }) {
+export default function Header({ handleToggle }) {
   const [width, setWidth] = useState(window.innerWidth);
   const [isMobileMenuActive, setIsMobileMenuActive] = useState(false);
+  const isTransition = useContext(themeTransitionContext);
 
   function handleWindowSizeChange() {
     setWidth(window.innerWidth);
@@ -19,21 +21,6 @@ export default function Header({ handleToggle, isTransition }) {
   }, []);
   const isMobile = width <= 800;
 
-  function getMenu() {
-    if (isMobile) {
-      return (
-        <MobileMenu
-          handleToggle={handleToggle}
-          isTransition={isTransition}
-          isMobileMenuActive={isMobileMenuActive}
-          setIsMobileMenuActive={setIsMobileMenuActive}
-        />
-      );
-    } else {
-      return <Menu handleToggle={handleToggle} isTransition={isTransition} />;
-    }
-  }
-
   return (
     <StyledHeader isTransition={isTransition} id="header">
       <div id="container">
@@ -41,7 +28,15 @@ export default function Header({ handleToggle, isTransition }) {
           isTransition={isTransition}
           setIsMobileMenuActive={setIsMobileMenuActive}
         />
-        {getMenu()}
+        {isMobile ? (
+          <MobileMenu
+            handleToggle={handleToggle}
+            isMobileMenuActive={isMobileMenuActive}
+            setIsMobileMenuActive={setIsMobileMenuActive}
+          />
+        ) : (
+          <Menu handleToggle={handleToggle} />
+        )}
       </div>
     </StyledHeader>
   );

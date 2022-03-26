@@ -1,7 +1,8 @@
-import styled, { css } from "styled-components";
+import styled from "styled-components";
+import { DebugBorder } from "../../components/styles/Global";
 
 export const StyledHeader = styled.header`
-  ${(props) => displayBorders(props.theme)}
+  ${(props) => DebugBorder(props.theme)}
   flex-direction: row;
   border-bottom: 1px solid ${(props) => props.theme.colors.elementBorder};
   position: sticky;
@@ -54,7 +55,7 @@ export const StyledThemeButton = styled.div`
 `;
 
 export const StyledLogo = styled.div`
-  ${(props) => displayBorders(props.theme)}
+  ${(props) => DebugBorder(props.theme)}
   display: flex;
   align-items: center;
   flex-wrap: wrap;
@@ -92,7 +93,7 @@ export const StyledLogo = styled.div`
 `;
 
 export const StyledMenu = styled.div`
-  ${(props) => displayBorders(props.theme)}
+  ${(props) => DebugBorder(props.theme)}
   display: inline-flex;
   align-items: center;
   flex-wrap: wrap;
@@ -124,7 +125,7 @@ export const StyledMenu = styled.div`
 `;
 
 export const StyledMobileMenu = styled.div`
-  ${(props) => displayBorders(props.theme)}
+  ${(props) => DebugBorder(props.theme)}
   display: inline-flex;
   align-items: center;
   flex-wrap: wrap;
@@ -177,12 +178,3 @@ export const StyledMobileMenu = styled.div`
     background-color: ${(props) => props.theme.colors.hoveredElementBg};
   }
 `;
-
-function displayBorders(theme, color) {
-  if (theme.showBorders) {
-    return css`
-      outline-style: solid;
-      outline-color: ${color ? color : "burlywood"};
-    `;
-  }
-}

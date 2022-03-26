@@ -1,7 +1,8 @@
-import styled, { css } from "styled-components";
+import styled from "styled-components";
+import { DebugBorder } from "../../components/styles/Global";
 
 export const StyledExperience = styled.div`
-  ${(props) => displayBorders(props.theme)}
+  ${(props) => DebugBorder(props.theme)}
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -17,7 +18,7 @@ export const StyledExperience = styled.div`
     display: flex;
     justify-content: center;
     font-weight: 500;
-    ${(props) => displayBorders(props.theme)}
+    ${(props) => DebugBorder(props.theme)}
     max-width: 890px;
     justify-content: flex-start;
     width: -webkit-fill-available;
@@ -58,7 +59,7 @@ export const StyledExperience = styled.div`
     max-width: 180px;
     margin-right: 8px;
     margin-left: 16px;
-    ${(props) => displayBorders(props.theme, "black")}
+    ${(props) => DebugBorder(props.theme, "black")}
     #name {
       font-family: "Manrope", sans-serif;
       display: flex;
@@ -67,7 +68,7 @@ export const StyledExperience = styled.div`
       justify-content: start;
       flex-wrap: wrap;
       column-gap: 1rem;
-      ${(props) => displayBorders(props.theme)}
+      ${(props) => DebugBorder(props.theme)}
       img {
         height: 36px;
       }
@@ -83,7 +84,7 @@ export const StyledExperience = styled.div`
     }
     #dates {
       font-size: 1rem;
-      ${(props) => displayBorders(props.theme)}
+      ${(props) => DebugBorder(props.theme)}
       color: ${(props) => props.theme.colors.darkFont};
       transition: color
         ${(props) => (props.isTransition ? props.theme.transitionTime : "0s")};
@@ -97,7 +98,7 @@ export const StyledExperience = styled.div`
       display: flex;
       flex-direction: column;
       justify-content: center;
-      ${(props) => displayBorders(props.theme)}
+      ${(props) => DebugBorder(props.theme)}
       font-weight: 500;
     }
     .description {
@@ -116,7 +117,7 @@ export const StyledExperience = styled.div`
 `;
 
 export const StyledExperienceMobile = styled.div`
-  ${(props) => displayBorders(props.theme)}
+  ${(props) => DebugBorder(props.theme)}
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -132,7 +133,7 @@ export const StyledExperienceMobile = styled.div`
     display: flex;
     justify-content: flex-start;
     font-weight: 500;
-    ${(props) => displayBorders(props.theme)}
+    ${(props) => DebugBorder(props.theme)}
     max-width: 890px;
     justify-content: flex-start;
     width: -webkit-fill-available;
@@ -175,7 +176,7 @@ export const StyledExperienceMobile = styled.div`
     padding-bottom: 2px;
     margin: unset;
     font-weight: 500;
-    ${(props) => displayBorders(props.theme)}
+    ${(props) => DebugBorder(props.theme)}
     #at-sign {
       color: ${(props) => props.theme.colors.link};
       transition: color
@@ -184,8 +185,7 @@ export const StyledExperienceMobile = styled.div`
   }
 
   #company {
-    ${(props) => displayBorders(props.theme, "black")}
-    ${(props) => displayBorders(props.theme)}
+    ${(props) => DebugBorder(props.theme, "black")}
     color: ${(props) => props.theme.colors.link};
     text-decoration: none;
     transition: color
@@ -210,14 +210,14 @@ export const StyledExperienceMobile = styled.div`
     margin-top: 2px;
     display: flex;
     flex-direction: column;
-    ${(props) => displayBorders(props.theme)}
+    ${(props) => DebugBorder(props.theme)}
     color: ${(props) => props.theme.colors.darkFont};
     transition: color
       ${(props) => (props.isTransition ? props.theme.transitionTime : "0s")};
 
     #dates {
       margin-bottom: 10px;
-      ${(props) => displayBorders(props.theme)}
+      ${(props) => DebugBorder(props.theme)}
     }
 
     li {
@@ -245,12 +245,3 @@ export const StyledExperienceMobile = styled.div`
     row-gap: 30px;
   }
 `;
-
-function displayBorders(theme, color) {
-  if (theme.showBorders) {
-    return css`
-      outline-style: solid;
-      outline-color: ${color ? color : "burlywood"};
-    `;
-  }
-}

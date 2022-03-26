@@ -1,7 +1,8 @@
-import styled, { css } from "styled-components";
+import styled from "styled-components";
+import { DebugBorder } from "../../components/styles/Global";
 
 export const StyledProjects = styled.div`
-  ${(props) => displayBorders(props.theme, "brown")}
+  ${(props) => DebugBorder(props.theme, "brown")}
   display: flex;
   flex-direction: column;
   margin-top: 65px;
@@ -23,7 +24,7 @@ export const StyledProjects = styled.div`
     align-items: center;
     display: flex;
     flex-direction: row;
-    ${(props) => displayBorders(props.theme, "green")}
+    ${(props) => DebugBorder(props.theme, "green")}
 
     &:after {
       content: "";
@@ -61,7 +62,7 @@ export const StyledProjects = styled.div`
   #projectImage {
     display: flex;
     justify-content: center;
-    ${(props) => displayBorders(props.theme, "blue")}
+    ${(props) => DebugBorder(props.theme, "blue")}
     img {
       max-width: 100%;
       max-height: 500px;
@@ -85,6 +86,7 @@ export const StyledProjects = styled.div`
       margin-right: 1rem;
       :hover {
         color: ${(props) => props.theme.colors.link};
+        transition: color 0s;
       }
     }
   }
@@ -120,17 +122,9 @@ export const StyledProjects = styled.div`
       transition: color
         ${(props) => (props.isTransition ? props.theme.transitionTime : "0s")};
     }
-    ${(props) => displayBorders(props.theme, "silver")}
+    ${(props) => DebugBorder(props.theme, "silver")}
     color: ${(props) => props.theme.colors.brightFont};
     transition: color
       ${(props) => (props.isTransition ? props.theme.transitionTime : "0s")};
   }
 `;
-function displayBorders(theme, color) {
-  if (theme.showBorders) {
-    return css`
-      outline-style: solid;
-      outline-color: ${color ? color : "burlywood"};
-    `;
-  }
-}

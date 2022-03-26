@@ -1,12 +1,13 @@
-import { useState } from "react";
 import { ThemeProvider } from "styled-components";
 import { darkTheme, lightTheme } from "./components/styles/Themes";
 import { Header } from "./views/Header";
-import {Body} from "./views/Body";
-import GlobalStyle from "./components/styles/Global";
-import React, { useEffect } from "react";
+import { Body } from "./views/Body";
+import { GlobalStyle } from "./components/styles/Global";
+import { useState, createContext, useEffect } from "react";
 
-function App() {
+export const themeTransitionContext = createContext();
+
+const App = () => {
   const [theme, setTheme] = useState(lightTheme);
   const [isTransition, setIsTransition] = useState(false);
 
@@ -29,16 +30,18 @@ function App() {
     localStorage.setItem("theme", theme === lightTheme ? "dark" : "light");
     setTimeout(() => {
       setIsTransition(false);
-    }, 5000);
+    }, 500);
   };
 
   return (
     <ThemeProvider theme={theme}>
-      <GlobalStyle isTransition={isTransition} />
-      <Header handleToggle={handleToggle} isTransition={isTransition} />
-      <Body isTransition={isTransition} />
+      <themeTransitionContext.Provider value={isTransition}>
+        <GlobalStyle isTransition={isTransition} />
+        <Header handleToggle={handleToggle} />
+        <Body />
+      </themeTransitionContext.Provider>
     </ThemeProvider>
   );
-}
+};
 
 export default App;

@@ -1,8 +1,12 @@
-import { StyledMenu } from "./style";
-import resume from "../../static/Resume.pdf";
+import { StyledMenu } from "../style";
+import resume from "../../../static/Resume.pdf";
 import { ThemeButton } from "./themeButton";
+import { themeTransitionContext } from "../../../App";
+import { useContext } from "react";
 
-export default function Menu({ isTransition, handleToggle }) {
+export default function Menu({ handleToggle }) {
+  const isTransition = useContext(themeTransitionContext);
+
   return (
     <StyledMenu isTransition={isTransition}>
       <a href="/#experience" onClick={HandleClick}>
@@ -17,10 +21,7 @@ export default function Menu({ isTransition, handleToggle }) {
       <a href={resume} target="blank">
         Resume
       </a>
-      <ThemeButton
-        handleToggle={handleToggle}
-        isTransition={isTransition}
-      ></ThemeButton>
+      <ThemeButton handleToggle={handleToggle} isTransition={isTransition} />
     </StyledMenu>
   );
 }

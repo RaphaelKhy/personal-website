@@ -1,5 +1,5 @@
 import styled, { useTheme, css } from "styled-components";
-import { lightTheme } from "./Themes";
+import { lightTheme } from "../styles/Themes";
 
 const GetShadow = () => {
   const theme = useTheme();
@@ -18,6 +18,7 @@ const GetShadow = () => {
 };
 
 export const StyledCard = styled.div`
+  margin: 0 auto;
   display: flex;
   background-color: ${(props) => props.theme.colors.elementBg};
   border-radius: 16px;

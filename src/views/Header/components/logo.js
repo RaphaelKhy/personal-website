@@ -1,4 +1,4 @@
-import { StyledLogo } from "./style";
+import { StyledLogo } from "../style";
 
 export default function Logo(props) {
   const HandleClick = () => {

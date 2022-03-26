@@ -1,11 +1,12 @@
-import styled, { css } from "styled-components";
+import styled from "styled-components";
+import { DebugBorder } from "../../components/styles/Global";
 
 export const StyledContact = styled.div`
   display: flex;
   flex-direction: column;
   margin-bottom: 65px;
   margin-top: 65px;
-  ${(props) => displayBorders(props.theme)}
+  ${(props) => DebugBorder(props.theme)}
   color: ${(props) => props.theme.colors.brightFont};
   transition: color
     ${(props) => (props.isTransition ? props.theme.transitionTime : "0s")};
@@ -18,7 +19,7 @@ export const StyledContact = styled.div`
     display: flex;
     justify-content: flex-start;
     font-weight: 500;
-    ${(props) => displayBorders(props.theme)}
+    ${(props) => DebugBorder(props.theme)}
     max-width: 890px;
     justify-content: flex-start;
     width: -webkit-fill-available;
@@ -55,7 +56,7 @@ export const StyledContact = styled.div`
     width: -webkit-fill-available;
     max-width: 890px;
     align-self: center;
-    ${(props) => displayBorders(props.theme)}
+    ${(props) => DebugBorder(props.theme)}
   }
 
   #button {
@@ -64,7 +65,7 @@ export const StyledContact = styled.div`
     align-items: center;
     height: 100px;
     width: 230px;
-    ${(props) => displayBorders(props.theme)}
+    ${(props) => DebugBorder(props.theme)}
   }
   h4 {
     margin-top: 0px;
@@ -153,12 +154,3 @@ export const StyledContact = styled.div`
     }
   }
 `;
-
-function displayBorders(theme, color) {
-  if (theme.showBorders) {
-    return css`
-      outline-style: solid;
-      outline-color: ${color ? color : "burlywood"};
-    `;
-  }
-}

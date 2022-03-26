@@ -1,6 +1,7 @@
 import { createGlobalStyle } from "styled-components";
+import { css } from "styled-components";
 
-const GlobalStyle = createGlobalStyle`
+export const GlobalStyle = createGlobalStyle`
 html{
   scroll-behavior: smooth;
   overflow-x: clip;
@@ -9,10 +10,7 @@ html{
 body{
   background-color: ${(props) => props.theme.colors.AppBg};
   font-family: 'Inter', serif;
-  margin-top: 0px;
-  margin-left: 0px;
-  margin-right: 0px;
-  margin-bottom: 0px;
+  margin: 0 0 0 0;
   transition: background-color ${(props) =>
     props.isTransition ? props.theme.transitionTime : "0s"};
   overflow-x: clip;
@@ -25,4 +23,11 @@ body{
 }
 `;
 
-export default GlobalStyle;
+export const DebugBorder = (theme, color) => {
+  if (theme.showBorders) {
+    return css`
+      outline-style: solid;
+      outline-color: ${color ? color : "burlywood"};
+    `;
+  }
+};
