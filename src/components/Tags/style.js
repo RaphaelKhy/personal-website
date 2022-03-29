@@ -14,9 +14,9 @@ export const StyledTags = styled.div`
     height: 30px;
     padding: 0 12px 0 12px;
     border-radius: 16px;
-    border: 1px solid ${(props) => props.theme.colors.elementBorder};
+    /* border: 1px solid ${(props) => props.theme.colors.elementBorder}; */
     color: ${(props) => props.theme.colors.brightFont};
-    /* background-color: ${(props) => hexToRgbA(props.theme.colors.link)}; */
+    background-color: ${(props) => hexToRgbA(props.theme.colors.link)};
     transition: border-color
         ${(props) => (props.isTransition ? props.theme.transitionTime : "0s")},
       color
@@ -40,7 +40,7 @@ function hexToRgbA(hex) {
     }
     c = "0x" + c.join("");
     return (
-      "rgba(" + [(c >> 16) & 255, (c >> 8) & 255, c & 255].join(",") + ",0.1)"
+      "rgba(" + [(c >> 16) & 255, (c >> 8) & 255, c & 255].join(",") + ",0.15)"
     );
   }
 }

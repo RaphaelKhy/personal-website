@@ -20,7 +20,7 @@ function Tags(props) {
             type: "tween",
             ease: "easeInOut",
             duration: 0.7,
-            delay: (index * 0.4) + 0.5,
+            delay: (index * 0.5) + 0.5,
           }}
           viewport={{ once: true }}
         >

@@ -99,7 +99,6 @@ export const StyledExperience = styled.div`
 
 export const Body = styled.div`
   padding-bottom: ${(props) => (props.hasContent ? "10px" : "0px")};
-  padding-top: 2px;
   display: flex;
   flex-direction: column;
   ${(props) => DebugBorder(props.theme)}
@@ -109,6 +108,7 @@ export const Body = styled.div`
 
   #dates {
     ${(props) => DebugBorder(props.theme)}
+    padding-bottom: ${(props) => (props.hasContent ? "10px" : "0px")};
   }
 
   li {
