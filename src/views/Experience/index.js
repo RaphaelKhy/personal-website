@@ -1,4 +1,4 @@
-import { StyledExperienceMobile } from "./style";
+import { StyledExperience, Body } from "./style";
 import { Card } from "../../components/Card";
 import { Tags } from "../../components/Tags";
 import { themeTransitionContext } from "../../App";
@@ -6,8 +6,13 @@ import { useContext } from "react";
 
 export const Experience = () => {
   const isTransition = useContext(themeTransitionContext);
+
+  const checkEmptyBody = (body) => {
+    console.log("empty");
+  };
+
   return (
-    <StyledExperienceMobile id="experience" isTransition={isTransition}>
+    <StyledExperience id="experience" isTransition={isTransition}>
       <h2 id="title">Experience</h2>
       <div id="experienceCards">
         {experienceList.map((company, index) => (
@@ -22,24 +27,21 @@ export const Experience = () => {
                     {company.name}
                   </a>
                 </h2>
-                <div id="body">
+                <Body hasContent={company.body.length > 0}>
                   <div id="dates">{company.dates}</div>
                   {company.body.map((content, i) => (
                     <li key={i} className="description">
                       {content}
                     </li>
                   ))}
-                </div>
-                <Tags
-                  technologies={company.tags}
-                  isTransition={isTransition}
-                />
+                </Body>
+                <Tags technologies={company.tags} isTransition={isTransition} />
               </div>
             }
           />
         ))}
       </div>
-    </StyledExperienceMobile>
+    </StyledExperience>
   );
 };
 

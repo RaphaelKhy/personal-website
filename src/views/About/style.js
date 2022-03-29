@@ -27,6 +27,7 @@ export const StyledAbout = styled.div`
       ${(props) => (props.isTransition ? props.theme.transitionTime : "0s")};
     font-size: 1.3rem;
     line-height: 2rem;
+    margin-bottom: 0px;
   }
 
   a {

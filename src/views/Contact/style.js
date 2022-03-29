@@ -99,8 +99,7 @@ export const StyledContact = styled.div`
         ${(props) => (props.isTransition ? props.theme.transitionTime : "0s")};
 
     :hover {
-      transform: translate(0, -2px);
-      box-shadow: 0px 0px 0px 1px ${(props) => props.theme.colors.elementBorder},
+      box-shadow: 0px 0px 0px 1px ${(props) => props.theme.colors.darkFont},
         0px 0.5px 0.5px rgba(0, 0, 0, 0.015),
         0px 1.1px 1.1px rgba(0, 0, 0, 0.022),
         0px 1.8px 1.9px rgba(0, 0, 0, 0.027),
@@ -114,11 +113,7 @@ export const StyledContact = styled.div`
       transition: background-color
           ${(props) => (props.isTransition ? props.theme.transitionTime : "0s")},
         border-color
-          ${(props) => (props.isTransition ? props.theme.transitionTime : "0s")},
-        transform 0.2s, box-shadow 0.2s;
-      #icon {
-        color: ${(props) => props.theme.colors.ThemeButton};
-      }
+          ${(props) => (props.isTransition ? props.theme.transitionTime : "0s")};
     }
   }
 

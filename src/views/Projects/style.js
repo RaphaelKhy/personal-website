@@ -92,8 +92,7 @@ export const StyledProjects = styled.div`
   }
 
   #body {
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding: 0 16px 8px 16px;
   }
 
   #projectTitle {

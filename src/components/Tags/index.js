@@ -7,15 +7,28 @@ import { DiJavascript1 } from "react-icons/di";
 import { BsBootstrap } from "react-icons/bs";
 import { DiJqueryLogo } from "react-icons/di";
 import { SiStyledcomponents } from "react-icons/si";
+import { motion } from "framer-motion";
 
 function Tags(props) {
   return (
     <StyledTags isTransition={props.isTransition}>
       {props.technologies.map((technology, index) => (
-        <p key={index}>
-          {technologyIcons[technology]}
-          {technology}
-        </p>
+        <motion.div
+          initial={{ scale: 0, opacity: 0 }}
+          whileInView={{ scale: 1, opacity: 1 }}
+          transition={{
+            type: "tween",
+            ease: "easeInOut",
+            duration: 0.7,
+            delay: (index * 0.4) + 0.5,
+          }}
+          viewport={{ once: true }}
+        >
+          <p key={index}>
+            {technologyIcons[technology]}
+            {technology}
+          </p>
+        </motion.div>
       ))}
     </StyledTags>
   );

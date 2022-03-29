@@ -16,121 +16,6 @@ export const StyledExperience = styled.div`
     font-size: 1.9rem;
     margin: 15px 0px 15px 0px;
     display: flex;
-    justify-content: center;
-    font-weight: 500;
-    ${(props) => DebugBorder(props.theme)}
-    max-width: 890px;
-    justify-content: flex-start;
-    width: -webkit-fill-available;
-    align-self: center;
-    align-items: center;
-    display: flex;
-    flex-direction: row;
-    &:after {
-      content: "";
-      display: block;
-      position: relative;
-      width: 300px;
-      height: 1px;
-      margin-left: 15px;
-      background: linear-gradient(
-        to left,
-        ${(props) => props.theme.colors.AppBg},
-        25%,
-        ${(props) => props.theme.colors.darkFont}
-      );
-      transition: all
-        ${(props) => (props.isTransition ? props.theme.transitionTime : "0s")};
-      z-index: -2;
-    }
-  }
-
-  #container {
-    width: -webkit-fill-available;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-  }
-
-  #company {
-    display: flex;
-    flex-direction: column;
-    width: -webkit-fill-available;
-    max-width: 180px;
-    margin-right: 8px;
-    margin-left: 16px;
-    ${(props) => DebugBorder(props.theme, "black")}
-    #name {
-      font-family: "Manrope", sans-serif;
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: start;
-      flex-wrap: wrap;
-      column-gap: 1rem;
-      ${(props) => DebugBorder(props.theme)}
-      img {
-        height: 36px;
-      }
-      a {
-        color: ${(props) => props.theme.colors.brightFont};
-        text-decoration: none;
-        transition: color
-          ${(props) => (props.isTransition ? props.theme.transitionTime : "0s")};
-      }
-      h2 {
-        font-weight: 500;
-      }
-    }
-    #dates {
-      font-size: 1rem;
-      ${(props) => DebugBorder(props.theme)}
-      color: ${(props) => props.theme.colors.darkFont};
-      transition: color
-        ${(props) => (props.isTransition ? props.theme.transitionTime : "0s")};
-    }
-  }
-
-  #body {
-    width: -webkit-fill-available;
-    #role {
-      font-family: "Manrope", sans-serif;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      ${(props) => DebugBorder(props.theme)}
-      font-weight: 500;
-    }
-    .description {
-      color: ${(props) => props.theme.colors.darkFont};
-      transition: color
-        ${(props) => (props.isTransition ? props.theme.transitionTime : "0s")};
-    }
-  }
-
-  #experienceCards {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    row-gap: 30px;
-  }
-`;
-
-export const StyledExperienceMobile = styled.div`
-  ${(props) => DebugBorder(props.theme)}
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  margin-top: 65px;
-  color: ${(props) => props.theme.colors.brightFont};
-  transition: color
-    ${(props) => (props.isTransition ? props.theme.transitionTime : "0s")};
-
-  #title {
-    font-family: "Manrope", sans-serif;
-    font-size: 1.9rem;
-    margin: 15px 0px 15px 0px;
-    display: flex;
     justify-content: flex-start;
     font-weight: 500;
     ${(props) => DebugBorder(props.theme)}
@@ -165,14 +50,13 @@ export const StyledExperienceMobile = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding: 16px;
   }
 
   #role {
     display: flex;
     flex-wrap: wrap;
-    padding-top: 20px;
+    padding-top: 0px;
     padding-bottom: 2px;
     margin: unset;
     font-weight: 500;
@@ -205,43 +89,42 @@ export const StyledExperienceMobile = styled.div`
     }
   }
 
-  #body {
-    margin-bottom: 10px;
-    margin-top: 2px;
-    display: flex;
-    flex-direction: column;
-    ${(props) => DebugBorder(props.theme)}
-    color: ${(props) => props.theme.colors.darkFont};
-    transition: color
-      ${(props) => (props.isTransition ? props.theme.transitionTime : "0s")};
-
-    #dates {
-      margin-bottom: 10px;
-      ${(props) => DebugBorder(props.theme)}
-    }
-
-    li {
-      display: block;
-      margin-bottom: 0.5rem;
-      margin-top: 0.5rem;
-
-      &:before {
-        padding-right: 15px;
-        box-sizing: inherit;
-        content: "▹";
-        position: relative;
-        left: 0px;
-        color: ${(props) => props.theme.colors.darkFont};
-        transition: color
-          ${(props) => (props.isTransition ? props.theme.transitionTime : "0s")};
-      }
-    }
-  }
-
   #experienceCards {
     display: flex;
     justify-content: center;
     flex-direction: column;
     row-gap: 30px;
+  }
+`;
+
+export const Body = styled.div`
+  padding-bottom: ${(props) => (props.hasContent ? "10px" : "0px")};
+  padding-top: 2px;
+  display: flex;
+  flex-direction: column;
+  ${(props) => DebugBorder(props.theme)}
+  color: ${(props) => props.theme.colors.darkFont};
+  transition: color
+    ${(props) => (props.isTransition ? props.theme.transitionTime : "0s")};
+
+  #dates {
+    ${(props) => DebugBorder(props.theme)}
+  }
+
+  li {
+    display: block;
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+
+    &:before {
+      padding-right: 15px;
+      box-sizing: inherit;
+      content: "▹";
+      position: relative;
+      left: 0px;
+      color: ${(props) => props.theme.colors.darkFont};
+      transition: color
+        ${(props) => (props.isTransition ? props.theme.transitionTime : "0s")};
+    }
   }
 `;

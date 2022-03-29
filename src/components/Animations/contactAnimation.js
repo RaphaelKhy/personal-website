@@ -8,9 +8,9 @@ export const ContactAnimation = ({ delay, children }) => {
       opacity: 1,
       transition: {
         type: "spring",
-        stiffness: 70,
+        stiffness: 80,
         damping: 10,
-        mass: 0.75,
+        mass: 1,
         delay: delay,
       },
     },
