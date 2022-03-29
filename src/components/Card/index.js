@@ -7,7 +7,7 @@ export const Card = ({ children }) => {
   const isTransition = useContext(themeTransitionContext);
   return (
     <motion.div
-      initial={{ y: 50, opacity: 0 }}
+      initial={{ y: 30, opacity: 0 }}
       whileInView={{ y: 0, opacity: 1 }}
       transition={{
         type: "tween",
