@@ -7,10 +7,6 @@ import { useContext } from "react";
 export const Experience = () => {
   const isTransition = useContext(themeTransitionContext);
 
-  const checkEmptyBody = (body) => {
-    console.log("empty");
-  };
-
   return (
     <StyledExperience id="experience" isTransition={isTransition}>
       <h2 id="title">Experience</h2>
