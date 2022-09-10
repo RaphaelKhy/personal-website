@@ -1,7 +1,7 @@
-import styled, { css } from 'styled-components'
-import { DebugBorder } from '../../components/styles/Global'
+import styled, { css } from "styled-components";
+import { DebugBorder } from "../../components/styles/Global";
 
-const headerHeight = 50
+const headerHeight = 50;
 
 export const StyledHeader = styled.header`
   ${(props) => DebugBorder(props.theme)}
@@ -15,9 +15,9 @@ export const StyledHeader = styled.header`
   overflow: unset;
 
   transition: background-color
-      ${(props) => (props.isTransition ? props.theme.transitionTime : '0s')},
+      ${(props) => (props.isTransition ? props.theme.transitionTime : "0s")},
     border-color
-      ${(props) => (props.isTransition ? props.theme.transitionTime : '0s')};
+      ${(props) => (props.isTransition ? props.theme.transitionTime : "0s")};
 
   #container {
     display: flex;
@@ -25,9 +25,9 @@ export const StyledHeader = styled.header`
     padding: 0px 25px 0px 25px;
     max-width: 890px;
     margin: auto;
-    height: ${headerHeight + 'px'};
+    height: ${headerHeight + "px"};
   }
-`
+`;
 
 export const StyledThemeButton = styled.div`
   #button {
@@ -41,21 +41,21 @@ export const StyledThemeButton = styled.div`
     width: 40px;
     color: ${(props) => props.theme.colors.brightFont};
     transition: color
-      ${(props) => (props.isTransition ? props.theme.transitionTime : '0s')};
+      ${(props) => (props.isTransition ? props.theme.transitionTime : "0s")};
     :hover {
       cursor: pointer;
       background-color: ${(props) => props.theme.colors.buttonHover};
       transition: background-color
-          ${(props) => (props.isTransition ? props.theme.transitionTime : '0s')},
+          ${(props) => (props.isTransition ? props.theme.transitionTime : "0s")},
         color
-          ${(props) => (props.isTransition ? props.theme.transitionTime : '0s')};
+          ${(props) => (props.isTransition ? props.theme.transitionTime : "0s")};
     }
     #svg {
       height: 25px;
       width: 25px;
     }
   }
-`
+`;
 
 export const StyledLogo = styled.div`
   ${(props) => DebugBorder(props.theme)}
@@ -68,7 +68,7 @@ export const StyledLogo = styled.div`
   color: ${(props) => props.theme.colors.brightFont};
   text-decoration: none;
   transition: color
-    ${(props) => (props.isTransition ? props.theme.transitionTime : '0s')};
+    ${(props) => (props.isTransition ? props.theme.transitionTime : "0s")};
 
   #logo {
     display: inline-block;
@@ -78,11 +78,11 @@ export const StyledLogo = styled.div`
     text-decoration: none;
     padding-top: 0.1em;
     transition: color
-      ${(props) => (props.isTransition ? props.theme.transitionTime : '0s')};
+      ${(props) => (props.isTransition ? props.theme.transitionTime : "0s")};
   }
 
   #logo:after {
-    content: '';
+    content: "";
     width: 0px;
     height: 1.5px;
     display: block;
@@ -93,7 +93,7 @@ export const StyledLogo = styled.div`
   #logo:hover:after {
     width: 100%;
   }
-`
+`;
 
 export const StyledMenu = styled.div`
   ${(props) => DebugBorder(props.theme)}
@@ -110,11 +110,11 @@ export const StyledMenu = styled.div`
     text-decoration: none;
     padding-top: 0.1em;
     transition: color
-      ${(props) => (props.isTransition ? props.theme.transitionTime : '0s')};
+      ${(props) => (props.isTransition ? props.theme.transitionTime : "0s")};
   }
 
   a:after {
-    content: '';
+    content: "";
     width: 0px;
     height: 1.5px;
     display: block;
@@ -125,7 +125,7 @@ export const StyledMenu = styled.div`
   a:hover:after {
     width: 100%;
   }
-`
+`;
 
 export const StyledMobileMenu = styled.div`
   ${(props) => DebugBorder(props.theme)}
@@ -148,7 +148,7 @@ export const StyledMobileMenu = styled.div`
     top: 0;
     left: 100%;
     width: 100%;
-    margin-top: ${headerHeight + 1 + 'px'};
+    margin-top: ${headerHeight + 1 + "px"};
     min-height: 100vh;
     display: block;
     background-color: ${(props) => props.theme.colors.AppBg};
@@ -156,9 +156,9 @@ export const StyledMobileMenu = styled.div`
     padding-top: 120px;
     transition: all 0.3s,
       background-color
-        ${(props) => (props.isTransition ? props.theme.transitionTime : '0s')},
+        ${(props) => (props.isTransition ? props.theme.transitionTime : "0s")},
       color
-        ${(props) => (props.isTransition ? props.theme.transitionTime : '0s')};
+        ${(props) => (props.isTransition ? props.theme.transitionTime : "0s")};
   }
 
   .mobile-nav.is-active {
@@ -180,18 +180,18 @@ export const StyledMobileMenu = styled.div`
   .mobile-nav a:hover {
     background-color: ${(props) => props.theme.colors.hoveredElementBg};
   }
-`
+`;
 
 function hexToRgbA(hex) {
-  var c
+  var c;
   if (/^#([A-Fa-f0-9]{3}){1,2}$/.test(hex)) {
-    c = hex.substring(1).split('')
+    c = hex.substring(1).split("");
     if (c.length === 3) {
-      c = [c[0], c[0], c[1], c[1], c[2], c[2]]
+      c = [c[0], c[0], c[1], c[1], c[2], c[2]];
     }
-    c = '0x' + c.join('')
+    c = "0x" + c.join("");
     return (
-      'rgba(' + [(c >> 16) & 255, (c >> 8) & 255, c & 255].join(',') + ',0.7)'
-    )
+      "rgba(" + [(c >> 16) & 255, (c >> 8) & 255, c & 255].join(",") + ",0.7)"
+    );
   }
 }
