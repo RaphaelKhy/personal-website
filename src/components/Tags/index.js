@@ -1,12 +1,13 @@
 import { StyledTags } from "./style";
-import { FaReact } from "react-icons/fa";
-import { FaSass } from "react-icons/fa";
-import { FiFramer } from "react-icons/fi";
-import { DiHeroku } from "react-icons/di";
-import { DiJavascript1 } from "react-icons/di";
-import { BsBootstrap } from "react-icons/bs";
-import { DiJqueryLogo } from "react-icons/di";
-import { SiStyledcomponents } from "react-icons/si";
+import { FaReact as React } from "react-icons/fa";
+import { FaSass as Sass } from "react-icons/fa";
+import { FiFramer as Framer } from "react-icons/fi";
+import { DiHeroku as Heroku } from "react-icons/di";
+import { DiJavascript1 as Javascript } from "react-icons/di";
+import { BsBootstrap as Bootstrap } from "react-icons/bs";
+import { DiJqueryLogo as Jquery } from "react-icons/di";
+import { SiStyledcomponents as Styledcomponents } from "react-icons/si";
+
 import { motion } from "framer-motion";
 
 function Tags(props) {
@@ -20,7 +21,7 @@ function Tags(props) {
             type: "tween",
             ease: "easeInOut",
             duration: 0.7,
-            delay: (index * 0.5) + 0.5,
+            delay: index * 0.5 + 0.5,
           }}
           viewport={{ once: true }}
         >
@@ -35,14 +36,14 @@ function Tags(props) {
 }
 
 const technologyIcons = {
-  React: <FaReact size={"1rem"} />,
-  SASS: <FaSass size={"1rem"} />,
-  Heroku: <DiHeroku size={"1rem"}></DiHeroku>,
-  JavaScript: <DiJavascript1 size={"1rem"} />,
-  Bootstrap: <BsBootstrap size={"1rem"} />,
-  jQuery: <DiJqueryLogo size={"1rem"} />,
-  "Framer Motion": <FiFramer size={"1rem"} />,
-  "Styed Components": <SiStyledcomponents size={"2rem"} />,
+  React: <React size={"1rem"} />,
+  SASS: <Sass size={"1rem"} />,
+  Heroku: <Heroku size={"1rem"} />,
+  JavaScript: <Javascript size={"1rem"} />,
+  Bootstrap: <Bootstrap size={"1rem"} />,
+  jQuery: <Jquery size={"1rem"} />,
+  "Framer Motion": <Framer size={"1rem"} style={{ height: "100%" }} />,
+  "Styed Components": <Styledcomponents size={"2rem"} />,
 };
 
 export { Tags };

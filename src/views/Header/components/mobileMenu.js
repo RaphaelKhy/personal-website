@@ -3,7 +3,6 @@ import { ThemeButton } from "./themeButton";
 import { HandleClick } from "./menu";
 import { StyledMobileMenu } from "../style";
 import { Squash as Hamburger } from "hamburger-react";
-import resume from "../../../static/Resume.pdf";
 import { themeTransitionContext } from "../../../App";
 
 export default function MobileMenu(props) {
@@ -36,9 +35,6 @@ export default function MobileMenu(props) {
         </a>
         <a href="/#contact" onClick={onClick}>
           Contact
-        </a>
-        <a href={resume} target="blank">
-          Resume
         </a>
       </nav>
     </StyledMobileMenu>

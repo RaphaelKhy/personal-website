@@ -1,5 +1,4 @@
 import { StyledMenu } from "../style";
-import resume from "../../../static/Resume.pdf";
 import { ThemeButton } from "./themeButton";
 import { themeTransitionContext } from "../../../App";
 import { useContext } from "react";
@@ -17,9 +16,6 @@ export default function Menu({ handleToggle }) {
       </a>
       <a href="/#contact" onClick={HandleClick}>
         Contact
-      </a>
-      <a href={resume} target="blank">
-        Resume
       </a>
       <ThemeButton handleToggle={handleToggle} isTransition={isTransition} />
     </StyledMenu>

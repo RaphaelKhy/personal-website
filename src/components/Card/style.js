@@ -1,7 +1,7 @@
 import styled, { useTheme, css } from "styled-components";
 import { lightTheme } from "../styles/Themes";
 
-const GetShadow = () => {
+const GetCardShadow = () => {
   const theme = useTheme();
   if (theme === lightTheme) {
     return css`
@@ -27,7 +27,7 @@ export const StyledCard = styled.div`
   width: -moz-available;
   ${(props) => displayBorders(props.theme, "yellow")}
   align-self: center;
-  ${GetShadow}
+  ${GetCardShadow}
   transition: box-shadow
       ${(props) => (props.isTransition ? props.theme.transitionTime : "0s")},
     background-color

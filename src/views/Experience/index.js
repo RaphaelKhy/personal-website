@@ -45,15 +45,18 @@ const experienceList = [
   {
     name: "TikTok",
     link: "https://www.tiktok.com/about?lang=en",
-    dates: "June 2022 - August 2022",
-    role: "Incoming Software Engineer Intern",
-    body: [],
-    tags: [],
+    dates: "May 2022 - Aug 2022",
+    role: "Software Engineer Intern",
+    body: [
+      "Developed a service to improve testing workflow and increase developer productivity. This service provides read access to over 90% of TikTok’s online data and is accessible via CLI commands and a Web UI.",
+      "Configured a continuous deployment pipeline to automate deployment for testing service. It handles compilation and deployment across all online regions.",
+    ],
+    tags: ["Golang"],
   },
   {
     name: "IvyScope",
     link: "https://ivyscope.io/",
-    dates: "September 2021 - January 2022",
+    dates: "Sep 2021 - Dec 2021",
     role: "Front-End Software Engineer",
     body: [
       "Built a platform for students to schedule and host college tours online.",
