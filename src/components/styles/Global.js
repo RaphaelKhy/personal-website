@@ -1,5 +1,5 @@
-import { createGlobalStyle } from "styled-components";
-import { css } from "styled-components";
+import { createGlobalStyle } from 'styled-components'
+import { css } from 'styled-components'
 
 export const GlobalStyle = createGlobalStyle`
 html{
@@ -12,7 +12,7 @@ body{
   font-family: 'Inter', serif;
   margin: 0 0 0 0;
   transition: background-color ${(props) =>
-    props.isTransition ? props.theme.transitionTime : "0s"};
+      props.isTransition ? props.theme.transitionTime : '0s'};
   overflow-x: clip;
 
   & ::selection {
@@ -21,13 +21,13 @@ body{
 
   } 
 }
-`;
+`
 
 export const DebugBorder = (theme, color) => {
-  if (theme.showBorders) {
-    return css`
-      outline-style: solid;
-      outline-color: ${color ? color : "burlywood"};
-    `;
-  }
-};
+    if (theme.showBorders) {
+        return css`
+            outline-style: solid;
+            outline-color: ${color ? color : 'burlywood'};
+        `
+    }
+}

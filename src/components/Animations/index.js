@@ -1,3 +1,3 @@
-import { ContactAnimation } from "./contactAnimation";
+import { ContactAnimation } from './contactAnimation'
 
-export { ContactAnimation };
+export { ContactAnimation }
