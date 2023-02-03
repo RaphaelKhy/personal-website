@@ -1,5 +1,8 @@
 import { motion } from 'framer-motion'
 
+/**
+ * Animation for contact buttons
+ */
 export const ContactAnimation = ({ delay, children }) => {
     const variants = {
         hidden: { y: 50, opacity: 0 },

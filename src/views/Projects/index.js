@@ -104,7 +104,7 @@ const projectList = [
         title: 'Personal Website',
         description:
             'A website to share my experience, projects, and interests.',
-        tags: ['React', 'Styed Components', 'Framer Motion', 'Tippy.js'],
+        tags: ['React', 'Styed Components', 'Framer Motion'],
         link: 'https://raphaelkhaykin.com',
         gitHubLink: 'https://github.com/RaphaelKhy/Personal-website',
     },

@@ -8,7 +8,7 @@ const About = () => {
     return (
         <StyledAbout id="about" isTransition={isTransition}>
             <div className="aboutMeText">
-                <h1 id="name">Hi, I'm Raphael.</h1>
+                <h1 id="name">Hi, I'm Raphael</h1>
                 <p>
                     I'm a software engineer based in New York City. I love
                     building{' '}

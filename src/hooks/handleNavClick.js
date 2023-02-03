@@ -1,3 +1,6 @@
+/**
+ * Scrolls viewport to Projects Section
+ */
 export const handleNavClick = (e) => {
     e.preventDefault()
     var target = e.target.getAttribute('href').substring(2)

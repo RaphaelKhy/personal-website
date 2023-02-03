@@ -11,14 +11,11 @@ const App = () => {
     const [theme, setTheme] = useState(lightTheme)
     const [isTransition, setIsTransition] = useState(false)
 
+    // Store theme in local Storage
     useEffect(() => {
         if ('theme' in localStorage) {
             let theme = localStorage.getItem('theme')
-            if (theme === 'light') {
-                setTheme(lightTheme)
-            } else {
-                setTheme(darkTheme)
-            }
+            theme === 'light' ? setTheme(lightTheme) : setTheme(darkTheme)
         } else {
             localStorage.setItem('theme', 'light')
         }
@@ -27,10 +24,10 @@ const App = () => {
     const handleToggle = () => {
         theme === lightTheme ? setTheme(darkTheme) : setTheme(lightTheme)
         setIsTransition(true)
-        localStorage.setItem('theme', theme === lightTheme ? 'dark' : 'light')
         setTimeout(() => {
             setIsTransition(false)
         }, 500)
+        localStorage.setItem('theme', theme === lightTheme ? 'dark' : 'light')
     }
 
     return (

@@ -7,15 +7,13 @@ import { StyledThemeButton } from '../style'
 
 export const ThemeButton = (props) => {
     const theme = useTheme()
+    const toolTipText =
+        theme === lightTheme ? 'Activate dark mode' : 'Activate light mode'
 
     return (
         <ToolTip
-            text={
-                theme === lightTheme
-                    ? 'Activate dark mode'
-                    : 'Activate light mode'
-            }
-            delay="0"
+            text={toolTipText}
+            delay="300"
             content={
                 <StyledThemeButton isTransition={props.isTransition}>
                     <button id="button" onClick={props.handleToggle}>

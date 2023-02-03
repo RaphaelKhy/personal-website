@@ -24,7 +24,7 @@ export const Experience = () => {
                                         href={company.link}
                                         target="blank"
                                     >
-                                        {company.name}
+                                        {company.organization}
                                     </a>
                                 </h2>
                                 <Body hasContent={company.body.length > 0}>
@@ -50,7 +50,7 @@ export const Experience = () => {
 
 const experienceList = [
     {
-        name: 'TikTok',
+        organization: 'TikTok',
         link: 'https://www.tiktok.com/about?lang=en',
         dates: 'May 2022 - Aug 2022',
         role: 'Software Engineer Intern',
@@ -61,7 +61,7 @@ const experienceList = [
         tags: ['Golang'],
     },
     {
-        name: 'IvyScope',
+        organization: 'IvyScope',
         link: 'https://ivyscope.io/',
         dates: 'Sep 2021 - Dec 2021',
         role: 'Front-End Software Engineer',
