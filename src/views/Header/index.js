@@ -1,2 +1,3 @@
-import Header from "./components/header";
-export { Header };
+import Header from './components/header'
+
+export { Header }
