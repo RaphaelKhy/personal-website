@@ -7,7 +7,7 @@ export const StyledExperience = styled.div`
     flex-direction: column;
     justify-content: flex-start;
     margin-top: 65px;
-    color: ${(props) => props.theme.colors.brightFont};
+    color: ${(props) => props.theme.colors.fontLight};
     transition: color
         ${(props) => (props.isTransition ? props.theme.transitionTime : '0s')};
 
@@ -35,9 +35,9 @@ export const StyledExperience = styled.div`
             margin-left: 15px;
             background: linear-gradient(
                 to left,
-                ${(props) => props.theme.colors.AppBg},
+                ${(props) => props.theme.colors.appBackground},
                 25%,
-                ${(props) => props.theme.colors.darkFont}
+                ${(props) => props.theme.colors.fontDark}
             );
             transition: color
                 ${(props) =>
@@ -105,7 +105,7 @@ export const Body = styled.div`
     display: flex;
     flex-direction: column;
     ${(props) => DebugBorder(props.theme)}
-    color: ${(props) => props.theme.colors.darkFont};
+    color: ${(props) => props.theme.colors.fontDark};
     transition: color
         ${(props) => (props.isTransition ? props.theme.transitionTime : '0s')};
 
@@ -125,7 +125,7 @@ export const Body = styled.div`
             content: '▹';
             position: relative;
             left: 0px;
-            color: ${(props) => props.theme.colors.darkFont};
+            color: ${(props) => props.theme.colors.fontDark};
             transition: color
                 ${(props) =>
                     props.isTransition ? props.theme.transitionTime : '0s'};

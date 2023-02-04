@@ -10,7 +10,7 @@ export const StyledAbout = styled.div`
     align-self: center;
     max-width: 890px;
     width: -webkit-fill-available;
-    color: ${(props) => props.theme.colors.brightFont};
+    color: ${(props) => props.theme.colors.fontLight};
     transition: color
         ${(props) => (props.isTransition ? props.theme.transitionTime : '0s')};
 
@@ -22,7 +22,7 @@ export const StyledAbout = styled.div`
     }
 
     p {
-        color: ${(props) => props.theme.colors.darkFont};
+        color: ${(props) => props.theme.colors.fontDark};
         transition: color
             ${(props) =>
                 props.isTransition ? props.theme.transitionTime : '0s'};
@@ -33,7 +33,7 @@ export const StyledAbout = styled.div`
 
     a {
         font-weight: 600;
-        color: ${(props) => props.theme.colors.brightFont};
+        color: ${(props) => props.theme.colors.fontLight};
         text-decoration-color: ${(props) => props.theme.colors.link};
         transition: color
                 ${(props) =>
@@ -42,7 +42,7 @@ export const StyledAbout = styled.div`
                 ${(props) =>
                     props.isTransition ? props.theme.transitionTime : '0s'};
         :hover {
-            color: ${(props) => props.theme.colors.AppBg};
+            color: ${(props) => props.theme.colors.appBackground};
             background-color: ${(props) => props.theme.colors.link};
             transition: color 0s, background-color 0s;
         }

@@ -6,7 +6,7 @@ export const StyledProjects = styled.div`
     display: flex;
     flex-direction: column;
     margin-top: 65px;
-    color: ${(props) => props.theme.colors.brightFont};
+    color: ${(props) => props.theme.colors.fontLight};
     transition: color
         ${(props) => (props.isTransition ? props.theme.transitionTime : '0s')};
 
@@ -35,9 +35,9 @@ export const StyledProjects = styled.div`
             margin-left: 15px;
             background: linear-gradient(
                 to left,
-                ${(props) => props.theme.colors.AppBg},
+                ${(props) => props.theme.colors.appBackground},
                 25%,
-                ${(props) => props.theme.colors.darkFont}
+                ${(props) => props.theme.colors.fontDark}
             );
             transition: all
                 ${(props) =>
@@ -81,7 +81,7 @@ export const StyledProjects = styled.div`
 
     #links {
         a {
-            color: ${(props) => props.theme.colors.darkFont};
+            color: ${(props) => props.theme.colors.fontDark};
             transition: color
                 ${(props) =>
                     props.isTransition ? props.theme.transitionTime : '0s'};
@@ -106,7 +106,7 @@ export const StyledProjects = styled.div`
         margin-top: 0px;
 
         a {
-            color: ${(props) => props.theme.colors.brightFont};
+            color: ${(props) => props.theme.colors.fontLight};
             text-decoration: none;
             transition: color
                 ${(props) =>
@@ -120,13 +120,13 @@ export const StyledProjects = styled.div`
             margin-bottom: 0.5rem;
         }
         .description {
-            color: ${(props) => props.theme.colors.darkFont};
+            color: ${(props) => props.theme.colors.fontDark};
             transition: color
                 ${(props) =>
                     props.isTransition ? props.theme.transitionTime : '0s'};
         }
         ${(props) => DebugBorder(props.theme, 'silver')}
-        color: ${(props) => props.theme.colors.brightFont};
+        color: ${(props) => props.theme.colors.fontLight};
         transition: color
             ${(props) =>
                 props.isTransition ? props.theme.transitionTime : '0s'};

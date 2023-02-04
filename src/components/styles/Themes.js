@@ -1,6 +1,6 @@
 export const globalTheme = {
     borders: false,
-    transitionTime: '0.5s',
+    transitionTime: '0.3s',
     menuTime: '0.4s',
 }
 
@@ -9,16 +9,14 @@ export const darkTheme = {
     transitionTime: globalTheme.transitionTime,
     menuTime: globalTheme.menuTime,
     colors: {
-        AppBg: '#030303',
+        appBackground: '#030303',
         headerBg: '#1a1a1b',
         elementBg: '#1a1a1b',
         elementBorder: '#343536',
-        darkFont: '#d5dde1',
-        brightFont: '#ffffff',
+        fontDark: '#d5dde1',
+        fontLight: '#ffffff',
         buttonHover: '#272727',
         link: '#868dff',
-        Title: '#fdb54a',
-        ThemeButton: '#868dff',
     },
 }
 
@@ -27,15 +25,13 @@ export const lightTheme = {
     transitionTime: globalTheme.transitionTime,
     menuTime: globalTheme.menuTime,
     colors: {
-        AppBg: '#f9fafb',
+        appBackground: '#f9fafb',
         headerBg: '#ffffff',
         elementBg: '#ffffff',
         elementBorder: '#ccc',
-        darkFont: '#525557',
-        brightFont: '#222222',
+        fontDark: '#525557',
+        fontLight: '#222222',
         buttonHover: '#ddd',
         link: '#6b76f3',
-        Title: '#222',
-        ThemeButton: '#6b76f3',
     },
 }

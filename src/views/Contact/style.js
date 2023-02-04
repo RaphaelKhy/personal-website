@@ -7,7 +7,7 @@ export const StyledContact = styled.div`
     margin-bottom: 65px;
     margin-top: 65px;
     ${(props) => DebugBorder(props.theme)}
-    color: ${(props) => props.theme.colors.brightFont};
+    color: ${(props) => props.theme.colors.fontLight};
     transition: color
         ${(props) => (props.isTransition ? props.theme.transitionTime : '0s')};
     font-family: 'Manrope', sans-serif;
@@ -36,9 +36,9 @@ export const StyledContact = styled.div`
             margin-left: 15px;
             background: linear-gradient(
                 to left,
-                ${(props) => props.theme.colors.AppBg},
+                ${(props) => props.theme.colors.appBackground},
                 25%,
-                ${(props) => props.theme.colors.darkFont}
+                ${(props) => props.theme.colors.fontDark}
             );
             transition: color
                 ${(props) =>
@@ -88,7 +88,7 @@ export const StyledContact = styled.div`
         border-style: solid;
         border-radius: 8px;
         text-decoration: none;
-        color: ${(props) => props.theme.colors.brightFont};
+        color: ${(props) => props.theme.colors.fontLight};
         border: unset;
         box-shadow: 0 0 0 1px ${(props) => props.theme.colors.elementBorder};
         background-color: ${(props) => props.theme.colors.elementBg};
@@ -104,7 +104,7 @@ export const StyledContact = styled.div`
 
         :hover {
             box-shadow: 0px 0px 0px 1px
-                ${(props) => props.theme.colors.darkFont};
+                ${(props) => props.theme.colors.fontDark};
             transition: background-color
                     ${(props) =>
                         props.isTransition ? props.theme.transitionTime : '0s'},

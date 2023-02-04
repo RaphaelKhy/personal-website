@@ -1,5 +1,6 @@
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 import { DebugBorder } from '../../components/styles/Global'
+import { hexToRgba } from '../../components/styles/Global'
 
 const headerHeight = 50
 
@@ -9,7 +10,7 @@ export const StyledHeader = styled.header`
     border-bottom: 1px solid ${(props) => props.theme.colors.elementBorder};
     position: sticky;
     top: 0;
-    background-color: ${(props) => hexToRgbA(props.theme.colors.headerBg)};
+    background-color: ${(props) => hexToRgba(props.theme.colors.headerBg, 0.7)};
     backdrop-filter: blur(10px);
     z-index: 2;
     overflow: unset;
@@ -41,7 +42,7 @@ export const StyledThemeButton = styled.div`
         border-radius: 0.5rem;
         height: 40px;
         width: 40px;
-        color: ${(props) => props.theme.colors.brightFont};
+        color: ${(props) => props.theme.colors.fontLight};
         transition: color
             ${(props) =>
                 props.isTransition ? props.theme.transitionTime : '0s'};
@@ -70,7 +71,7 @@ export const StyledLogo = styled.div`
     column-gap: 20px;
     font-size: 20px;
     cursor: pointer;
-    color: ${(props) => props.theme.colors.brightFont};
+    color: ${(props) => props.theme.colors.fontLight};
     text-decoration: none;
     transition: color
         ${(props) => (props.isTransition ? props.theme.transitionTime : '0s')};
@@ -79,7 +80,7 @@ export const StyledLogo = styled.div`
         display: inline-block;
         font-weight: 500;
         font-size: 1rem;
-        color: ${(props) => props.theme.colors.brightFont};
+        color: ${(props) => props.theme.colors.fontLight};
         text-decoration: none;
         padding-top: 0.1em;
         transition: color
@@ -112,7 +113,7 @@ export const StyledMenu = styled.div`
         font-weight: 400;
         font-size: 1rem;
         display: inline-block;
-        color: ${(props) => props.theme.colors.brightFont};
+        color: ${(props) => props.theme.colors.fontLight};
         text-decoration: none;
         padding-top: 0.1em;
         transition: color
@@ -142,7 +143,7 @@ export const StyledMobileMenu = styled.div`
     column-gap: 20px;
 
     .hamburger-react {
-        color: ${(props) => props.theme.colors.brightFont};
+        color: ${(props) => props.theme.colors.fontLight};
         transition: all 0s;
     }
 
@@ -158,8 +159,8 @@ export const StyledMobileMenu = styled.div`
         margin-top: ${headerHeight + 1 + 'px'};
         min-height: 100vh;
         display: block;
-        background-color: ${(props) => props.theme.colors.AppBg};
-        color: ${(props) => props.theme.colors.brightFont};
+        background-color: ${(props) => props.theme.colors.appBackground};
+        color: ${(props) => props.theme.colors.fontLight};
         padding-top: 120px;
         transition: all 0.3s,
             background-color
@@ -182,7 +183,7 @@ export const StyledMobileMenu = styled.div`
         margin: 0 auto 16px;
         text-align: center;
         padding: 12px 16px;
-        color: ${(props) => props.theme.colors.brightFont};
+        color: ${(props) => props.theme.colors.fontLight};
         text-decoration: none;
     }
 
@@ -190,19 +191,3 @@ export const StyledMobileMenu = styled.div`
         background-color: ${(props) => props.theme.colors.hoveredElementBg};
     }
 `
-
-function hexToRgbA(hex) {
-    var c
-    if (/^#([A-Fa-f0-9]{3}){1,2}$/.test(hex)) {
-        c = hex.substring(1).split('')
-        if (c.length === 3) {
-            c = [c[0], c[0], c[1], c[1], c[2], c[2]]
-        }
-        c = '0x' + c.join('')
-        return (
-            'rgba(' +
-            [(c >> 16) & 255, (c >> 8) & 255, c & 255].join(',') +
-            ',0.7)'
-        )
-    }
-}
