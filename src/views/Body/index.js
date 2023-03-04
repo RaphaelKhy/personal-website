@@ -5,12 +5,12 @@ import { Projects } from '../Projects'
 import { StyledBody } from './style'
 
 export const Body = () => {
-    return (
-        <StyledBody>
-            <About />
-            <Experience />
-            <Projects />
-            <Contact />
-        </StyledBody>
-    )
+  return (
+    <StyledBody>
+      <About />
+      <Experience />
+      <Projects />
+      <Contact />
+    </StyledBody>
+  )
 }
