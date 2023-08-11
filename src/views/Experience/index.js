@@ -46,6 +46,14 @@ const experienceList = [
   {
     organization: 'TikTok',
     link: 'https://www.tiktok.com/about?lang=en',
+    dates: 'June 2023 - Present',
+    role: 'Software Engineer',
+    body: ['Data Access team'],
+    tags: ['Golang']
+  },
+  {
+    organization: 'TikTok',
+    link: 'https://www.tiktok.com/about?lang=en',
     dates: 'May 2022 - Aug 2022',
     role: 'Software Engineer Intern',
     body: [
