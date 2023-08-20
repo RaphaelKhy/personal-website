@@ -73,7 +73,7 @@ const projectList = [
     title: 'Investment Visual',
     description: 'A website to backtest and analyze investment portfolios.',
     tags: ['React', 'Next.js', 'Typescript', 'Ant Design', 'PostgreSQL', 'Python'],
-    link: 'https://main.d3f3u7l8egl9c.amplifyapp.com/'
+    link: 'https://www.investmentvisual.com/'
   },
   {
     title: 'Portfolio Visualizer',
