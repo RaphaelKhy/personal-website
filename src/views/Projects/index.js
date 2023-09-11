@@ -5,6 +5,7 @@ import { themeTransitionContext } from '../../App'
 import { Card } from '../../components/Card'
 import { Tags } from '../../components/Tags'
 import ToolTip from '../../components/ToolTip'
+import InvestmentVisual from '../../static/investment-visual.png'
 import PortfolioVisualizerDark from '../../static/portfolio-visualizer.png'
 import { StyledProjects } from './style'
 
@@ -73,7 +74,8 @@ const projectList = [
     title: 'Investment Visual',
     description: 'A website to backtest and analyze investment portfolios.',
     tags: ['React', 'Next.js', 'Typescript', 'Ant Design', 'PostgreSQL', 'Python'],
-    link: 'https://www.investmentvisual.com/'
+    link: 'https://www.investmentvisual.com/',
+    image: InvestmentVisual
   },
   {
     title: 'Portfolio Visualizer',
