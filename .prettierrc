@@ -1,0 +1,16 @@
+{
+    "semi": false,
+    "tabWidth": 2,
+    "printWidth": 100,
+    "singleQuote": true,
+    "trailingComma": "none",
+    "importOrder": [
+        "^react(.*)",
+        "antd/(.*)",
+        "<THIRD_PARTY_MODULES>",
+        "@/(.*)",
+        "^[./]"
+    ],
+    "importOrderSeparation": true,
+    "importOrderSortSpecifiers": true
+}
