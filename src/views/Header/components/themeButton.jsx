@@ -17,7 +17,7 @@ export const ThemeButton = (props) => {
       delay="300"
       content={
         <StyledThemeButton isTransition={props.isTransition}>
-          <button id="button" onClick={props.handleToggle}>
+          <button id="button" onClick={props.handleToggle} aria-label={toolTipText}>
             {theme === lightTheme ? (
               <MdOutlineDarkMode id="svg" />
             ) : (
