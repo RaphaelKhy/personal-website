@@ -13,6 +13,12 @@ export const GlobalStyle = createGlobalStyle`
     color-scheme: ${(props) => (props.theme === lightTheme ? 'light' : 'dark')};
   }
 
+  ::view-transition-group(root),
+  ::view-transition-old(root),
+  ::view-transition-new(root) {
+    animation-duration: ${(props) => props.theme.transitionTime};
+  }
+
   body {
     background-color: ${(props) => props.theme.colors.appBackground};
     font-family: 'Inter', serif;

@@ -1,4 +1,5 @@
 import { createContext, useState } from 'react'
+import { flushSync } from 'react-dom'
 
 import { ThemeProvider } from 'styled-components'
 
@@ -27,12 +28,19 @@ const App = () => {
 
   const handleToggle = () => {
     const next = theme === lightTheme ? darkTheme : lightTheme
+    saveTheme(next === darkTheme ? 'dark' : 'light')
+
+    // Cross-fade the whole page as one animation, so every color changes in step
+    if (document.startViewTransition) {
+      document.startViewTransition(() => flushSync(() => setTheme(next)))
+      return
+    }
+
     setTheme(next)
     setIsTransition(true)
     setTimeout(() => {
       setIsTransition(false)
     }, 500)
-    saveTheme(next === darkTheme ? 'dark' : 'light')
   }
 
   return (
