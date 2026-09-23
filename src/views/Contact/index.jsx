@@ -10,16 +10,16 @@ export const Contact = () => {
 
   return (
     <StyledContact isTransition={isTransition}>
-      <h1 className="title" id="contact">
+      <h2 className="title" id="contact">
         Contact
-      </h1>
+      </h2>
 
       <div id="body">
         <ContactAnimation
           delay={0}
           children={
             <div id="button">
-              <a href="mailto: raphaelkhaykin@gmail.com" rel="noreferrer">
+              <a href="mailto:raphaelkhaykin@gmail.com" rel="noreferrer">
                 <AiOutlineMail id="icon" size={30} />
                 <h4>raphaelkhaykin@gmail.com</h4>
               </a>
