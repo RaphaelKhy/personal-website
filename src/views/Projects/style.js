@@ -78,13 +78,25 @@ export const StyledProjects = styled.div`
   }
 
   #links {
+    /* Keep the icons side by side so their tap areas don't overlap */
+    white-space: nowrap;
+
     a {
+      position: relative;
       color: ${(props) => props.theme.colors.fontDark};
       transition: color ${(props) => (props.isTransition ? props.theme.transitionTime : '0s')};
       margin-right: 1rem;
       :hover {
         color: ${(props) => props.theme.colors.link};
         transition: color 0s;
+      }
+
+      /* Invisible 36x44 tap area around the 20px icon. It's as wide as the
+         icon spacing allows without overlapping, and doesn't change layout. */
+      ::after {
+        content: '';
+        position: absolute;
+        inset: -12px -8px;
       }
     }
   }
