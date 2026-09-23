@@ -8,6 +8,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   html {
+    background-color: ${(props) => props.theme.colors.appBackground};
     scroll-behavior: smooth;
     color-scheme: ${(props) => (props.theme === lightTheme ? 'light' : 'dark')};
   }
