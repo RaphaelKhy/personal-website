@@ -21,9 +21,20 @@ const Projects = () => {
             key={index}
             children={
               <div id="project">
-                <a id="projectImage" href={project.link} target="_blank" rel="noreferrer">
-                  <img src={project.image} alt="" />
-                </a>
+                {/* The title below links to the same page, so keep this duplicate out of
+                    the Tab order and away from screen readers. Mouse clicks still work. */}
+                {project.image && (
+                  <a
+                    id="projectImage"
+                    href={project.link}
+                    target="_blank"
+                    rel="noreferrer"
+                    tabIndex={-1}
+                    aria-hidden="true"
+                  >
+                    <img src={project.image} alt="" />
+                  </a>
+                )}
                 <div id="body">
                   <div id="header">
                     <h2 id="projectTitle">
@@ -37,7 +48,12 @@ const Projects = () => {
                           text="GitHub"
                           delay="300"
                           content={
-                            <a href={project.gitHubLink} target="_blank" rel="noreferrer">
+                            <a
+                              href={project.gitHubLink}
+                              target="_blank"
+                              rel="noreferrer"
+                              aria-label={`${project.title} on GitHub`}
+                            >
                               <FiGithub size={20} />
                             </a>
                           }
@@ -48,7 +64,12 @@ const Projects = () => {
                         text="External Link"
                         delay="300"
                         content={
-                          <a href={project.link} target="_blank" rel="noreferrer">
+                          <a
+                            href={project.link}
+                            target="_blank"
+                            rel="noreferrer"
+                            aria-label={`Open ${project.title}`}
+                          >
                             <FiExternalLink size={20} />
                           </a>
                         }
@@ -89,7 +110,7 @@ const projectList = [
   {
     title: 'Personal Website',
     description: 'A website to share my experience, projects, and interests.',
-    tags: ['React', 'Styed Components', 'Framer Motion'],
+    tags: ['React', 'Styled Components', 'Framer Motion'],
     link: 'https://raphaelkhaykin.com',
     gitHubLink: 'https://github.com/RaphaelKhy/Personal-website'
   }

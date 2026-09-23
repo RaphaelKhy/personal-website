@@ -13,6 +13,7 @@ import { TbBrandTypescript as Typescript } from 'react-icons/tb'
 import { TbBrandNextjs as Nextjs } from 'react-icons/tb'
 import { TbBrandPython as Python } from 'react-icons/tb'
 import { TbBrandGolang as Golang } from 'react-icons/tb'
+import { TbBrandD3 as D3 } from 'react-icons/tb'
 import { AiOutlineKubernetes as Kubernetes } from "react-icons/ai";
 
 import { motion } from 'framer-motion'
@@ -48,6 +49,7 @@ function Tags(props) {
 const technologyIcons = {
   'Ant Design': <Antdesign size={'1rem'} />,
   Bootstrap: <Bootstrap size={'1rem'} />,
+  'D3.js': <D3 size={'1rem'} />,
   'Framer Motion': <Framer size={'1rem'} style={{ height: '100%' }} />,
   Golang: <Golang size={'1.5rem'} />,
   JavaScript: <Javascript size={'1rem'} />,
@@ -56,7 +58,7 @@ const technologyIcons = {
   PostgreSQL: <PostgreSQL size={'1rem'} />,
   Python: <Python size={'1rem'} />,
   React: <React size={'1rem'} />,
-  'Styed Components': <StyledComponents size={'2rem'} />,
+  'Styled Components': <StyledComponents size={'2rem'} />,
   Typescript: <Typescript size={'1rem'} />,
   Docker: <Docker size={'1rem'} />,
   Kafka: <Kafka size={'1rem'} />,

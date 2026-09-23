@@ -100,11 +100,15 @@ export const StyledContact = styled.div`
     #body {
       justify-content: space-evenly;
     }
+    /* Hide the label visually but keep it as the link's accessible name */
     h4 {
-      visibility: hidden;
-      height: 0px;
-      width: 0px;
+      position: absolute;
+      width: 1px;
+      height: 1px;
       margin: 0;
+      overflow: hidden;
+      clip-path: inset(50%);
+      white-space: nowrap;
     }
     #button {
       height: 100px;

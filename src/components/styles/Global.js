@@ -8,8 +8,15 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   html {
+    background-color: ${(props) => props.theme.colors.appBackground};
     scroll-behavior: smooth;
     color-scheme: ${(props) => (props.theme === lightTheme ? 'light' : 'dark')};
+  }
+
+  ::view-transition-group(root),
+  ::view-transition-old(root),
+  ::view-transition-new(root) {
+    animation-duration: ${(props) => props.theme.transitionTime};
   }
 
   body {

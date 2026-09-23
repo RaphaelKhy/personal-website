@@ -27,4 +27,17 @@ export const StyledTags = styled.div`
       transition: color ${(props) => props.isTransition && props.theme.transitionTime};
     }
   }
+
+  /* Smaller pills and even 8px gaps, so more tags fit on each row */
+  @media only screen and (max-width: 800px) {
+    gap: 8px;
+    margin-bottom: 8px;
+
+    p {
+      margin: 0;
+      height: 28px;
+      padding: 0 10px;
+      font-size: 0.875rem;
+    }
+  }
 `

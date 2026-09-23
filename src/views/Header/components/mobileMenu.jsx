@@ -16,6 +16,7 @@ export default function MobileMenu(props) {
       <ThemeButton handleToggle={handleToggle} isTransition={isTransition} />
       <Hamburger
         id="hamburger"
+        label="Menu"
         duration={'0.3'}
         direction={'left'}
         toggled={isMobileMenuActive}

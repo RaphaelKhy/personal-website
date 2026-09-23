@@ -20,7 +20,7 @@ export const Experience = () => {
                 <h2 id="role">
                   <div>{company.role}</div>
                   <div id="at-sign">&nbsp;@&nbsp;</div>
-                  <a id="company" href={company.link} target="blank">
+                  <a id="company" href={company.link} target="_blank" rel="noreferrer">
                     {company.organization}
                   </a>
                 </h2>

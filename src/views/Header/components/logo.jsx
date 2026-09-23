@@ -8,9 +8,9 @@ export default function Logo(props) {
 
   return (
     <StyledLogo isTransition={props.isTransition}>
-      <div id="logo" onClick={HandleClick}>
+      <button type="button" id="logo" onClick={HandleClick}>
         Raphael Khaykin
-      </div>
+      </button>
     </StyledLogo>
   )
 }

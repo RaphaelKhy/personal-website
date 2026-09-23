@@ -3,3 +3,7 @@
 
 # production
 /build
+
+# claude
+/.claude
+CLAUDE.local.md
