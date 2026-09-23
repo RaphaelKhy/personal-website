@@ -1,4 +1,4 @@
-import { createContext, useEffect, useState } from 'react'
+import { createContext, useState } from 'react'
 
 import { ThemeProvider } from 'styled-components'
 
@@ -9,27 +9,30 @@ import { Header } from './views/Header'
 
 export const themeTransitionContext = createContext()
 
+// index.html reads the saved theme before first paint (guarded) and sets data-theme
+const initialTheme = () =>
+  document.documentElement.dataset.theme === 'dark' ? darkTheme : lightTheme
+
+const saveTheme = (name) => {
+  try {
+    localStorage.setItem('theme', name)
+  } catch (e) {
+    // Storage is blocked: the toggle still works, it just isn't remembered
+  }
+}
+
 const App = () => {
-  const [theme, setTheme] = useState(lightTheme)
+  const [theme, setTheme] = useState(initialTheme)
   const [isTransition, setIsTransition] = useState(false)
 
-  // Store theme in local Storage
-  useEffect(() => {
-    if ('theme' in localStorage) {
-      let theme = localStorage.getItem('theme')
-      theme === 'light' ? setTheme(lightTheme) : setTheme(darkTheme)
-    } else {
-      localStorage.setItem('theme', 'light')
-    }
-  }, [])
-
   const handleToggle = () => {
-    theme === lightTheme ? setTheme(darkTheme) : setTheme(lightTheme)
+    const next = theme === lightTheme ? darkTheme : lightTheme
+    setTheme(next)
     setIsTransition(true)
     setTimeout(() => {
       setIsTransition(false)
     }, 500)
-    localStorage.setItem('theme', theme === lightTheme ? 'dark' : 'light')
+    saveTheme(next === darkTheme ? 'dark' : 'light')
   }
 
   return (
