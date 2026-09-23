@@ -21,9 +21,11 @@ const Projects = () => {
             key={index}
             children={
               <div id="project">
-                <a id="projectImage" href={project.link} target="_blank" rel="noreferrer">
-                  <img src={project.image} alt="" />
-                </a>
+                {project.image && (
+                  <a id="projectImage" href={project.link} target="_blank" rel="noreferrer">
+                    <img src={project.image} alt="" />
+                  </a>
+                )}
                 <div id="body">
                   <div id="header">
                     <h2 id="projectTitle">
