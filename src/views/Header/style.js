@@ -70,11 +70,18 @@ export const StyledLogo = styled.div`
 
   #logo {
     display: inline-block;
+    /* Reset the default button look so it matches the old <div> */
+    margin: 0;
+    border: 0;
+    background: none;
+    font-family: inherit;
+    line-height: inherit;
+    cursor: pointer;
     font-weight: 500;
     font-size: 1rem;
     color: ${(props) => props.theme.colors.fontLight};
     text-decoration: none;
-    padding-top: 0.1em;
+    padding: 0.1em 0 0;
     transition: color ${(props) => (props.isTransition ? props.theme.transitionTime : '0s')};
   }
 
