@@ -172,6 +172,6 @@ export const StyledMobileMenu = styled.div`
   }
 
   .mobile-nav a:hover {
-    background-color: ${(props) => props.theme.colors.hoveredElementBg};
+    background-color: ${(props) => props.theme.colors.buttonHover};
   }
 `
